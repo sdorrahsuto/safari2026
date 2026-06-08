@@ -1,0 +1,2395 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ANIMAL · Safari 2026 · 肯亞坦尚尼亞</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root {
+  --bg-dark: #1A120B;
+  --bg-card: #2C1E15;
+  --bg-card-light: #3D2B1F;
+  --gold-amber: #D4A359;
+  --sand-gold: #C4A47A;
+  --brick-red: #A64B2A;
+  --brick-light: #D96B43;
+  --safari-green: #3A4F35;
+  --safari-light: #5A7853;
+  --text-white: #F5F0E8;
+  --text-muted: #A89685;
+  --glass-bg: rgba(44, 30, 21, 0.6);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+/*──body全頁基礎樣式──*/
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-white);
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+/* ── BACK NAV頂部導覽列固定在頁面最頂端，捲動不消失 ── */
+.top-nav {
+  background: rgba(26,18,11,0.95);
+  backdrop-filter: blur(10px);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid rgba(212,163,89,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.top-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 13px;
+  display: flex; align-items: center; gap: 6px;
+  transition: color .2s;
+}
+.top-nav a:hover { color: var(--gold-amber); }
+.top-nav .sep { color: rgba(212,163,89,0.3); }
+.top-nav .current { color: var(--gold-amber); font-weight: 500; font-size: 13px; }
+
+/* ── HERO主視覺橫幅 ── */
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(26,18,11,0.45), rgba(26,18,11,0.92)),
+             url('https://www.almaburton.com.tw/wp-content/uploads/2024/05/bGH5IzG.jpeg')  no-repeat center/cover;
+  padding: 80px 24px 64px;
+  text-align: center;
+  border-bottom: 3px double var(--gold-amber);
+  overflow: hidden;
+}
+/* ── HERO頂部裝飾彩條 ── */
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 10px;
+  background: repeating-linear-gradient(90deg, var(--gold-amber) 0 15px, var(--brick-red) 15px 30px, var(--safari-green) 30px 45px);
+  opacity: 0.7;
+}
+/* ── HERO右下方的半透明爪印裝飾 ── */
+.hero::after {
+  content: '🐾  🐾  🐾';
+  position: absolute; bottom: 20px; right: 28px;
+  font-size: 18px;
+  opacity: 0.18;
+  letter-spacing: 12px;
+}
+/* ── HERO標題上方小字 ── */
+.hero-eyebrow {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold-amber);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  font-weight: 500;
+}
+
+/* ── HERO大標題（漸層金色文字） ── */
+.hero-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(40px, 6vw, 56px);
+  font-weight: 700;
+  letter-spacing: 8px;
+/* 漸層文字技巧，clip text讓漸層只在文字形狀內顯示 */
+  background: linear-gradient(135deg, #FFF6E5 0%, var(--gold-amber) 50%, #C4A47A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  margin-bottom: 12px;
+}
+/* ── HERO副標題（斜體英文字） ── */
+.hero-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(14px, 2vw, 16px);
+  color: var(--text-white);
+  letter-spacing: 6px;
+  font-weight: 400;
+  margin-bottom: 28px;
+  opacity: 0.65;
+}
+/* ── HERO說明文字(最下方一小段介紹） ── */
+.hero-desc {
+  max-width: 520px;
+  margin: 0 auto;
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ── SECTION SHARED通用區塊（每個section適用） ── */
+.section {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+/* ── 每個區塊標題(帶右延伸裝飾線) ── */
+.section-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gold-amber);
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 14px;
+}
+/* ── 右延伸裝飾線 ── */
+.section-title::after {
+  content: '';
+  flex: 1; height: 1px;
+  background: linear-gradient(to right, var(--gold-amber), transparent);
+  opacity: 0.4;
+}
+.section-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 36px; }
+
+/* ── BACK TO SEARCH BUTTON返回動物說明按鈕 ── */
+.back-to-search-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--gold-amber);
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border: 1px solid rgba(212, 163, 89, 0.3);
+  border-radius: 4px;
+  background: rgba(212, 163, 89, 0.05);
+  transition: all 0.3s ease;
+  margin-bottom: 18px;
+  width: fit-content;
+}
+.back-to-search-btn:hover {
+  background: rgba(212, 163, 89, 0.15);
+  border-color: var(--gold-amber);
+  color: var(--text-white);
+  box-shadow: 0 4px 12px rgba(212, 163, 89, 0.1);
+}
+
+/* ════════════════════════════════
+   BLOCK 1 – COEXISTENCE INTRO
+════════════════════════════════ */
+#coexist-section {
+  background: linear-gradient(180deg, #1A120B 0%, #22170F 100%);
+  border-bottom: 1px solid rgba(212,163,89,0.1);
+}
+.coexist-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+@media (max-width: 700px) { .coexist-wrap { grid-template-columns: 1fr; } }
+
+.coexist-text h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(20px, 3.5vw, 28px);
+  font-weight: 700;
+  color: var(--gold-amber);
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+.coexist-text h2 small {
+  display: block;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 0.55em;
+  color: var(--sand-gold);
+  letter-spacing: 1px;
+  margin-bottom: 4px;
+}
+.coexist-text p {
+  color: var(--text-muted);
+  font-size: 14px;
+  line-height: 1.9;
+  margin-bottom: 14px;
+}
+.coexist-text p strong { color: var(--text-white); }
+
+/* Niche cards */
+.niche-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 24px;
+}
+.niche-card {
+  background: var(--bg-card);
+  border-radius: 6px;
+  padding: 14px 16px;
+  border-left: 3px solid var(--gold-amber);
+}
+.niche-card.green { border-left-color: var(--safari-light); }
+.niche-card.brick { border-left-color: var(--brick-light); }
+.niche-card.sand  { border-left-color: var(--sand-gold); }
+.niche-card .animal-en { font-size: 10px; color: var(--text-muted); letter-spacing: 1px; text-transform: uppercase; }
+.niche-card .animal-zh { font-family: 'Noto Serif TC', serif; font-size: 15px; font-weight: 600; color: var(--text-white); }
+.niche-card .niche-desc { font-size: 12px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; }
+
+/* Illustration panel右側草原插圖容器 */
+.coexist-illustration {
+  position: relative;
+}
+/* 草原圖片外框 */
+.savanna-scene {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  position: relative;
+  border: 1px solid rgba(212,163,89,0.25);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  background: var(--bg-card);
+}
+.savanna-scene img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.savanna-scene:hover img {
+  transform: scale(1.04);
+}
+
+/* Info-band below illustration */
+.food-band {
+  background: var(--bg-card);
+  border-radius: 6px;
+  padding: 14px 18px;
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 1px solid rgba(212,163,89,0.12);
+  flex-wrap: wrap;
+}
+.food-band .fb-title {
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--gold-amber);
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+.food-band .fb-items {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.fb-item {
+  font-size: 12px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(212,163,89,0.1);
+  color: var(--sand-gold);
+  border: 1px solid rgba(212,163,89,0.2);
+}
+
+/* ════════════════════════════════
+   BLOCK 2 – SEARCH A–Z
+════════════════════════════════ */
+#search-section {
+  background: #22170F;
+  border-bottom: 1px solid rgba(212,163,89,0.1);
+}
+.search-box {
+  position: relative;
+  max-width: 500px;
+  margin-bottom: 32px;
+}
+.search-box input {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid rgba(212,163,89,0.3);
+  border-radius: 4px;
+  color: var(--text-white);
+  font-family: 'Noto Sans TC', sans-serif;
+  font-size: 14px;
+  padding: 14px 48px 14px 18px;
+  outline: none;
+  transition: border-color .3s;
+}
+.search-box input::placeholder { color: var(--text-muted); }
+.search-box input:focus { border-color: var(--gold-amber); }
+.search-box .search-icon {
+  position: absolute; right: 16px; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); font-size: 16px; pointer-events: none;
+}
+
+.alphabet-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 32px;
+}
+.alpha-btn {
+  width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--bg-card);
+  border: 1px solid rgba(212,163,89,0.15);
+  border-radius: 3px;
+  color: var(--text-muted);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all .2s;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  user-select: none;
+}
+.alpha-btn:hover { background: var(--bg-card-light); color: var(--gold-amber); border-color: rgba(212,163,89,0.4); }
+.alpha-btn.active { background: rgba(212,163,89,0.15); color: var(--gold-amber); border-color: var(--gold-amber); }
+.alpha-btn.has-animals { color: var(--sand-gold); }
+.alpha-btn.disabled { opacity: 0.25; cursor: default; pointer-events: none; }
+
+/* Animal list placeholder */
+.animal-list-wrap {
+  background: var(--bg-card);
+  border-radius: 6px;
+  padding: 24px;
+  border: 1px solid rgba(212,163,89,0.1);
+  min-height: 120px;
+}
+.animal-list-title {
+  font-size: 12px; letter-spacing: 2px; color: var(--gold-amber); text-transform: uppercase; margin-bottom: 16px;
+}
+.animal-tags {
+  display: flex; flex-wrap: wrap; gap: 8px;
+}
+.animal-tag {
+  background: rgba(212,163,89,0.07);
+  border: 1px solid rgba(212,163,89,0.18);
+  border-radius: 4px;
+  padding: 6px 14px;
+  font-size: 13px;
+  color: var(--text-white);
+  cursor: pointer;
+  transition: all .2s;
+  display: flex; align-items: center; gap: 6px;
+}
+.animal-tag:hover { background: rgba(212,163,89,0.15); border-color: var(--gold-amber); color: var(--gold-amber); }
+.animal-tag .en { font-size: 11px; color: var(--text-muted); }
+.animal-tag a { color: inherit; text-decoration: none; }
+.no-result { color: var(--text-muted); font-size: 14px; }
+
+/* ── GIRAFFE PROFILE ── */
+#giraffe-section {
+  background: var(--bg-dark);
+}
+
+.animal-profile {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 56px;
+  align-items: start;
+}
+@media (max-width: 768px) { .animal-profile { grid-template-columns: 1fr; } }
+
+/* Left: image + quick-stats */
+.profile-img-wrap {
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(212,163,89,0.2);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  position: relative;
+}
+.profile-img-wrap img {
+  width: 100%;
+  display: block;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  filter: saturate(0.95) brightness(0.95);
+}
+.img-caption {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(26,18,11,0.9));
+  padding: 32px 16px 14px;
+  font-size: 11px; color: var(--text-muted);
+  display: flex; justify-content: space-between;
+}
+.img-caption strong { color: var(--gold-amber); }
+
+.stat-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 16px;
+}
+.stat-item {
+  background: var(--bg-card);
+  border-radius: 5px;
+  padding: 14px 16px;
+  border: 1px solid rgba(212,163,89,0.1);
+}
+.stat-item .stat-label {
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;
+}
+.stat-item .stat-value {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 16px; font-weight: 600; color: var(--gold-amber);
+}
+.stat-item .stat-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+
+/* IUCN badge */
+.iucn-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(166,75,42,0.15);
+  border: 1px solid rgba(166,75,42,0.4);
+  border-radius: 4px;
+  padding: 8px 14px;
+  font-size: 12px;
+  color: var(--brick-light);
+  margin-top: 12px;
+}
+
+/* Right: content */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+}
+.profile-names {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(212,163,89,0.12);
+}
+.name-zh {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(30px, 5vw, 44px);
+  font-weight: 700;
+  color: var(--text-white);
+  line-height: 1.1;
+  margin-bottom: 6px;
+}
+.name-en {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(18px, 3vw, 26px);
+  font-style: italic;
+  color: var(--gold-amber);
+  margin-bottom: 4px;
+}
+.name-sw {
+  font-size: 13px; color: var(--text-muted); letter-spacing: 1px;
+}
+.name-sw strong { color: var(--sand-gold); }
+.name-sci {
+  font-size: 12px; color: var(--text-muted); font-style: italic;
+  margin-top: 6px;
+}
+
+/* Content tabs */
+.tabs {
+  display: flex; gap: 0; margin-bottom: 0;
+  border-bottom: 1px solid rgba(212,163,89,0.2);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab-btn {
+  padding: 10px 20px;
+  font-size: 13px;
+  font-family: 'Noto Sans TC', sans-serif;
+  cursor: pointer; color: var(--text-muted);
+  border: none; background: transparent;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition: all .2s;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.tab-btn:hover { color: var(--text-white); }
+.tab-btn.active { color: var(--gold-amber); border-bottom-color: var(--gold-amber); }
+
+.tab-panels { padding-top: 28px; }
+.tab-panel { display: none; }
+.tab-panel.active { display: block; }
+
+/* Text block */
+.prose p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.95;
+  margin-bottom: 14px;
+}
+.prose p strong { color: var(--text-white); }
+.prose p em { color: var(--sand-gold); font-style: normal; }
+
+/* Feature bullets */
+.feature-list {
+  list-style: none;
+  display: flex; flex-direction: column; gap: 12px;
+  margin: 20px 0;
+}
+.feature-list li {
+  display: flex; gap: 12px; align-items: flex-start;
+  font-size: 14px; color: var(--text-muted);
+}
+.feature-list li .fi {
+  flex-shrink: 0;
+  width: 28px; height: 28px;
+  background: rgba(212,163,89,0.1);
+  border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 14px;
+}
+.feature-list li strong { color: var(--text-white); }
+
+/* Highlight blockquote */
+.fun-fact {
+  background: var(--bg-card);
+  border-left: 3px solid var(--gold-amber);
+  border-radius: 0 6px 6px 0;
+  padding: 16px 20px;
+  margin: 24px 0;
+}
+.fun-fact .ff-label { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-amber); margin-bottom: 6px; }
+.fun-fact p { font-size: 14px; color: var(--text-muted); line-height: 1.8; margin: 0; }
+.fun-fact p strong { color: var(--text-white); }
+
+/* Habitat tags */
+.location-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+.loc-tag {
+  font-size: 12px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid rgba(90,120,83,0.4);
+  color: var(--safari-light);
+  background: rgba(90,120,83,0.1);
+}
+
+/* ── FOOTER頁尾 ── */
+footer {
+  background: #0F0A06;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 40px 16px;
+  font-size: 13px;
+  border-top: 1px solid rgba(212,163,89,0.1);
+}
+footer strong { color: var(--gold-amber); }
+
+/* ── ANIMATIONS動畫fade-up向上淡入 ── */
+@keyframes fadeUp {
+  from { opacity:0; transform: translateY(20px); }
+  to   { opacity:1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp .5s ease both; }
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="safari_homepage.html"><i class="fa-solid fa-house"></i> 首頁</a>
+  <span class="sep">/</span>
+  <a href="safari_homepage.html#nav-section"><i class="fa-solid fa-compass"></i> 遊獵指南</a>
+  <span class="sep">/</span>
+  <span class="current"><i class="fa-solid fa-hippo"></i> ANIMAL</span>
+</nav>
+
+<header class="hero">
+  <p class="hero-eyebrow">Safari Animal Field Guide</p>
+  <h1 class="hero-title">ANIMAL</h1>
+  <p class="hero-subtitle">WILDLIFE OF EAST AFRICA</p>
+  <p class="hero-desc">肯亞・坦尚尼亞 Safari 完整野生動物圖鑑<br>探索大草原上每一位令人屏息的居民</p>
+</header>
+
+<section id="coexist-section">
+<div class="section">
+  <h2 class="section-title">🌿 共存於東非大草原</h2>
+  <p class="section-sub">Sharing and Making Off the Available Resources</p>
+
+  <div class="coexist-wrap">
+    <div class="coexist-text fade-up">
+      <h2>
+        <small>Serengeti · The Art of Coexistence</small>
+        共享及區隔<br>利用資源
+      </h2>
+      <p>
+        大草原上的動物們<strong>逐水草而居</strong>，微觀分類學證使長頸鹿過去雖被視為單一物種，但最新粒線體 DNA 研究已劃分為 <strong>4 個獨立物種</strong>（北方、網紋、馬賽、南方長頸鹿）。在塞倫蓋提中，牠們與羚羊、斑馬不爭奪食物，完美展現食性分化。
+      </p>
+      <p>
+        牠們每天花 <strong>16-20 小時進食</strong>，因為長頸鹿吃高達 5.5 公尺的樹冠最高處葉片，斑馬咬食草頂芽部位，牛羚咬中等長度的草，剩下的短草則是瞪羚們的美食。
+      </p>
+      <p>
+        這種精巧的生態分工，稱為「<strong>食性分化（Resource Partitioning）</strong>」，而牠們在地球上現存最接近的親戚，是生活在中非雨林、同樣擁有發達預警深色長舌的<strong>㺢㹢狓 (Okapi)</strong>。
+      </p>
+
+      <div class="niche-grid">
+        <div class="niche-card">
+          <div class="animal-en">Giraffe</div>
+          <div class="animal-zh">🦒 長頸鹿</div>
+          <div class="niche-desc">取食樹冠最高處葉片，最高達 5.5 公尺</div>
+        </div>
+        <div class="niche-card green">
+          <div class="animal-en">Zebra</div>
+          <div class="animal-zh">🦓 斑馬</div>
+          <div class="niche-desc">咬食草叢頂芽，揭開其他動物難以取得的莖部</div>
+        </div>
+        <div class="niche-card brick">
+          <div class="animal-en">Wildebeest</div>
+          <div class="animal-zh">🐃 牛羚</div>
+          <div class="niche-desc">進食中等高度的草，大規模遷徙時構成壯觀獸潮</div>
+        </div>
+        <div class="niche-card sand">
+          <div class="animal-en">Gazelle</div>
+          <div class="animal-zh">🦌 瞪羚</div>
+          <div class="niche-desc">啃食地面矮短草及嫩芽，行動靈敏速度極快</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="coexist-illustration fade-up">
+      <div class="savanna-scene">
+        <!-- 替換原本的網路圖片為電腦本地端檔案名稱 -->
+        <img src="大草原食物食性分化.jpg" alt="[大草原食物食性分化]" loading="lazy">
+      </div>
+
+      <div class="food-band">
+        <span class="fb-title">食物分層</span>
+        <div class="fb-items">
+          <span class="fb-item">🦒 樹冠高葉</span>
+          <span class="fb-item">🦓 草頂芽莖</span>
+          <span class="fb-item">🐃 中高草叢</span>
+          <span class="fb-item">🦌 地面矮草</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="search-section">
+<div class="section">
+  <h2 class="section-title">🔍 動物搜尋</h2>
+  <p class="section-sub">按英文字母瀏覽，或直接輸入動物名稱搜尋</p>
+
+  <div class="search-box">
+    <input type="text" id="animalSearch" placeholder="輸入動物名稱，例：Giraffe、斑馬……" />
+    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+  </div>
+
+  <div class="alphabet-bar" id="alphabetBar"></div>
+
+  <div class="animal-list-wrap">
+    <div class="animal-list-title" id="listTitle">— 所有動物 —</div>
+    <div class="animal-tags" id="animalTagList"></div>
+  </div>
+</div>
+</section>
+
+<section id="giraffe-section">
+<div class="section">
+  <h2 class="section-title">🦒 動物介紹</h2>
+  <p class="section-sub">精選東非 Safari 必看物種深度解析</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b4/1993_147-3A_Samburu_reticulated_giraffe.jpg/500px-1993_147-3A_Samburu_reticulated_giraffe.jpg" alt="野生長頸鹿群體" loading="lazy" />
+        <div class="img-caption">
+          <span>網紋與馬賽物種 · Giraffe Species</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">♂ 身高</div>
+          <div class="stat-value">4.3 - 5.7 m</div>
+          <div class="stat-sub">雄性顯著高於雌性</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">1,192 kg</div>
+          <div class="stat-sub">♀ 平均約 828 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">舌頭長度</div>
+          <div class="stat-value">45 cm</div>
+          <div class="stat-sub">深藍紫色、無上門齒</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">蹄直徑</div>
+          <div class="stat-value">~ 30 cm</div>
+          <div class="stat-sub">偶蹄類、適合不同地面</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">進食比例</div>
+          <div class="stat-value">43% - 53%</div>
+          <div class="stat-sub">每日吃達 34 公斤樹葉</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外總數</div>
+          <div class="stat-value">約 8 萬頭</div>
+          <div class="stat-sub">部分亞種面臨滅絕危機</div>
+        </div>
+      </div>
+
+      <div class="iucn-badge">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危（Vulnerable，特定亞種瀕危）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+　　　<a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">長頸鹿</div>
+        <div class="name-en">Masai & Reticulated Giraffe</div>
+        <div class="name-sw">斯瓦希里語：<strong>Twiga</strong></div>
+        <div class="name-sci">Giraffa</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'tab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'tab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="tab-overview">
+          <div class="prose">
+            <p>
+              長頸鹿是<strong>地球上最高的陸地動物</strong>。過去傳統分類依據顏色、花紋與地理分佈將其分為 9 個亞種，但最新 **DNA 基因定序研究** 已將其重新獨立劃分為 <strong>4 個不同物種</strong>。
+            </p>
+            <p>
+              牠們身上獨特的花紋不只作為偽裝，深色斑塊下方更有著密集的**微血管網路**，能高效率地將熱量散發，具有極佳的<em>調節體溫</em>功能。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>45公分靈活黑舌：</strong>舌頭長且靈活，深色可防止採食時曬傷。牠們<strong>沒有上門齒</strong>，方便直接用齒墊快速扯下整串樹葉。</div>
+            </li>
+            <li>
+              <span class="fi">🍃</span>
+              <div><strong>7節頸椎的工程學：</strong>雖然脖子驚人地長，但牠們與人類及其他哺乳動物一樣<strong>只有 7 節頸椎</strong>，只是每一節都大幅拉長。</div>
+            </li>
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>高危險的喝水姿勢：</strong>因前肢極長，喝水時必須將雙腿大幅叉開甚至彎曲膝蓋。此時重心降低、視野受限，極易成為獅子或鱷魚突襲的目標。</div>
+            </li>
+            <li>
+              <span class="fi">♥️</span>
+              <div><strong>11公斤超級心臟：</strong>為逆著重力將血液送往大腦，左心室壁極厚，血壓是人類的 2~3 倍。顱底則有特殊的**壓力調節奇蹟血管網 (Rete Mirabile)**，能防止低頭時腦溢血。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>野生長頸鹿為了防範天敵突襲，每次入睡通常只有幾分鐘，每日總睡眠時間僅 <strong>1.9 至 4.6 小時</strong>，偶爾進入深度睡眠時才會將脖子向後彎曲貼在臀部！</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-behavior">
+          <div class="prose">
+            <p>
+              長頸鹿的一天極度規律，有高達 **43%–53% 的時間專注於進食**，27%–30% 的時間在進行反芻，並有少部分的社交行為。
+            </p>
+            <p>
+              牠們是群居動物，通常以母鹿及幼崽組成的**小型群體**形式生活，或是由無血緣關係的成年雄性組成鬆散的社交圈。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">⚔️</span>
+              <div><strong>頸鬥決決戰（Necking battles）：</strong>雄性會以脖子作為武器互相猛烈撞擊來建立社會階級。佔優勢的雄性可獲得與雌性的交配權。</div>
+            </li>
+            <li>
+              <span class="fi">👁️</span>
+              <div><strong>天敵防禦機制：</strong>主要天敵為獅子與豹（有時會受野狗、鬣狗攻擊）。母鹿會用極具威力的**前腿猛烈踢擊**來保護幼崽，甚至能利用沉重的脖子揮擊擊退威脅。</div>
+            </li>
+            <li>
+              <span class="fi">👣</span>
+              <div><strong>求偶裂唇嗅（Flehmen）：</strong>求偶儀式中，雄鹿會接近並舔拭母鹿的尿格以檢查其發情狀態，此時會出現特殊的翻唇嗅味行為。</div>
+            </li>
+            <li>
+              <span class="fi">👶</span>
+              <div><strong>20分鐘的生命奇蹟：</strong>雌鹿通常**站立分娩**。初生幼崽身高即有 170-200 公分、體重達 60 公斤，且在出生後短短 5 至 20 分鐘內就能奇蹟般地站立起來。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>長頸鹿身上共生著許多**牛椋鳥 (Oxpecker birds)**，鳥類會棲息在牠們的背部與頸部，啄食皮膚上的蜱蟲與寄生蟲，兩者維持著非常完美的互利共生關係。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-where">
+          <div class="prose">
+            <p>根據不同的野生版圖，東非各地區分布著截然不同的長頸鹿物種。本次 Safari 沿途將帶您見證牠們的棲地奇蹟：</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞北部與中部地區（網紋長頸鹿 Reticulated Giraffe）</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Northern Somalia</span>
+                  <span class="loc-tag">Southern Ethiopia</span>
+                  <span class="loc-tag">Northern Kenya</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>肯亞中南部與坦尚尼亞全境（馬賽長頸鹿 Masai Giraffe）</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Tarangire NP</span>
+                  <span class="loc-tag">Ngorongoro CA</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>網紋長頸鹿是體型最大的亞種之一</strong>。其幾何網格狀的橘紅線條極為清晰，與斑紋邊緣呈現不規則鋸齒狀的馬賽長頸鹿形成鮮明對比。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>捕捉長頸鹿叉開雙腿在水池低頭喝水的倒影畫面，或是捕捉公鹿之間揮動脖子進行「頸鬥 battles」的動態瞬間，是獵遊行程中最珍計的攝影視角。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>分辨雌雄與年齡：</strong>雄性的**骨質角 (ossicone)** 頂端因頻繁決鬥而毛發磨光、呈厚重圓球狀；雌性與幼崽的角頂則較為細弱且帶有一束黑毛。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>觀察項部項韌帶：</strong>長頸鹿之所以能靈活揮動沉重的頭頸部，全靠頸後極為發達、與肌肉共同支撐的**項韌帶 (Nuchal ligament)**，這也是拍攝牠們奔馳力學時的視覺焦點。</div>
+            </li>
+            <li>
+              <span class="fi">⏰</span>
+              <div><strong>注意共生警訊：</strong>當發現長頸鹿背上的**牛椋鳥**突然成群飛起或發出鳴叫時，通常代表附近草叢有隱蔽的獅群等大型掠食者靠近。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>動物園 vs. 野外習性：</strong>在野生環境下牠們因警戒天敵而睡眠極短；相反地，若在沒有掠食者威脅的動物園內，長頸鹿就能逐漸放鬆警惕，每日平均睡眠會大幅拉長到 4 至 6 小時。</div>
+            </li>
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>注意礦物質攝取：</strong>在稀樹草原中，若發現長頸鹿罕見地低頭**吃土**，不要驚慌，這是牠們在補充身體所需的礦物質成分。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>目前野生長頸鹿總數約 8 萬頭，網紋長頸鹿等特定物種由於棲地破碎化，急需進行立即性的保護。了解牠們的生態分工與生理工程，是支持非洲生態保育的第一步。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="hippo-section">
+<div class="section">
+  <h2 class="section-title">🦛 動物介紹</h2>
+  <p class="section-sub">精選東非 Safari 必看物種深度解析</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/Hippo_pod_edit.jpg/1280px-Hippo_pod_edit.jpg" alt="野生河馬" loading="lazy" />
+        <div class="img-caption">
+          <span>河馬沉浴 · Hippo in Water</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">♂ 身長</div>
+          <div class="stat-value">3.3 - 5.2 m</div>
+          <div class="stat-sub">雄性顯著大於雌性</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">1,500 - 3,000 kg</div>
+          <div class="stat-sub">♀ 平均約 1,300 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">奔跑速度</div>
+          <div class="stat-value">48 km/h</div>
+          <div class="stat-sub">陸地短距離衝刺</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">憋氣時間</div>
+          <div class="stat-value">5 - 7 分鐘</div>
+          <div class="stat-sub">水中可自動閉合鼻孔</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">每日進食</div>
+          <div class="stat-value">約 35 - 40 kg</div>
+          <div class="stat-sub">夜間在陸地草地進食</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外族群</div>
+          <div class="stat-value">約 11.5 萬頭</div>
+          <div class="stat-sub">族群逐年下降中</div>
+        </div>
+      </div>
+
+      <div class="iucn-badge">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危（Vulnerable）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+　　　<a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">河馬</div>
+        <div class="name-en">Common Hippopotamus</div>
+        <div class="name-sw">斯瓦希里語：<strong>Kiboko</strong></div>
+        <div class="name-sci">Hippopotamus amphibius</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'htab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'htab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'htab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'htab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="htab-overview">
+          <div class="prose">
+            <p>
+              河馬是<strong>世界上最危險的大型陸地動物之一</strong>，儘管外表笨重溫和，每年因河馬攻擊而喪生的人數遠超獅子或豹。牠們是<em>半水棲哺乳動物</em>，白天在水中保持涼爽，夜間才上岸覓食。
+            </p>
+            <p>
+              河馬在演化上最近的親戚令人驚訝——竟是<strong>鯨豚類（Cetaceans）</strong>，包括鯨魚與海豚，兩者約在 5,500 萬年前共享同一祖先，屬於「鯨偶蹄目（Whippomorpha）」。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>天然防曬乳——血汗（Bloodsweat）：</strong>皮膚會分泌一種紅色油性液體，俗稱「血汗」，實為含有<strong>河馬酸（hipposudoric acid）</strong>的天然防曬物質，同時具有抗菌功能，是牠們在水中長時間保持皮膚健康的秘訣。</div>
+            </li>
+            <li>
+              <span class="fi">🦷</span>
+              <div><strong>致命的犬齒武器：</strong>河馬的下犬齒（獠牙）最長可達 <strong>50 公分</strong>，不用於進食，而是用於雄性之間的領域爭奪與打鬥，咬合力極為驚人，可輕易咬斷小型船隻。</div>
+            </li>
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>夜行陸地覓食者：</strong>雖然河馬整天泡在水中，但牠們<strong>並非水中進食</strong>。日落後會離水上岸，沿著固定的「河馬小徑（hippo paths）」步行數公里，在草地大量啃食青草，天亮前返回水中。</div>
+            </li>
+            <li>
+              <span class="fi">🔊</span>
+              <div><strong>水陸雙頻溝通：</strong>河馬的咆哮聲可達 <strong>115 分貝</strong>，能在水面上下同時傳遞。牠們以特殊的聲音進行族群溝通與領域警告，是非洲大草原上音量最大的動物之一。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>河馬雖然體型龐大，卻<strong>完全不會游泳</strong>！牠們是靠著在水底行走或彈跳來移動，利用身體的浮力在水中漂浮，可以直接在河床上睡覺，鼻孔會自動反射性地浮出水面換氣。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="htab-behavior">
+          <div class="prose">
+            <p>
+              河馬是<strong>高度社會化的動物</strong>，通常以 10 到 30 頭組成「河馬群（pod/bloat）」，由一頭主宰雄性統治整個水域領地。雌性與幼崽構成群體核心，雄性守衛周邊邊界。
+            </p>
+            <p>
+              河馬的領土意識極強，任何侵入其水域的動物——無論是鱷魚還是人類船隻——都可能遭到毫無預警的猛烈攻擊。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">⚔️</span>
+              <div><strong>雄性領域戰（Territory battles）：</strong>爭奪水域控制權的雄性之間會發生激烈的正面衝突，用巨大的獠牙互相撕咬，打鬥傷口往往深可見骨。勝者取得與族群雌性的交配優先權。</div>
+            </li>
+            <li>
+              <span class="fi">👶</span>
+              <div><strong>水中哺乳：</strong>雌河馬通常在淺水中生產，幼崽出生後即能游泳。幼河馬在水中哺乳時會關閉耳朵與鼻孔，整個哺乳過程完全在水下進行。</div>
+            </li>
+            <li>
+              <span class="fi">☀️</span>
+              <div><strong>曬太陽的社交時光：</strong>清晨與傍晚，河馬群會大量集中在河岸淺灘或沙洲上，互相擠靠曬太陽——這是族群中最重要的社交時光，也是觀察與拍攝的最佳時機。</div>
+            </li>
+            <li>
+              <span class="fi">💩</span>
+              <div><strong>糞便領域標記：</strong>雄性河馬進行領域標記時，會一邊排便一邊用尾巴快速旋轉，將糞便散布到盡可能廣的範圍，以此宣示主權範圍。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>河馬是河川生態系的<strong>「生態工程師」</strong>。大量的河馬糞便為河流注入豐富的有機養分，滋養浮游生物與魚類，支撐整個水域食物鏈；牠們踩踏出的「河馬小徑」也成為其他動物前往水源的重要通道。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="htab-where">
+          <div class="prose">
+            <p>河馬需要深水域保持皮膚濕潤，並且需要附近有豐茂草地供夜間覓食。東非各主要保護區的河流與湖泊旁均有機會見到。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞馬賽馬拉（Masai Mara）——馬拉河岸</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Mara River</span>
+                  <span class="loc-tag">Talek River</span>
+                  <span class="loc-tag">Hippo Pool</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞塞倫蓋提及恩戈羅恩戈羅</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Ngorongoro Crater Lake</span>
+                  <span class="loc-tag">Lake Manyara NP</span>
+                  <span class="loc-tag">Ruaha NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>恩戈羅恩戈羅火山口湖</strong>是觀賞河馬的絕佳地點，火山口底部的淺湖中常見數十頭河馬集體棲息，與火烈鳥同框共浴的奇景極為難得。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>清晨日出後，河馬群大量聚集在淺灘曬太陽，是拍攝族群行為的黃金時段。傍晚時分可守候水岸邊，等待牠們一一爬上岸邊準備夜間覓食的出行畫面，逆光剪影效果絕佳。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="htab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">⚠️</span>
+              <div><strong>絕對保持安全距離：</strong>河馬是<strong>非洲最危險的動物之一</strong>。在陸地上，當牠們張開大嘴做出哈欠動作時，這是嚴重的<strong>威脅警告</strong>，而非疲倦。請立即告知導遊並保持車輛距離。</div>
+            </li>
+            <li>
+              <span class="fi">🚤</span>
+              <div><strong>乘船注意事項：</strong>若進行河上遊船觀賞，請嚴格遵從導覽人員指示，不得在河馬棲息水域靠近或停泊。受到威脅的河馬可以直接掀翻小型獨木舟。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>觀察最佳時段：</strong>清晨（06:00–08:00）與傍晚（17:00–19:00）是河馬活動的高峰期，此時牠們在水岸邊的行為最為豐富，也是安全觀賞與拍攝的最佳時機。</div>
+            </li>
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>用聽覺感知牠的存在：</strong>河馬深沉的咆哮聲與噴水聲，在靜謐的清晨可傳遞很遠，若在河岸附近聽見這種低頻轟鳴聲，代表河馬群就在附近。</div>
+            </li>
+            <li>
+              <span class="fi">📏</span>
+              <div><strong>辨認公母：</strong>雄性河馬體型明顯較大，頭部更寬闊，鼻口部更為突出。觀察水中漂浮的個體，若頭部明顯大且有明顯的戰鬥傷疤，通常是成年雄性的特徵。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>河馬因象牙貿易（其犬齒）、棲地喪失與人類衝突，族群數量持續下降，目前野外約存有 11.5 萬頭。許多保護區積極實施<strong>反盜獵巡邏</strong>與棲地保護計畫，旅客的到訪也直接支持了當地的保育經濟。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="elephant-section">
+<div class="section">
+  <h2 class="section-title">🐘 動物介紹</h2>
+  <p class="section-sub">精選東非 Safari 必看物種深度解析</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/37/African_Bush_Elephant.jpg/500px-African_Bush_Elephant.jpg" alt="野生非洲象" loading="lazy" />
+        <div class="img-caption">
+          <span>非洲草原象 · African Bush Elephant</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">♂ 肩高</div>
+          <div class="stat-value">3.2 - 4.0 m</div>
+          <div class="stat-sub">陸地最高的動物之一</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">5,000 - 6,000 kg</div>
+          <div class="stat-sub">陸地最重的動物</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">象牙長度</div>
+          <div class="stat-value">最長 3.5 m</div>
+          <div class="stat-sub">雄性象牙重達 45 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">鼻子肌肉</div>
+          <div class="stat-value">約 40,000 條</div>
+          <div class="stat-sub">可抬起 300 kg 重物</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">每日進食</div>
+          <div class="stat-value">130 - 170 kg</div>
+          <div class="stat-sub">每日飲水 150-200 升</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外族群</div>
+          <div class="stat-value">約 41.5 萬頭</div>
+          <div class="stat-sub">較歷史峰值大幅減少</div>
+        </div>
+      </div>
+
+      <div class="iucn-badge">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危（Vulnerable）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+　　　<a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">非洲象</div>
+        <div class="name-en">African Bush Elephant</div>
+        <div class="name-sw">斯瓦希里語：<strong>Tembo / Ndovu</strong></div>
+        <div class="name-sci">Loxodonta africana</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'etab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'etab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'etab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'etab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="etab-overview">
+          <div class="prose">
+            <p>
+              非洲草原象是<strong>地球上現存最大的陸地動物</strong>，也是東非 Safari 中令人震撼的核心物種。牠們不僅體型龐大，更以高度的<em>智慧與複雜社會結構</em>著稱，被科學家視為最接近人類情感複雜度的非靈長類動物。
+            </p>
+            <p>
+              非洲象分為兩個獨立物種：<strong>非洲草原象（Bush Elephant）</strong>與較小的<strong>非洲森林象（Forest Elephant）</strong>，兩者在 DNA 層面的差異不亞於獅子與老虎。本次 Safari 所見皆為草原象。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌡️</span>
+              <div><strong>大耳朵是天然冷氣機：</strong>非洲象巨大的耳廓內佈滿密集血管，耳朵面積可達 <strong>1.5 平方公尺</strong>。當牠們扇動耳朵時，流經的血液可降溫高達 <strong>10°C</strong>，是在酷熱草原上維持體溫的精密散熱系統。</div>
+            </li>
+            <li>
+              <span class="fi">🦷</span>
+              <div><strong>一生換六次臼齒：</strong>象的牙齒採「<strong>水平替換</strong>」方式，新牙從後方長出推動舊牙脫落，一生共替換六組臼齒。最後一組臼齒磨盡後，象便無法再進食，這也是大多數老象最終的死亡原因。</div>
+            </li>
+            <li>
+              <span class="fi">🔊</span>
+              <div><strong>次聲波的祕密通訊：</strong>除了可聽見的咆哮聲，非洲象還能發出人耳無法察覺的<strong>次聲波（14–35 Hz）</strong>，透過地面震動傳遞，通訊距離可達 <strong>10 公里</strong>以上，是族群間遠距協調的重要方式。</div>
+            </li>
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>象鼻的工程奇蹟：</strong>象鼻由約 <strong>40,000 條肌肉</strong>組成（人類全身肌肉約 639 條），能精細地拾起地上一根細針，又能抬起 300 公斤的重木，還可吸入 <strong>8–10 升</strong>水後精準噴灑，是進化史上最全能的多用途器官。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>非洲象是少數被科學記錄到有<strong>哀悼儀式</strong>的動物。牠們會在同伴死亡後徘徊遺體旁，用鼻子輕觸遺骨，甚至搬運並埋藏遺骨——即便是面對陌生象群的遺骸，這種行為依然會發生，展現出令人動容的情感深度。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="etab-behavior">
+          <div class="prose">
+            <p>
+              非洲象社會以<strong>母系家族（Matriarchal family）</strong>為核心單位，通常由一頭年長的母象（Matriarch）帶領 8–15 頭有血緣關係的母象與幼象共同生活。年長母象積累數十年的知識——水源位置、天敵威脅、遷徙路線——對族群存亡至關重要。
+            </p>
+            <p>
+              成年雄象（公象）通常獨居或組成<strong>鬆散的雄性群體（Bachelor herd）</strong>，只在發情期「狂暴期（Musth）」短暫加入母群交配。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">👑</span>
+              <div><strong>母象家長制（Matriarchy）：</strong>最年長的母象擁有最高社會地位，她的決策影響族群的每日移動、飲水與危機應對。研究顯示，有經驗母象帶領的族群幼象存活率顯著更高。</div>
+            </li>
+            <li>
+              <span class="fi">🤝</span>
+              <div><strong>互助育幼系統（Allomothering）：</strong>幼象由整個家族共同照顧，非生母的「阿姨象（Allomothers）」會主動幫助照顧、保護幼崽，甚至哺乳。這種集體育幼行為在動物界極為罕見。</div>
+            </li>
+            <li>
+              <span class="fi">🌊</span>
+              <div><strong>狂暴期（Musth）的雄象：</strong>成年雄象每年進入 Musth 期時，睪酮素濃度暴增至平時的 60 倍，顳腺（太陽穴）會分泌大量黑色黏液，行為變得極度具侵略性，此時連其他大象都會迴避牠。</div>
+            </li>
+            <li>
+              <span class="fi">🎵</span>
+              <div><strong>豐富的情感表達：</strong>科學家已記錄到非洲象的<strong>喜悅、悲傷、憤怒、同理心</strong>等多種情緒行為，包括重逢時的歡呼擁抱、幼象死亡時的長時間守靈，以及面鏡子時的自我認知反應。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態工程師</div>
+            <p>非洲象被稱為草原的<strong>「生態工程師（Keystone Species）」</strong>。牠們推倒樹木創造草地開口，供斑馬與羚羊取食；踩踏出的象道成為其他動物的通路；糞便中未消化的種子則讓植物傳播到幾十公里外，一頭象每年可傳播逾 <strong>300 種植物種子</strong>。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="etab-where">
+          <div class="prose">
+            <p>非洲草原象廣布於東非各大保護區，對水源依賴極高，通常活動於河流、湖泊與泥沼附近。本次行程將有多次機會近距離觀賞。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞安博塞利國家公園（Amboseli NP）</strong>——全東非最佳賞象地點，以乞力馬扎羅雪山為背景的象群合影舉世聞名
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Amboseli NP</span>
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Tsavo NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞塔蘭吉雷國家公園（Tarangire NP）</strong>——乾季時象群集中密度為東非之冠，壯觀程度令人屏息
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Tarangire NP</span>
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Ngorongoro CA</span>
+                  <span class="loc-tag">Lake Manyara NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>馬亞拉湖國家公園（Lake Manyara NP）</strong>以「<strong>爬樹的獅子</strong>」著名，同時也是觀賞象群在湖畔戲水的絕佳地點，黃昏時分的象群倒影是難得的攝影機會。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>清晨象群前往水源地飲水是一天中最精彩的畫面。當象群聚集在泥沼中洗澡、互相潑水，幼象在大象腿間嬉戲奔跑——這些溫馨的家族互動，往往比任何壯麗景色都更令人難以忘懷。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="etab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>讀懂耳朵語言：</strong>大象<strong>張開耳朵</strong>並面向你，是<em>威脅警告</em>的展示行為（Threat display）；若同時低頭、甩鼻，代表情緒升級，請立刻告知導遊保持距離。耳朵貼緊身體通常表示放鬆與平靜。</div>
+            </li>
+            <li>
+              <span class="fi">🐘</span>
+              <div><strong>辨別真假衝鋒：</strong>象的衝鋒分<strong>假衝（Mock charge）</strong>與<strong>真衝（Full charge）</strong>。假衝通常大張耳朵並在半途停下；真衝則耳朵緊貼、頭部低垂、目光直盯，此時車輛必須立即後退撤離。</div>
+            </li>
+            <li>
+              <span class="fi">🚗</span>
+              <div><strong>幼象的保護圈：</strong>若象群中有幼象，成年象的警戒心會大幅提高。車輛不應過於靠近幼象，更不可切斷幼象與其母親之間的路線，這可能激發整群象的集體防衛反應。</div>
+            </li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨認公母與年齡：</strong>雄象體型顯著更大，頭頂更圓隆，象牙通常更長更粗。老年母象（Matriarch）通常是族群中體型最大的雌性，她的行進方向即為整個家族的移動方向。</div>
+            </li>
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>象牙的悲劇故事：</strong>非洲象在過去一個世紀因象牙盜獵，族群從約 <strong>500 萬頭</strong>銳減至今日約 <strong>41.5 萬頭</strong>。許多肯亞、坦尚尼亞的象群已進化出較小的象牙甚至無牙個體，這是人類選擇壓力在短短幾代內改變物種演化方向的震撼案例。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>1989 年 CITES《華盛頓公約》全面禁止象牙國際貿易後，非洲象族群逐步恢復，但<strong>非法盜獵</strong>與<strong>人象衝突</strong>至今仍是最大威脅。肯亞大衛謝爾德里克野生動物基金會（DSWT）等機構長期救援孤兒象，若有機會，可安排前往內羅畢的孤兒象計畫參觀。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="buffalo-section">
+<div class="section">
+  <h2 class="section-title">🐃 動物介紹</h2>
+  <p class="section-sub">精選東非 Safari 必看物種深度解析</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/66/Serengeti_Bueffel1.jpg/1280px-Serengeti_Bueffel1.jpg" />
+        <div class="img-caption">
+          <span>非洲水牛 · African Buffalo</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">♂ 肩高</div>
+          <div class="stat-value">1.3 - 1.7 m</div>
+          <div class="stat-sub">體型壯碩，重心低</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">500 - 900 kg</div>
+          <div class="stat-sub">雌性體型稍小</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">角展寬度</div>
+          <div class="stat-value">達 1 m</div>
+          <div class="stat-sub">基部癒合呈「盾」狀</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">領地行為</div>
+          <div class="stat-value">高度防禦</div>
+          <div class="stat-sub">保護弱小極具攻擊性</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">每日進食</div>
+          <div class="stat-value">約 2% 體重</div>
+          <div class="stat-sub">主要為草本植物</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外總數</div>
+          <div class="stat-value">約 90 萬頭</div>
+          <div class="stat-sub">分布廣泛且穩定</div>
+        </div>
+      </div>
+
+      <div class="iucn-badge">
+        <i class="fa-solid fa-circle-check"></i>
+        IUCN 紅色名錄：<strong>無危（Least Concern）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">非洲水牛</div>
+        <div class="name-en">Cape Buffalo</div>
+        <div class="name-sw">斯瓦希里語：<strong>Mbogo</strong></div>
+        <div class="name-sci">Syncerus caffer</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'btab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'btab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'btab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'btab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="btab-overview">
+          <div class="prose">
+            <p>非洲水牛是非洲「五霸 (The Big Five)」之一，以其<strong>強悍、不服輸的性格</strong>聞名。牠們是極成功的群居動物，對掠食者展現出高度的防禦警覺。</p>
+            <p>不同於家牛，非洲水牛從未被人類馴化，其不可預測的攻擊性與強大的團結力，使牠們成為獅群最棘手的獵物之一。</p>
+            <p>水牛屬於<strong>草食性反芻動物</strong>，每天需要長達 8～10 小時持續進食，以維持龐大的體型所需的能量需求。牠們對水源依賴極高，每天都需飲水，因此族群移動路線往往與水源地高度重疊。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🛡️</span>
+              <div><strong>盔甲般的頭盾 (Boss)：</strong>雄性水牛的雙角基部向中央癒合，形成厚重的骨質角盾，稱為「Boss」。這是判斷雄性成熟程度的重要依據——Boss 越平整寬闊，代表該個體越年長、地位越高。</div>
+            </li>
+            <li>
+              <span class="fi">🐂</span>
+              <div><strong>嚴密的社會紀律：</strong>水牛群展現出類似軍隊的戰術，當族群受到威脅時，成年水牛會向外排列成防禦陣型，將幼牛包圍在中心，並以集體低吼聲威嚇掠食者。</div>
+            </li>
+            <li>
+              <span class="fi">🧠</span>
+              <div><strong>驚人的記憶力：</strong>水牛被認為具有高度記憶能力，能記住曾攻擊過自己的獵食者或人類，並在數年後仍具報復行為的記錄，被稱為草原上最「記仇」的動物。</div>
+            </li>
+            <li>
+              <span class="fi">🐦</span>
+              <div><strong>共生夥伴——黃嘴牛椋鳥：</strong>常見黃嘴牛椋鳥 (Yellow-billed Oxpecker) 站在水牛背上，啄食寄生蟲與傷口中的蠅蛆，雙方形成著名的共生關係——牛椋鳥獲得食物，水牛獲得清潔服務。</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="btab-behavior">
+          <div class="prose">
+            <p>水牛的社會結構由<strong>成年母牛擔任核心領袖</strong>，族群決策往往依賴「多數意見」——當族群需要決定移動方向時，個體水牛會朝目標方向站立，其他成員統計後再集體行動，被研究者戲稱為「民主投票」。</p>
+            <p>當遭遇獅群攻擊時，水牛甚至會主動反擊。2007 年在克魯格國家公園拍攝的「水牛之戰 (Battle at Kruger)」影片中，完整記錄了一群水牛成功從獅口奪回幼牛的震撼場面，至今仍是 YouTube 史上最多人觀看的野生動物影片之一。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">💨</span>
+              <div><strong>集體防禦策略：</strong>水牛群在受威脅時展現出的「團結互助」行為極為壯觀，成年水牛會低頭並將鋒利牛角對準掠食者進行集體反衝，就連獅子也會被迫退讓。</div>
+            </li>
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>夜間移動與晨間休息：</strong>水牛習慣在夜間或清晨趁涼溫進行大規模移動與進食，日出後則常見牠們臥於泥灘或樹蔭下反芻休息。這種作息節奏使牠們在清晨 Safari 時最容易被發現。</div>
+            </li>
+            <li>
+              <span class="fi">🪖</span>
+              <div><strong>老年雄牛「退休群」(Dagga Boys)：</strong>年老或被群體驅逐的雄牛，往往會形成 3～15 頭的小型獨立群體，稱為「Dagga Boys」（源自祖魯語「泥巴」）。牠們性情最為暴躁易怒，是 Safari 中最危險的遭遇之一。</div>
+            </li>
+            <li>
+              <span class="fi">🎵</span>
+              <div><strong>豐富的聲音語言：</strong>水牛擁有多樣的溝通聲音——低沉的「哞」聲代表移動訊號，短促的「嗯哼」聲是警戒呼叫，而連續高頻叫聲則代表族群成員遭受攻擊，可在數公里外被同伴聽到並引發馳援。</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="btab-where">
+          <div class="prose">
+            <p>非洲水牛對水源的需求量大，因此廣泛分布於肯亞與坦尚尼亞各大河岸、草原與林地邊緣。乾旱季節（6～10 月）時，水牛族群會向水源地集中，此時最容易在同一地點觀察到數百甚至數千頭的壯觀聚集場面。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div><strong>馬賽馬拉 (Masai Mara)：</strong>常見數千頭組成的壯觀大遷徙部隊。馬拉河沿岸是水牛飲水與泥浴的核心地帶，清晨時分常可見整個族群齊聚河邊，蔚為壯觀。7～10 月遷徙季尤佳。</div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div><strong>塞倫蓋提 (Serengeti)：</strong>常在清晨聚集於沼澤區，與大象、河馬共同棲息。北部 Lamai 區在乾季可見超過萬頭的超大型族群，是非洲最壯觀的水牛聚集點之一。</div>
+            </li>
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>安波塞利 (Amboseli)：</strong>以乞力馬扎羅山為背景，水牛族群常出現於濕地邊緣。獨特的景觀讓這裡成為兼顧攝影與觀察的絕佳地點，雪山倒映水牛剪影是夢幻的構圖場景。</div>
+            </li>
+            <li>
+              <span class="fi">🌊</span>
+              <div><strong>塔蘭吉雷 (Tarangire)：</strong>旱季時塔蘭吉雷河成為唯一水源，吸引大批水牛定期聚集。這裡的水牛族群因接觸遊客頻率高，相對較不敏感，適合靜態長時間觀察。</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="btab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">⚠️</span>
+              <div><strong>讀懂警戒訊號：</strong>被稱為「黑死神 (Black Death)」的水牛在 Safari 中雖然看起來平靜，但牠們若發現車輛太近而停下並「盯著你看」，同時伴隨鼻子朝天仰起嗅風，這是極高的危險訊號，應立即緩慢後退保持距離。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>拍攝技巧：</strong>水牛喜歡成群在陽光下活動，利用廣角鏡頭捕捉整個族群移動的陣勢，比單拍一隻水牛更有震撼力。清晨的金色光線下拍攝族群剪影，效果尤為出色。</div>
+            </li>
+            <li>
+              <span class="fi">🕐</span>
+              <div><strong>最佳觀察時段：</strong>清晨 6:00－8:30 是水牛最活躍的時段，此時牠們正移動至水源地飲水或進行集體進食。黃昏前的 16:00－18:30 也是另一個高活躍窗口，且光線最適合攝影。</div>
+            </li>
+            <li>
+              <span class="fi">👃</span>
+              <div><strong>風向很重要：</strong>水牛視力不佳，但嗅覺極為靈敏。Safari 車隊應保持在水牛的順風側行進，避免牠們嗅到人的氣味而引起警戒或衝撞。專業導遊在停車觀察前都會先確認當下風向。</div>
+            </li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>尋找 Dagga Boys：</strong>如果你想近距離觀察雄性水牛最典型的威嚇姿態，可以請導遊帶你尋找在林地邊緣活動的老年雄牛小群體。牠們常獨自在水窪旁泥浴，且因好奇心而常主動靠近車輛，提供極近的拍攝機會，但務必謹慎不要下車。</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="lion-section">
+<div class="section">
+  <h2 class="section-title">🦁 動物介紹</h2>
+  <p class="section-sub">草原之王：頂級掠食者的生存哲學</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <!-- 請確認該路徑可正常顯示 -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/73/Lion_waiting_in_Namibia.jpg/500px-Lion_waiting_in_Namibia.jpg" alt="非洲獅" loading="lazy" />
+        <div class="img-caption">
+          <span>非洲獅 · African Lion</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">150 - 250 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">狩獵時間</div>
+          <div class="stat-value">夜間/晨昏</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">睡眠時間</div>
+          <div class="stat-value">16 - 20 小時</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">族群單位</div>
+          <div class="stat-value">獅群 (Pride)</div>
+        </div>
+      </div>
+      
+      <div class="iucn-badge">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危 (Vulnerable)</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">獅子</div>
+        <div class="name-en">Lion</div>
+        <div class="name-sw">斯瓦希里語：<strong>Simba</strong></div>
+        <div class="name-sci">Panthera leo</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'ltab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ltab-behavior')">狩獵技巧</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ltab-where')">分布區域</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ltab-tips')">Safari 小技巧</button>
+      </div>
+      <div class="tab-panels">
+        <div class="tab-panel active" id="ltab-overview">
+          <div class="prose">
+            <p>獅子是貓科中<strong>唯一具有高度社會性</strong>的動物，透過「獅群（Pride）」制度共同狩獵、育雛、防禦領地。一個典型的獅群由 1～4 頭雄獅、數頭雌獅，以及牠們的幼獅組成，成員間的合作關係極為緊密。</p>
+            <p>強大的鬃毛不僅是雄獅最具辨識度的外觀特徵，更是<strong>健康、基因優勢與地位的象徵</strong>。研究發現，鬃毛越黑越濃密，代表雄激素水平越高，對雌獅的吸引力也越強；但在炎熱地區，過重的鬃毛反而會影響散熱，因此東非獅的鬃毛通常比南非獅略為稀疏。</p>
+            <p>目前全球野生獅子數量已從 20 世紀初的超過 20 萬頭，急劇下降至約 <strong>2 萬頭</strong>，棲地喪失、獵物減少與人獅衝突是主要威脅。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">👑</span>
+              <div><strong>貓科中的「社會主義者」：</strong>不同於其他獨居貓科，獅群的核心是母系血緣群體——雌獅之間往往是姊妹、母女關係，共同哺乳與照顧幼獅。這種合作制度大幅提升了幼獅的存活率。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>日間的「懶惰之王」：</strong>獅子每天有高達 20 小時處於睡眠或靜止狀態，以保存能量應對激烈的夜間狩獵。白天的 Safari 中常見牠們癱軟在樹蔭下，完全無視周圍車輛，展現出「王者的淡定」。</div>
+            </li>
+            <li>
+              <span class="fi">🔊</span>
+              <div><strong>震撼人心的吼叫：</strong>獅吼聲可達 114 分貝，並傳遞至 8 公里外，是自然界最具震懾力的聲音之一。清晨或黃昏時分，領地邊界的獅群往往會以連串呼嘯宣告存在，對 Safari 旅人而言是畢生難忘的體驗。</div>
+            </li>
+            <li>
+              <span class="fi">⚔️</span>
+              <div><strong>雄獅的高風險人生：</strong>成年雄獅通常在 2～3 歲時被趕出原生獅群，此後成為「流浪聯盟（Coalition）」，四處尋覓機會入侵並接管他群。這段流浪期危機四伏，大多數雄獅在 10 歲前便因戰鬥傷亡或飢餓而死。</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 狩獵技巧 -->
+        <div class="tab-panel" id="ltab-behavior">
+          <div class="prose">
+            <p>狩獵工作主要由<strong>雌獅協力完成</strong>。雌獅體型輕盈敏捷，擁有更高的衝刺速度與耐力，且不像雄獅因鬃毛而容易在接近獵物時暴露目標。</p>
+            <p>典型的獅群狩獵是一場精密的<strong>戰術分工</strong>：部分雌獅擔任「驅趕者」，從側翼包抄並向特定方向驅趕獵物；另一部分則擔任「伏擊者」，提前潛伏在獵物逃跑路線的前方靜待時機。這種分工使獅群能對付斑馬、水牛等體型遠大於自身的獵物。</p>
+            <p>然而，即便如此縝密的策略，獅群的<strong>狩獵成功率仍僅約 20～30%</strong>。一旦成功捕獵，雄獅往往第一個進食，儘管牠們幾乎不參與捕獵過程，這一行為也引發研究者關於公平性的大量討論。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>夜視的絕對優勢：</strong>獅子的視網膜具有特殊的「tapetum lucidum」反光層，夜視能力是人類的 6 倍。這使牠們在月黑風高的夜晚擁有壓倒性的優勢，而獵物的視野卻大受限制。</div>
+            </li>
+            <li>
+              <span class="fi">🎯</span>
+              <div><strong>精準鎖定弱點：</strong>獅群在發動攻擊前往往會長時間觀察獵物群，優先鎖定老弱病殘個體——跛行、落單、年幼，或是有寄生蟲導致行動遲緩的個體。這種選擇性狩獵在客觀上維持了生態系統的健康結構。</div>
+            </li>
+            <li>
+              <span class="fi">💨</span>
+              <div><strong>短跑衝刺而非長途追逐：</strong>獅子的最高衝刺速度可達 80 km/h，但僅能維持約 300 公尺。因此，牠們的策略是盡可能潛行至距獵物 30 公尺內，再發動短促的致命衝刺，而非像獵豹一樣進行長距離追逐。</div>
+            </li>
+            <li>
+              <span class="fi">🤝</span>
+              <div><strong>雄獅在狩獵中的角色：</strong>雄獅雖然較少參與主動追獵，但在圍捕水牛、長頸鹿等大型獵物時，其巨大體型與力量扮演「壓制者」的關鍵角色。研究也顯示，在灌木叢茂密的地區，雄獅的狩獵頻率其實與雌獅相當。</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 分布區域 -->
+        <div class="tab-panel" id="ltab-where">
+          <div class="prose">
+            <p>在塞倫蓋提與馬賽馬拉的廣闊草原上，牠們常棲息於金合歡樹下避暑，或在岩石高處巡視領地。東非的保護區是目前全球獅子密度最高、觀察機會最多的地點。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div><strong>塞倫蓋提 (Serengeti)：</strong>全球獅子密度最高的區域之一，估計棲息超過 3,000 頭。北部 Seronera 地區的高草原是著名的「獅子地帶」，常可見多個獅群在同一區域活動，並發生激烈的領地爭奪。</div>
+            </li>
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div><strong>馬賽馬拉 (Masai Mara)：</strong>以「Marsh Pride（沼澤獅群）」聞名於世，這個被 BBC 長期跟拍的獅群是全球最有名的野生獅群之一。遷徙季時大量角馬湧入，讓此地的獅子能享受一年中最豐盛的食物資源。</div>
+            </li>
+            <li>
+              <span class="fi">🪨</span>
+              <div><strong>恩戈羅恩戈羅火山口 (Ngorongoro Crater)：</strong>封閉的火山口地形形成天然圍欄，獅子與獵物長年共存於同一生態系中。因地形開闊無遮蔽，是東非最容易觀察獅子狩獵行為的地點，能見度極佳。</div>
+            </li>
+            <li>
+              <span class="fi">🌳</span>
+              <div><strong>塔蘭吉雷 (Tarangire)：</strong>此地的獅群以善於獵捕大象幼獸聞名，是全球少數記錄到此類行為的地點。旱季時象群大量聚集，提供獅群特殊的獵捕機會，展現出其他地區罕見的狩獵策略。</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Safari 小技巧 -->
+        <div class="tab-panel" id="ltab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌄</span>
+              <div><strong>把握黃金時段：</strong>日落後 1 小時與日出前 1 小時是獅子最活躍的時段。若住宿地點允許夜間 Safari，黃昏後出發往往能目擊完整的狩獵過程，是最珍貴的體驗。</div>
+            </li>
+            <li>
+              <span class="fi">🔍</span>
+              <div><strong>跟著禿鷹找現場：</strong>大量禿鷹盤旋聚集的地點，往往代表附近剛完成狩獵。請導遊向此方向前進，很可能目擊獅群正在進食的壯觀場面，甚至還能觀察到鬣狗、豺狼前來搶食的生動互動。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>拍攝建議：</strong>獅子在早晨通常精力充沛，姿態更為警覺立體；正午則多半癱臥成一團，雖然憨態可掬，但較難拍出「王者氣勢」。建議優先安排清晨車次，利用低角度側光捕捉鬃毛的金色層次感。</div>
+            </li>
+            <li>
+              <span class="fi">🚗</span>
+              <div><strong>保持引擎運轉：</strong>接近獅群時，許多導遊會建議保持引擎低速運轉而非完全熄火，原因是車輛的機械聲音反而讓獅子習以為常，一旦引擎突然啟動，反而可能引起牠們的好奇甚至警戒反應。</div>
+            </li>
+            <li>
+              <span class="fi">😴</span>
+              <div><strong>別嫌「牠們只是在睡覺」：</strong>許多初次 Safari 旅人對一直看到沉睡的獅子感到失望，但這正是獅子在野外最真實的日常——耐心等待，保持觀察，幼獅嬉戲、雄獅起身巡視、或是雌獅突然站起盯向遠方的那一刻，往往在毫無預警中發生。</div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="leopard-section">
+<div class="section">
+  <h2 class="section-title">🐆 動物介紹</h2>
+  <p class="section-sub">神秘的潛行大師：草原上的隱形獵手</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://cdn.prod.website-files.com/67d307c345bc6fc4c0a47848/686e19edb143d2c291a96734_Leopard%20(2).jpg" />
+        <div class="img-caption">
+          <span>花豹 · Leopard</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">體重</div>
+          <div class="stat-value">30 - 90 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">棲息習性</div>
+          <div class="stat-value">獨居</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">活動高峰</div>
+          <div class="stat-value">清晨 / 夜晚</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">爬樹能力</div>
+          <div class="stat-value">卓越 (可攜帶獵物)</div>
+        </div>
+      </div>
+      
+      <div class="iucn-badge">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危 (Vulnerable)</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">花豹</div>
+        <div class="name-en">Leopard</div>
+        <div class="name-sw">斯瓦希里語：<strong>Chui</strong></div>
+        <div class="name-sci">Panthera pardus</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'leotab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'leotab-skill')">生存絕技</button>
+        <button class="tab-btn" onclick="switchTab(event, 'leotab-tips')">觀察要點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'leotab-where')">觀賞地點</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="leotab-overview">
+          <div class="prose">
+            <p>花豹是五霸 (Big Five) 中<strong>最難以捉摸的成員</strong>，也是全球分布最廣的大型貓科動物，從非洲莽原到亞洲叢林皆有其蹤跡。牠們以極佳的隱蔽性與獨立的生活型態聞名，身上的玫瑰斑 (Rosettes) 是完美的天然迷彩，能讓牠們在草叢與樹影間瞬間消失。</p>
+            <p>花豹是貓科動物中<strong>適應力最強</strong>的物種——牠們能在沙漠、雨林、高山草原、甚至城市邊緣存活。相較於獅子與獵豹需要開闊草原，花豹對棲地的選擇靈活得多，這也是牠們在人類活動壓縮下相對存活較佳的原因。</p>
+          </div>
+
+          <h4 style="margin-top: 20px; padding-bottom: 10px; border-bottom: 2px solid #d4af37; color: #d4af37; display: inline-block;">🔍 鑑別指南：花豹 (Leopard) vs. 獵豹 (Cheetah)</h4>
+          <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; color: #eee; background-color: rgba(255,255,255,0.05);">
+            <thead>
+              <tr style="border-bottom: 2px solid #444;">
+                <th style="padding: 12px; text-align: left; color: #d4af37;">特徵</th>
+                <th style="padding: 12px; text-align: center;">花豹 (Leopard)</th>
+                <th style="padding: 12px; text-align: center;">獵豹 (Cheetah)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 10px;"><strong>花紋</strong></td>
+                <td style="padding: 10px; text-align: center;">玫瑰斑（空心環狀）</td>
+                <td style="padding: 10px; text-align: center;">實心圓點</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 10px;"><strong>臉部淚痕</strong></td>
+                <td style="padding: 10px; text-align: center;">無明顯淚痕</td>
+                <td style="padding: 10px; text-align: center;">明顯黑色淚溝</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 10px;"><strong>體型結構</strong></td>
+                <td style="padding: 10px; text-align: center;">厚實、肌肉發達</td>
+                <td style="padding: 10px; text-align: center;">修長、腰部纖細</td>
+              </tr>
+              <tr style="border-bottom: 1px solid #333;">
+                <td style="padding: 10px;"><strong>爬樹行為</strong></td>
+                <td style="padding: 10px; text-align: center;">頻繁、擅長</td>
+                <td style="padding: 10px; text-align: center;">極少爬樹</td>
+              </tr>
+              <tr>
+                <td style="padding: 10px;"><strong>性格</strong></td>
+                <td style="padding: 10px; text-align: center;">神秘、高度警覺</td>
+                <td style="padding: 10px; text-align: center;">相對溫和、日行性</td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 15px; font-size: 0.85em; color: #aaa; font-style: italic;">
+            💡 快速判斷法：在樹上 = 幾乎肯定是花豹；高速奔馳於開闊草原 = 幾乎肯定是獵豹。
+          </p>
+
+          <ul class="feature-list" style="margin-top: 20px;">
+            </li>
+          </ul>
+        </div>
+
+        <!-- 生存絕技 -->
+        <div class="tab-panel" id="leotab-skill">
+          <div class="prose">
+            <p>花豹擁有貓科動物中<strong>最全面的生存技能組合</strong>：極靜的潛行能力、卓越的爬樹技術、驚人的力量重量比，以及高度的機會主義飲食策略，讓牠在其他大型掠食者強烈競爭的環境中仍能找到自己的生態位。</p>
+            <p>面對獅子與鬣狗的搶食威脅，花豹演化出了最獨特的食物儲存策略：<strong>將獵物垂直拖至樹梢</strong>，有時甚至將超過自身體重兩三倍的屍體懸掛於高枝，這需要極為強大的頸部與前肢肌力。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>世界級的偽裝大師：</strong>花豹的玫瑰斑花紋可讓牠在斑駁的光影中幾乎完全消失。研究發現，花豹能在距離獵物 5 公尺內潛行而不被發現，這比任何其他大型貓科動物都更接近目標後才發動攻擊。</div>
+            </li>
+            <li>
+              <span class="fi">🌳</span>
+              <div><strong>垂直儲糧策略：</strong>為了避免獵物被獅子或鬣狗搶奪，花豹習慣將獵殺後的重型食物拖至樹梢上方享用，曾有記錄顯示花豹將重達 125 kg 的長頸鹿幼獸拖上 5 公尺高的金合歡樹，是其最具指標性的行為。</div>
+            </li>
+            <li>
+              <span class="fi">🎯</span>
+              <div><strong>機會主義的廣泛食性：</strong>花豹的獵物種類超過 90 種，從甲蟲、兔子、狒狒，到青斑羚、黑斑羚乃至幼年長頸鹿皆可。這種極高的飲食彈性是牠在食物匱乏時期仍能存活的關鍵。</div>
+            </li>
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>耐渴能力卓越：</strong>花豹能從獵物的血液與肌肉中攝取水分，因此在乾旱環境中可長達數週不直接飲水。這使牠能在其他大型掠食者無法生存的半乾旱地帶開拓棲地。</div>
+            </li>
+            <li>
+              <span class="fi">🐾</span>
+              <div><strong>潛行速度的反直覺：</strong>花豹在接近獵物時速度極慢——研究計時顯示，牠有時需要花費超過 30 分鐘「爬行」最後 50 公尺，每一步落腳都刻意避開任何可能發出聲音的枯葉或樹枝，展現出驚人的耐心與動作控制力。</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 觀察要點 -->
+        <div class="tab-panel" id="leotab-tips">
+          <div class="prose">
+            <p>觀察花豹需要<strong>極大的耐心與運氣</strong>——即便是最資深的導遊，也無法保證每次都能找到花豹。但正因如此，一旦目擊，其震撼感往往遠超過獅子或大象。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌲</span>
+              <div><strong>從樹梢開始搜索：</strong>Safari 時建議留意馬賽馬拉河岸邊的金合歡樹梢，若看到樹上有「不尋常的物體」（如獵物屍體、下垂的蹄肢），那極大機率是花豹的藏身處。即使看不見花豹本身，懸掛的獵物就是牠在附近的最有力証據。</div>
+            </li>
+            <li>
+              <span class="fi">🐒</span>
+              <div><strong>跟著猴群的警報聲：</strong>狒狒與疣猴是花豹最敏感的「預警系統」。當牠們突然發出連串高頻警戒叫聲並迅速向樹梢集中，往往代表附近有花豹正在移動。有經驗的導遊都懂得傾聽靈長類動物的警報，比直接搜索更有效率。</div>
+            </li>
+            <li>
+              <span class="fi">🕐</span>
+              <div><strong>最佳時段：清晨與黃昏：</strong>花豹是典型的晨昏活動型動物，尤其是日出後 1 小時內，牠們剛完成夜間狩獵或正要出發覓食，是最容易被目擊的時間窗口。強烈建議安排清晨首班 Safari。</div>
+            </li>
+            <li>
+              <span class="fi">📵</span>
+              <div><strong>保持絕對安靜：</strong>花豹對人類的聲音和動作極為敏感，是所有五霸中最容易因干擾而消失的動物。在觀察期間，車內應盡量保持靜默，避免突然的手勢或閃光燈，才能讓牠自然展現行為，而非倉皇隱入草叢。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>拍攝建議：</strong>使用長焦鏡頭（300mm 以上）並保持最大光圈以應對林下低光環境。若發現花豹在樹上休息，嘗試以仰角取景，利用背光或逆光捕捉其剪影，往往比清晰的正面照更具藝術張力。</div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 觀賞地點 -->
+        <div class="tab-panel" id="leotab-where">
+          <div class="prose">
+            <p>花豹的隱蔽性使得目擊率因地因時而異，選擇<strong>對的地點</strong>能大幅提高相遇機率。以下幾個東非地點因豹口密度高或棲地開闊，是業界公認最佳的花豹觀察點。</p>
+          </div>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div><strong>馬賽馬拉 (Masai Mara)：</strong>沿馬拉河的河岸林地是花豹最常被目擊的地帶，高大的金合歡樹提供理想的瞭望與儲糧點。Mara North 與 Olare Motorogi 私人保護區因遊客管制嚴格，目擊品質尤佳。</div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div><strong>塞倫蓋提北部 (Serengeti North)：</strong>Lobo 地區的岩丘地形（Kopjes）是花豹鍾愛的棲地，高聳的花崗岩礁不僅提供絕佳的視野，也成為牠們儲存獵物的天然冰箱。</div>
+            </li>
+            <li>
+              <span class="fi">🪨</span>
+              <div><strong>恩戈羅恩戈羅 (Ngorongoro)：</strong>火山口封閉地形使豹的密度相當高，且因地形開闊少遮蔽，一旦發現後可進行長時間觀察。Lerai 森林是花豹最喜愛的藏匿地點，當地導遊通常熟知個別花豹的習慣路線。</div>
+            </li>
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>山布魯 (Samburu)：</strong>位於肯亞北部的山布魯保護區擁有特殊的「北方五霸」，其中花豹密度極高。乾燥的灌木叢地形反而讓花豹更容易被發現，且此地的豹相對習慣於遊客車輛，行為展示更為自然。</div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="cheetah-section">
+<div class="section">
+  <h2 class="section-title">🐆 動物介紹</h2>
+  <p class="section-sub">草原上的極速閃電：精準的狩獵專家</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/09/TheCheethcat.jpg/500px-TheCheethcat.jpg" />
+        <div class="img-caption">
+          <span>獵豹 · Cheetah</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">最高時速</div>
+          <div class="stat-value">110 - 120 km/h</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">狩獵風格</div>
+          <div class="stat-value">日間衝刺</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">特徵標記</div>
+          <div class="stat-value">眼下黑淚痕</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">爪子構造</div>
+          <div class="stat-value">半伸縮 (增加抓地力)</div>
+        </div>
+      </div>
+      
+      <div class="iucn-badge" style="background: var(--brick-red);">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危 (Vulnerable)</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">獵豹</div>
+        <div class="name-en">Cheetah</div>
+        <div class="name-sw">斯瓦希里語：<strong>Duma</strong></div>
+        <div class="name-sci">Acinonyx jubatus</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'ctab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ctab-speed')">極速奧秘</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ctab-tips')">觀察小語</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="ctab-overview">
+          <div class="prose">
+            <p>獵豹是世界上跑得最快的陸生動物，牠們的身體構造完全為了「速度」而演化。不同於獅子與花豹，獵豹傾向於在<strong>日間</strong>活動，這能避免與其他強大的夜行性掠食者發生衝突。</p>
+          </div>
+        </div>
+        <div class="tab-panel" id="ctab-speed">
+          <div class="prose">
+            <p>獵豹的加速度比跑車還快，從 0 加速到時速 100 公里僅需 3 秒。牠們強壯的尾巴就像「方向舵」，在高速急轉彎時協助平衡。此外，牠們的爪子無法完全縮回，這提供了絕佳的抓地力，使其能如釘鞋般在草原上衝刺。</p>
+          </div>
+        </div>
+        <div class="tab-panel" id="ctab-tips">
+          <div class="prose">
+            <p>觀察獵豹時，請留意牠們眼下的<strong>「黑色淚痕」</strong>。這些淚痕能減少陽光折射，讓牠們在強光下也能精準盯緊獵物。獵豹性格相對害羞，若您在 Safari 途中看到牠們站在白蟻丘上，那是牠們在利用高地勢掃視獵物的標準姿勢。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="rhino-section">
+<div class="section">
+  <h2 class="section-title">🦏 動物介紹</h2>
+  <p class="section-sub">史前巨獸：非洲大草原的厚甲戰士</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://www.hifly.com.tw/storage/media/377c6898-173d-4553-af17-711403c5e3f0.webp" />
+        <div class="img-caption">
+          <span>黑犀牛 · Black Rhino</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+<div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">體重</div>
+          <div class="stat-value">800 - 1,400 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">食性</div>
+          <div class="stat-value">瀏覽型 (食葉)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">視力</div>
+          <div class="stat-value">較差 (依賴聽覺)</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">角成分</div>
+          <div class="stat-value">角蛋白 (與毛髮同)</div>
+        </div>
+      </div>
+      
+      <div class="iucn-badge">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        IUCN 紅色名錄：<strong>極危 (Critically Endangered)</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">黑犀牛</div>
+        <div class="name-en">Black Rhino</div>
+        <div class="name-sw">斯瓦希里語：<strong>Kifaru</strong></div>
+        <div class="name-sci">Diceros bicornis</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'rhino-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'rhino-biology')">生存絕技</button>
+        <button class="tab-btn" onclick="switchTab(event, 'rhino-tips')">觀察要點</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="rhino-overview">
+          <div class="prose">
+            <p>黑犀牛是典型的「瀏覽者」，其尖銳的鉤狀上唇能精準採食灌木叢的葉片。牠們是極具領地意識的獨居動物，對生存環境的變遷極度敏感，是馬賽馬拉與塞倫蓋提 Safari 的頂級夢幻物種。</p>
+            <p>很多人以為名稱與顏色有關，事實上，兩者體色差異不大，名稱差異來自於對口部構造的誤譯。</p>
+            <h4 style="color:#d4af37; margin: 15px 0 10px;">🔍 鑑別指南：黑犀牛 vs. 白犀牛</h4>           
+            <ul style="padding-left: 20px; line-height: 1.8;">
+              <li><strong>黑犀牛：</strong>鉤狀上唇，頭部高抬，性格較具攻擊性。</li>
+              <li><strong>白犀牛：</strong>名稱源自荷蘭語 "wijd"（意為寬廣），被誤聽為 "white"。擁有寬闊「方唇」，是專門吃草的「食草者 (Grazer)」，頭部常垂向地面，性格較溫和群居，常可見到母犀牛帶著幼犀牛活動。</li>
+            </ul>
+          </div>
+          <ul class="feature-list">
+
+            <li>
+              <span class="fi">⚔️</span>
+              <div><strong>盜獵根源：</strong>犀牛角在亞洲部分文化中被錯誤地賦予「醫療與滋補」功效，儘管醫學證明其成分與指甲無異。這種迷信導致黑犀牛數量曾一度降至瀕臨滅絕。</div>
+            </li>
+            <li>
+              <span class="fi">🌍</span>
+              <div><strong>斷角實驗：</strong>為了保護犀牛，部分野生動物保護區採取「安全斷角」措施，即在麻醉狀態下修剪犀牛角。這雖然是一個爭議性的手段，但被證明能顯著降低盜獵者的興趣，有效提高個體生存率。</div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="tab-panel" id="rhino-biology">
+          <div class="prose">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🛡️</span>
+              <div><strong>盔甲般的頭盾 (Boss)：</strong>犀牛的角並非骨頭，而是由<strong>角蛋白 (Keratin)</strong> 組成的，與人類指甲成分相同，即便被切斷，如果基部未受損，角仍會持續生長。</div>
+            </li>
+            <li>
+              <span class="fi">🌲</span>
+              <div><strong>皮膚防禦：</strong>犀牛喜歡在泥濘中打滾（Mud wallowing），這不僅是為了降溫，更能在皮膚表面形成一層「防曬與防蟲層」，保護牠們厚達 2-5 公分的皮革。</div>
+            </li>
+            <li>
+              <span class="fi">🐦</span>
+              <div><strong>警報器：</strong>與牠們共生的<strong>紅嘴牛椋鳥 (Oxpeckers)</strong> 是牠們的「警報器」，能幫忙清理寄生蟲，補足犀牛視力不足（僅 30 米有效範圍）的弱點。</div>
+            </li>
+
+            </li>
+          </div>
+        </div>
+        <div class="tab-panel" id="rhino-tips">
+          <div class="prose">
+            <p>犀牛移動速度快且安靜，若觀察到牠們出現<strong>「噴氣」或「快速跺腳」</strong>，這是極高的危險訊號，請務必示意嚮導立即拉開距離。</p>
+            <p><em>攝影提示：建議利用望遠鏡或中長焦鏡頭，捕捉犀牛角部的紋理與耳部細節，並優先觀察是否有鳥類伴隨，那是牠們安穩棲息的象徵。</em></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="zebra-section">
+<div class="section">
+  <h2 class="section-title">🦓 動物介紹</h2>
+  <p class="section-sub">草原上的黑白律動：群居的藝術家</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Plains_Zebra_Equus_quagga.jpg/500px-Plains_Zebra_Equus_quagga.jpg" />
+        <div class="img-caption">
+          <span>斑馬 · Zebra</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">體重</div>
+          <div class="stat-value">250 - 450 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">社會性</div>
+          <div class="stat-value">高度群居</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">主要威脅</div>
+          <div class="stat-value">獅子、鬣狗</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">條紋特徵</div>
+          <div class="stat-value">獨一無二</div>
+        </div>
+      </div>
+      
+      <div class="iucn-badge" style="background: var(--safe-green, #2d5a27);">
+        <i class="fa-solid fa-circle-check"></i>
+        IUCN 紅色名錄：<strong>無危 (Least Concern)</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">斑馬</div>
+        <div class="name-en">Zebra</div>
+        <div class="name-sw">斯瓦希里語：<strong>Punda Milia</strong></div>
+        <div class="name-sci">Equus quagga</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'ztab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ztab-stripes')">條紋之謎</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ztab-tips')">觀察小語</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="ztab-overview">
+          <div class="prose">
+            <p>斑馬是東非草原最常見的居民，也是馬科動物的代表。牠們採取「團體防禦」策略，利用群體活動時形成的視覺模糊效應，干擾掠食者的判斷。</p>
+          </div>
+        </div>
+        <div class="tab-panel" id="ztab-stripes">
+          <div class="prose">
+            <p>關於斑馬為什麼有條紋，科學家有幾個主流理論：</p>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">👁️</span>
+              <div><strong>視覺干擾 (Dazzle Effect)：</strong>高速移動時的黑白條紋讓獅子難以鎖定單一個體。</div>
+            </li>
+            <li>
+              <span class="fi">🐝</span>
+              <div><strong>防蟲功能：</strong>研究發現，條紋能有效干擾吸血蠅類（如采采蠅）的降落。</div>
+            </li>
+            <li>
+              <span class="fi">🦓</span>
+              <div><strong>個體識別：</strong>每隻斑馬的條紋皆像指紋一樣獨一無二，這有助於家庭成員間的辨識。</div>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-panel" id="ztab-tips">
+          <div class="prose">
+            <p>Safari 時，您常會看到斑馬與角馬（Wildebeest）混在一起活動。這是一種絕佳的生存搭檔：斑馬負責警戒，角馬則運用敏銳嗅覺找尋水源，兩者互補以提高生存機率。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="wildebeest-section">
+<div class="section">
+  <h2 class="section-title">🐃 動物介紹</h2>
+  <p class="section-sub">草原遷徙的靈魂：東非大遷徙的絕對主角</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://img.natgeomedia.com/userfiles/sm/sm1920_images_A1/922/96474273510.jpg" />
+        <div class="img-caption">
+          <span>牛羚/角馬 · Wildebeest</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">體重</div>
+          <div class="stat-value">160 - 270 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">遷徙規模</div>
+          <div class="stat-value">超過 150 萬頭</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">主要天敵</div>
+          <div class="stat-value">獅子、鱷魚</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">壽命</div>
+          <div class="stat-value">15 - 20 年</div>
+        </div>
+      </div>
+      
+      <div class="iucn-badge" style="background: var(--safe-green, #2d5a27);">
+        <i class="fa-solid fa-circle-check"></i>
+        IUCN 紅色名錄：<strong>無危 (Least Concern)</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
+      <div class="profile-names">
+        <div class="name-zh">牛羚 (角馬)</div>
+        <div class="name-en">Wildebeest</div>
+        <div class="name-sw">斯瓦希里語：<strong>Nyumbu</strong></div>
+        <div class="name-sci">Connochaetes taurinus</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'wtab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'wtab-migration')">黃金拍檔</button>
+        <button class="tab-btn" onclick="switchTab(event, 'wtab-tips')">觀察小語</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="wtab-overview">
+          <div class="prose">
+            <p>牛羚（Wildebeest），常被稱為「角馬」，是馬科動物與牛科特徵的奇妙結合體。雖然外表看來有些笨拙，但牠們是維持非洲草原生態平衡的關鍵物種，透過大規模的攝食與遷徙，避免了某些特定草種的過度茂盛，維持了草原結構的多樣性。</p>
+           <p>每年百萬頭牛羚在大遷徙中排出的糞便，提供了大量的有機養分，是大草原得以維持肥沃的關鍵。</p>
+         <ul class="feature-list">
+            <li>
+              <span class="fi">🧬</span>
+              <div><strong>生存博弈：</strong>牛羚展現了驚人的「同步產子」策略。在短短的兩三週內，幾乎全群的母牛羚會同時生產。</div>
+            </li>
+            <li>
+              <span class="fi">👶</span>
+              <div><strong>掠食者飽和（Predator Satiation）：</strong>透過在極短時間內產生大量幼雛，牛羚讓掠食者（獅子、獵豹、鬣狗）即便全力狩獵也吃不完，從而極大地提高了幼雛的存活率，這是在自然界中極為罕見的集體生存智慧。</div>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-panel" id="wtab-migration">
+          <div class="prose">
+            <p>您常會看到牛羚與斑馬混群，這並非巧合，而是互補的合作策略。</p>
+         <ul class="feature-list">
+            <li>
+              <span class="fi">🌱</span>
+              <div><strong>不同的進食偏好：</strong>斑馬偏好啃食較粗、纖維較長的草莖，而牛羚則喜歡啃食被斑馬「清理」過後、露出的更嫩、蛋白質含量更高的短草芽。</div>
+            </li>
+            <li>
+              <span class="fi">👀</span>
+              <div><strong>感官互補：</strong>斑馬的視覺極佳，適合擔任「警戒官」；而牛羚的嗅覺與聽覺較靈敏，能更容易感知到隱藏在灌木中的掠食者。</div>
+            </li>
+            </ul>
+          </div>
+        </div>
+        <div class="tab-panel" id="wtab-tips">
+          <div class="prose">
+            <p>牛羚對於雨季的感應極為敏銳，牠們似乎擁有「追逐雨水」的本能，跟著牛羚走往往就能找到最鮮綠的草原。</p>
+         <ul class="feature-list">
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>聽聲辨位：</strong>牛羚在受到威脅時會發出特殊的「咕嚕」聲。如果您在 Safari 聽到附近牛羚群發出焦慮的叫聲並開始奔跑，那極大機率代表附近有獅子或獵豹正在伏擊。</div>
+            </li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>河流渡口觀察：</strong>如果您有幸在馬拉河（Mara River）觀賞到大遷徙，那是觀察牛羚最震撼的時刻。儘管充滿危險，但這種面對死亡與生存的原始博弈，正是非洲大草原最真實的寫照。</div>
+            </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<footer>
+  <p>九十路埃及05團 <strong>Safari 小隊</strong> · 肯亞 &amp; 坦尚尼亞 · 2026 / 07 / 08–19</p>
+  <p style="margin-top:8px; opacity:0.6; font-size:12px;">Hakuna Matata · 行程規劃由 Splendid Vacations 與 Alex Masila 團隊聯合呈獻</p>
+</footer>
+
+<script>
+const animals = [
+  { zh: '長頸鹿', en: 'Giraffe', anchor: '#giraffe-section' },
+  { zh: '獅子', en: 'Lion', anchor:'#lion-section' },
+  { zh: '花豹', en: 'Leopard', anchor:'#leopard-section'},
+  { zh: '獵豹', en: 'Cheetah', anchor:'#cheetah-section'},
+  { zh: '水牛', en: 'Buffalo', anchor: '#buffalo-section' },
+  { zh: '犀牛', en: 'Rhinoceros', anchor: '#rhino-section' },
+  { zh: '河馬', en: 'Hippopotamus', anchor: '#hippo-section' },
+  { zh: '斑馬', en: 'Zebra', anchor:'#zebra-section'},
+  { zh: '牛羚', en: 'Wildebeest', anchor:'#wildebeest-section'},
+  { zh: '瞪羚', en: 'Gazelle', anchor: null },
+  { zh: '疣豬', en: 'Warthog', anchor: null },
+  { zh: '狒狒', en: 'Baboon', anchor: null },
+  { zh: '非洲野狗', en: 'African Wild Dog', anchor: null },
+  { zh: '土狼', en: 'Hyena', anchor: null },
+  { zh: '黑面牛羚', en: 'Topi', anchor: null },
+  { zh: '伊蘭羚羊', en: 'Eland', anchor: null },
+  { zh: '轉角牛羚', en: 'Kongoni (Hartebeest)', anchor: null },
+  { zh: '水羚', en: 'Waterbuck', anchor: null },
+  { zh: '葦羚', en: 'Reedbuck', anchor: null },
+  { zh: '黑斑羚', en: 'Impala', anchor: null },
+  { zh: '湯氏瞪羚', en: "Thomson's Gazelle", anchor: null },
+  { zh: '格氏瞪羚', en: "Grant's Gazelle", anchor: null },
+  { zh: '岩蹄兔', en: 'Rock Hyrax', anchor: null },
+  { zh: '藪貓', en: 'Serval', anchor: null },
+  { zh: '非洲松鼠', en: 'African Ground Squirrel', anchor: null },
+  { zh: '蜜獾', en: 'Honey Badger', anchor: null },
+  { zh: '非洲鸵鸟', en: 'Ostrich', anchor: null },
+  { zh: '火鶴', en: 'Flamingo', anchor: null },
+  { zh: '禿鷲', en: 'Vulture', anchor: null },
+  { zh: '非洲魚鷹', en: 'African Fish Eagle', anchor: null },
+  { zh: '馬拉布鸛', en: 'Marabou Stork', anchor: null },
+  { zh: '非洲象', en: 'African Elephant', anchor: '#elephant-section' },
+  { zh: '薮貓', en: 'Caracal', anchor: null },
+  { zh: '土豚', en: 'Aardvark', anchor: null },
+  { zh: '蒙哥', en: 'Mongoose', anchor: null },
+  { zh: '翠鳥', en: 'Kingfisher', anchor: null },
+  { zh: '鱷魚', en: 'Nile Crocodile', anchor: null },
+  { zh: '藍牛羚', en: 'Blue Wildebeest', anchor: null },
+  { zh: '非洲布穀鳥', en: 'Kori Bustard', anchor: null },
+];
+
+const alphabetMap = {};
+animals.forEach(a => {
+  const letter = a.en[0].toUpperCase();
+  if (!alphabetMap[letter]) alphabetMap[letter] = [];
+  alphabetMap[letter].push(a);
+});
+
+const bar = document.getElementById('alphabetBar');
+const allLetters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
+let activeFilter = 'ALL';
+
+allLetters.forEach(letter => {
+  const btn = document.createElement('button');
+  btn.className = 'alpha-btn' + (alphabetMap[letter] ? ' has-animals' : ' disabled');
+  btn.textContent = letter;
+  btn.dataset.letter = letter;
+  btn.addEventListener('click', () => {
+    if (!alphabetMap[letter]) return;
+    setFilter(letter, btn);
+  });
+  bar.appendChild(btn);
+});
+
+function setFilter(letter, btn) {
+  activeFilter = letter;
+  document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+  if (btn) btn.classList.add('active');
+  renderList(alphabetMap[letter] || []);
+  document.getElementById('listTitle').textContent = `— ${letter} —`;
+  document.getElementById('animalSearch').value = '';
+}
+
+function renderList(list) {
+  const container = document.getElementById('animalTagList');
+  if (!list.length) {
+    container.innerHTML = '<span class="no-result">暫無符合的動物</span>';
+    return;
+  }
+  container.innerHTML = list.map(a => `
+    <div class="animal-tag" onclick="${a.anchor ? `window.location.href='${a.anchor}'` : 'void(0)'}">
+      <span>${a.zh}</span>
+      <span class="en">${a.en}</span>
+      ${a.anchor ? '<i class="fa-solid fa-arrow-right" style="font-size:10px; color:var(--gold-amber)"></i>' : ''}
+    </div>
+  `).join('');
+}
+
+renderList(animals);
+document.getElementById('listTitle').textContent = '— 所有動物 —';
+
+document.getElementById('animalSearch').addEventListener('input', function() {
+  const q = this.value.trim().toLowerCase();
+  if (!q) {
+    renderList(animals);
+    document.getElementById('listTitle').textContent = '— 所有動物 —';
+    document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+    return;
+  }
+  const filtered = animals.filter(a =>
+    a.zh.toLowerCase().includes(q) || a.en.toLowerCase().includes(q)
+  );
+  renderList(filtered);
+  document.getElementById('listTitle').textContent = `搜尋「${this.value.trim()}」— 找到 ${filtered.length} 筆`;
+  document.querySelectorAll('.alpha-btn').forEach(b => b.classList.remove('active'));
+
+  // 若搜尋結果只有一筆且有錨點，自動平滑滾動至該動物介紹
+  if (filtered.length === 1 && filtered[0].anchor) {
+    const target = document.querySelector(filtered[0].anchor);
+    if (target) {
+      setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 300);
+    }
+  }
+});
+
+function switchTab(e, id) {
+  const profileContent = e.target.closest('.profile-content');
+  profileContent.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  profileContent.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  e.target.classList.add('active');
+  document.getElementById(id).classList.add('active');
+}
+</script>
+</body>
+</html>
