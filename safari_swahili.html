@@ -122,7 +122,7 @@ body {
 .hero {
   position: relative;
   background: linear-gradient(rgba(26,18,11,0.45), rgba(26,18,11,0.92)),
-             url('馬賽族人.jpg')  no-repeat center/cover;
+             url('https://pixnio.com/free-images/2025/12/04/2025-12-04-00-02-51-960x540.jpg')  no-repeat center/cover;
   padding: 80px 24px 64px;
   text-align: center;
   border-bottom: 3px double var(--gold-amber);
@@ -789,9 +789,9 @@ footer strong { color: var(--gold-amber); }
 <div class="top-ornament"></div>
 
 <nav class="top-nav">
-  <a href="index.html"><i class="fa-solid fa-house"></i> 首頁</a>
+  <a href="safari_homepage.html"><i class="fa-solid fa-house"></i> 首頁</a>
   <span class="sep">/</span>
-  <a href="index.html#nav-section"><i class="fa-solid fa-compass"></i> 遊獵指南</a>
+  <a href="safari_homepage.html#nav-section"><i class="fa-solid fa-compass"></i> 遊獵指南</a>
   <span class="sep">/</span>
   <span class="current"><i class="fa-solid fa-language"></i> WORD</span>
 </nav>
@@ -1519,7 +1519,7 @@ footer strong { color: var(--gold-amber); }
         lastTranslatedText = translated;
         lastTranslatedLang = isZhToEn ? 'en-US' : 'zh-TW';
         resultBox.classList.add('visible');
-        document.getElementById('speak-btn').style.display = 'flex';
+        if (window.speechSynthesis) document.getElementById('speak-btn').style.display = 'flex';
       } else {
         showFallback(input, isZhToEn, resultText, resultNotes, resultBox);
       }
@@ -1628,6 +1628,15 @@ footer strong { color: var(--gold-amber); }
 
   // 頁面載入後，為每張 phrase-card 注入聆聽按鈕（舊式，保留相容）
   document.addEventListener('DOMContentLoaded', () => {
+    // 🎤 SpeechRecognition 不支援時隱藏麥克風按鈕（Safari / Firefox）
+    if (!(window.SpeechRecognition || window.webkitSpeechRecognition)) {
+      const vb = document.getElementById('voice-btn');
+      if (vb) vb.style.display = 'none';
+    }
+
+    // 🔊 SpeechSynthesis 不支援時跳過所有聆聽按鈕注入
+    if (!window.speechSynthesis) return;
+
     document.querySelectorAll('.phrase-card').forEach(card => {
       const swahiliEl = card.querySelector('.phrase-swahili');
       if (!swahiliEl) return;
