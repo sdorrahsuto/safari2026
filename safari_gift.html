@@ -60,6 +60,7 @@ body {
 .top-nav .sep { color: rgba(212,163,89,0.3); }
 .top-nav .current { color: var(--gold-amber); font-weight: 500; font-size: 13px; }
 
+
 /* ── HERO ── */
 .hero {
   position: relative;
@@ -102,6 +103,41 @@ body {
   max-width: 560px; margin: 0 auto; font-size: 13px; color: var(--text-muted);
   line-height: 1.9;
 }
+
+/* ── NAV PILLS 黏性導覽── */
+.nav-pills {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  padding: 16px;
+  background: rgba(44, 30, 21, 0.85);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position:-webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  border-bottom: 1px solid rgba(214, 163, 89, 0.2);
+  width: 100%;
+}
+.nav-pills a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: all .3s ease;
+}
+.nav-pills a:hover, .nav-pills a.active {
+  background: rgba(212, 163, 89, 0.1);
+  color: var(--gold-amber);
+  border-color: var(--gold-amber);
+}
+
 
 /* ── SECTION ── */
 .section {
@@ -331,6 +367,7 @@ footer strong { color: var(--gold-amber); }
   <span class="current"><i class="fa-solid fa-gift"></i> GIFT</span>
 </nav>
 
+
 <!-- HERO -->
 <header class="hero">
   <p class="hero-eyebrow">Souvenirs &amp; Treasures from East Africa</p>
@@ -341,6 +378,12 @@ footer strong { color: var(--gold-amber); }
     延續草原故事的悸動。
   </p>
 </header>
+
+<nav class="nav-pills">
+  <a href="#gifts-section"><i class="fa-solid fa-gift"></i> 伴手禮精選</a>
+  <a href="#tip-section"><i class="fa-solid fa-marker"></i> 購物心法</a>
+  <a href="#map-section"><i class="fa-solid fa-map"></i> 購物地點</a>
+</nav>
 
 <!-- MAIN GIFT SECTION -->
 <div id="gifts-section">
@@ -387,7 +430,7 @@ footer strong { color: var(--gold-amber); }
     <!-- 2 馬賽手環 -->
     <div class="gift-card fade-up" data-cat="jewelry">
       <div class="gift-img-wrap">
-        <img src="https://thumbs.dreamstime.com/b/kanonkop-58519709.jpg?w=992" alt="馬賽珠寶">
+        <img src="串珠.JPG" alt="馬賽珠寶">
         <span class="gift-badge badge-jewelry"><i class="fa-solid fa-gem"></i> 珠寶飾品</span>
         <span class="price-tag">USD 5 – 60</span>
       </div>
@@ -626,8 +669,15 @@ footer strong { color: var(--gold-amber); }
 
 
   </div><!-- /gift-grid -->
+</div>
+</div>
 
-  <!-- TIP BOXES -->
+<!-- TIP BOXES SECTION -->
+<div id="tip-section">
+<div class="section">
+  <h2 class="section-title">💡 購物心法</h2>
+  <p class="section-sub"></p>
+
   <div class="tip-grid">
     <div class="tip-box">
       <div class="tip-label">💡 議價心法</div>
