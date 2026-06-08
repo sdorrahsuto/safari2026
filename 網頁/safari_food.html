@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FOOD · Safari 2026 · 肯亞坦尚尼亞</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;600;700&family=Noto+Sans+TC:wght@300;400;500;700&family=Caveat:wght@700&family=Playfair+Display:ital,wght@0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+:root {
+  --bg-dark: #1A120B;
+  --bg-card: #2C1E15;
+  --bg-card-light: #3D2B1F;
+  --gold-amber: #D4A359;
+  --sand-gold: #C4A47A;
+  --brick-red: #A64B2A;
+  --brick-light: #D96B43;
+  --safari-green: #3A4F35;
+  --safari-light: #5A7853;
+  --text-white: #F5F0E8;
+  --text-muted: #A89685;
+  --glass-bg: rgba(44, 30, 21, 0.6);
+  --border-gold: rgba(212, 163, 89, 0.2);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Noto Sans TC', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-white);
+  font-size: 15px;
+  line-height: 1.8;
+  letter-spacing: 0.5px;
+}
+
+/* ── TOP NAV ── */
+.top-nav {
+  background: rgba(26,18,11,0.95);
+  backdrop-filter: blur(10px);
+  padding: 14px 28px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid rgba(212,163,89,0.2);
+  position: sticky;
+  top: 0;
+  z-index: 200;
+}
+.top-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 13px;
+  display: flex; align-items: center; gap: 6px;
+  transition: color .2s;
+}
+.top-nav a:hover { color: var(--gold-amber); }
+.top-nav .sep { color: rgba(212,163,89,0.3); }
+.top-nav .current { color: var(--gold-amber); font-weight: 500; font-size: 13px; }
+
+/* ── HERO ── */
+.hero {
+  position: relative;
+  background: linear-gradient(rgba(26,18,11,0.35), rgba(26,18,11,0.92)),
+    url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') no-repeat center/cover;
+  padding: 80px 24px 64px;
+  text-align: center;
+  border-bottom: 3px double var(--gold-amber);
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 10px;
+  background: repeating-linear-gradient(90deg, var(--gold-amber) 0 15px, var(--brick-red) 15px 30px, var(--safari-green) 30px 45px);
+  opacity: 0.7;
+}
+.hero::after {
+  content: '🍽  🌿  🔥';
+  position: absolute; bottom: 20px; right: 28px;
+  font-size: 18px;
+  opacity: 0.18; letter-spacing: 12px;
+}
+.hero-eyebrow {
+  font-size: 11px; letter-spacing: 4px; color: var(--gold-amber);
+  text-transform: uppercase; margin-bottom: 12px; font-weight: 500;
+}
+.hero-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: clamp(40px, 6vw, 56px); font-weight: 700; letter-spacing: 8px;
+  background: linear-gradient(135deg, #FFF6E5 0%, var(--gold-amber) 50%, #C4A47A 100%);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  margin-bottom: 12px;
+}
+.hero-subtitle {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(14px, 2vw, 16px); color: var(--text-white);
+  letter-spacing: 6px; font-weight: 400; margin-bottom: 28px; opacity: 0.65;
+}
+.hero-desc {
+  max-width: 560px; margin: 0 auto; font-size: 13px; color: var(--text-muted);
+  line-height: 1.9;
+}
+
+/* ── SECTION ── */
+.section {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 70px 24px;
+}
+.section-title {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 24px; font-weight: 700; color: var(--gold-amber);
+  margin-bottom: 8px;
+  display: flex; align-items: center; gap: 14px;
+}
+.section-title::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(to right, var(--gold-amber), transparent);
+  opacity: 0.4;
+}
+.section-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 36px; }
+
+/* ── FILTER BAR ── */
+.filter-bar {
+  display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 40px;
+}
+.filter-btn {
+  padding: 8px 20px;
+  border-radius: 3px;
+  font-size: 12px; font-weight: 500; letter-spacing: 1px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: 1px solid rgba(212,163,89,0.25);
+  background: transparent;
+  color: var(--text-muted);
+  font-family: 'Noto Sans TC', sans-serif;
+  transition: all .25s;
+}
+.filter-btn:hover { color: var(--gold-amber); border-color: var(--gold-amber); }
+.filter-btn.active {
+  background: rgba(212,163,89,0.12);
+  color: var(--gold-amber);
+  border-color: var(--gold-amber);
+}
+
+/* ── FOOD GRID ── */
+.food-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.food-card {
+  background: var(--bg-card);
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid rgba(212,163,89,0.12);
+  transition: all .35s cubic-bezier(0.25,0.8,0.25,1);
+  display: flex; flex-direction: column;
+}
+.food-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212,163,89,0.4);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.5);
+}
+.food-card.hidden { display: none; }
+
+/* ── CARD IMAGE ── */
+.food-img-wrap {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 4/3;
+  background: var(--bg-card-light);
+}
+.food-img-wrap img {
+  width: 100%; height: 100%; object-fit: cover;
+  transition: transform .6s cubic-bezier(0.16,1,0.3,1);
+  filter: saturate(0.9) brightness(0.9);
+}
+.food-card:hover .food-img-wrap img { transform: scale(1.06); }
+
+/* ── BADGES ── */
+.food-badge {
+  position: absolute; top: 14px; left: 14px;
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 10px; letter-spacing: 1.5px; text-transform: uppercase; font-weight: 600;
+  padding: 5px 12px; border-radius: 2px;
+}
+.badge-main   { background: rgba(166,75,42,0.88);  color: #F5D5C0; }
+.badge-street { background: rgba(90,120,83,0.88);  color: #C8E6C0; }
+.badge-drink  { background: rgba(180,140,50,0.88); color: #FFF0C0; }
+.badge-safari { background: rgba(44,70,110,0.88);  color: #C0D4F5; }
+
+.country-tag {
+  position: absolute; bottom: 14px; right: 14px;
+  background: rgba(26,18,11,0.88);
+  border: 1px solid rgba(212,163,89,0.4);
+  border-radius: 3px;
+  padding: 5px 12px;
+  font-size: 12px; font-weight: 600; color: var(--sand-gold);
+  letter-spacing: 0.5px;
+}
+
+/* ── CARD BODY ── */
+.food-body {
+  padding: 22px 24px 20px;
+  flex: 1; display: flex; flex-direction: column;
+}
+.food-name-zh {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 18px; font-weight: 700; color: var(--text-white);
+  margin-bottom: 4px; line-height: 1.3;
+}
+.food-name-en {
+  font-family: 'Playfair Display', serif;
+  font-style: italic; font-size: 14px; color: var(--sand-gold);
+  margin-bottom: 14px; letter-spacing: 0.5px;
+}
+.food-desc {
+  font-size: 13px; color: var(--text-muted); line-height: 1.85;
+  margin-bottom: 16px; flex: 1;
+}
+.food-desc strong { color: var(--text-white); }
+
+/* ── WHERE TO EAT ── */
+.eat-section {
+  border-top: 1px solid rgba(212,163,89,0.12);
+  padding-top: 14px;
+  margin-top: auto;
+}
+.eat-label {
+  font-size: 10px; letter-spacing: 2px; text-transform: uppercase;
+  color: var(--gold-amber); margin-bottom: 8px; font-weight: 600;
+}
+.eat-spots { display: flex; flex-direction: column; gap: 5px; }
+.eat-spot {
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 12px; color: var(--text-muted); line-height: 1.5;
+}
+.eat-spot i { color: var(--safari-light); margin-top: 3px; flex-shrink: 0; font-size: 11px; }
+.eat-spot strong { color: var(--sand-gold); }
+
+/* ── TIP BOXES ── */
+.tip-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  margin-top: 48px;
+}
+.tip-box {
+  background: var(--bg-card);
+  border-left: 3px solid var(--gold-amber);
+  border-radius: 0 5px 5px 0;
+  padding: 18px 20px;
+}
+.tip-box.green-border { border-left-color: var(--safari-light); }
+.tip-box.red-border   { border-left-color: var(--brick-light); }
+.tip-label-head { font-size: 10px; letter-spacing: 2px; text-transform: uppercase; color: var(--gold-amber); margin-bottom: 8px; font-weight: 600; }
+.tip-label-head.green { color: var(--safari-light); }
+.tip-label-head.red   { color: var(--brick-light); }
+.tip-box p { font-size: 13px; color: var(--text-muted); line-height: 1.8; }
+.tip-box p strong { color: var(--text-white); }
+
+/* ── FOOTER ── */
+footer {
+  background: #0F0A06;
+  color: var(--text-muted);
+  text-align: center;
+  padding: 40px 16px;
+  font-size: 13px;
+  border-top: 1px solid rgba(212,163,89,0.1);
+}
+footer strong { color: var(--gold-amber); }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp .5s ease both; }
+
+@media (max-width: 600px) {
+  .food-grid { grid-template-columns: 1fr; }
+  .hero { padding: 60px 16px 40px; }
+  .section { padding: 50px 16px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top-nav">
+  <a href="safari_homepage.html"><i class="fa-solid fa-house"></i> 首頁</a>
+  <span class="sep">/</span>
+  <a href="safari_homepage.html#nav-section"><i class="fa-solid fa-compass"></i> 遊獵指南</a>
+  <span class="sep">/</span>
+  <span class="current"><i class="fa-solid fa-utensils"></i> FOOD</span>
+</nav>
+
+<header class="hero">
+  <p class="hero-eyebrow">East African Cuisine &amp; Safari Dining</p>
+  <h1 class="hero-title">FOOD</h1>
+  <p class="hero-subtitle">FLAVOURS OF KENYA &amp; TANZANIA</p>
+  <p class="hero-desc">
+    從草原邊的炭火烤肉到石頭城的夜市小吃<br>
+    每一道料理都是一段文化交融的故事
+  </p>
+</header>
+
+<div id="foods-section">
+<div class="section">
+  <h2 class="section-title">🍽 東非飲食精選</h2>
+  <p class="section-sub"></p>
+
+  <div class="filter-bar">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="main">主食料理</button>
+    <button class="filter-btn" data-filter="street">街頭小吃</button>
+    <button class="filter-btn" data-filter="drink">飲品甜點</button>
+  </div>
+
+  <div class="food-grid" id="foodGrid">
+
+    <!-- 1 Nyama Choma -->
+    <div class="food-card fade-up" data-cat="main">
+      <div class="food-img-wrap">
+        <img src="https://www.arushacityguide.com/wp-content/uploads/2025/09/tanzanian-nyama-choma-grilled-meat-served-with-ugali-and-kachumbari-fresh-tomato-and-onion-salad-placed-on-a-rustic-wooden-platter-with-bright-sunlight-photo.jpeg" alt="烤肉 Nyama Choma" loading="lazy">
+        <span class="food-badge badge-main"><i class="fa-solid fa-fire"></i> 主食料理</span>
+        <span class="country-tag">🇰🇪 Kenya</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">烤肉</div>
+        <div class="food-name-en">Nyama Choma</div>
+        <div class="food-desc">
+          肯亞的<strong>國民料理</strong>，以木炭慢火炭烤，烤至外皮焦香酥脆、內裡鮮嫩多汁。通常搭配生洋蔥番茄沙拉（Kachumbari）與玉米糊（Ugali）上桌，是肯亞人聚會與慶典的必備主角。Nyama 為斯瓦希里語「肉」，Choma 為「燒烤」——兩個字，道盡整道菜的精髓。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>奈洛比 Carnivore 餐廳</strong> — 非洲最知名的烤肉餐廳，可嘗多種野生動物肉</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各地路邊 Nyama Choma 攤</strong> — 最道地、最實惠，找有煙囪的攤位準沒錯</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 Ugali -->
+    <div class="food-card fade-up" data-cat="main">
+      <div class="food-img-wrap">
+        <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t39.30808-6/514005247_1278825350479448_4377619377282085363_n.jpg?stp=dst-jpg_tt6&cstp=mx940x1333&ctp=s940x1333&_nc_cat=101&ccb=1-7&_nc_sid=833d8c&_nc_ohc=y-vP-UEg7v0Q7kNvwHYN8Yz&_nc_oc=AdpDSsULYARP_lHZmc8pqjBS2bRxhb-RUjjIUuvHLEvf8RsHF12SGxgusvxwObLK2KM&_nc_zt=23&_nc_ht=scontent.ftpe7-4.fna&_nc_gid=-iJeZTavatYUOZDwBohEAw&_nc_ss=7b2a8&oh=00_Af-SMnT88Ai8bdKz3cMF_fKYWZxBsBQBb2fflYd-4zVLsw&oe=6A2AED9E" alt="玉米糊 Ugali" loading="lazy">
+        <span class="food-badge badge-main"><i class="fa-solid fa-bowl-food"></i> 主食料理</span>
+        <span class="country-tag">🇰🇪/🇹🇿 兩國共有</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">玉米糊</div>
+        <div class="food-name-en">Ugali</div>
+        <div class="food-desc">
+          東非最普遍的主食澱粉，以<strong>玉米粉加水煮成厚實的無味糊狀物</strong>，質地紮實、本身淡味，功能是承載各種燉菜與烤肉的醬汁。傳統吃法是用右手掰一小塊，揉捏成淺碗狀，再舀取配菜送入口中，不用餐具。幾乎每間傳統餐廳的每一餐都會出現，是東非餐桌最忠實的陪伴。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>所有傳統餐廳與家庭料理</strong> — 幾乎每一餐都會端上，隨處可見</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各野奢營地的自助餐區</strong> — 通常與多種燉菜一同提供</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 Pilau -->
+    <div class="food-card fade-up" data-cat="main">
+      <div class="food-img-wrap">
+        <img src="https://swahilifood.com/wp-content/uploads/JPEG-image-4E04-9EAB-62-0-1.webp" alt="香料飯 Pilau" loading="lazy">
+        <span class="food-badge badge-main"><i class="fa-solid fa-bowl-rice"></i> 主食料理</span>
+        <span class="country-tag">🇰🇪 Kenya</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">皮拉夫香料飯</div>
+        <div class="food-name-en">Pilau</div>
+        <div class="food-desc">
+          受<strong>阿拉伯與印度飲食文化影響</strong>的香料炊飯，以豆蔻、丁香、肉桂、黑胡椒等香料炒香洋蔥與肉類後，加入米與高湯燜煮而成。米粒吸飽香料燉汁後呈深棕色，香氣濃郁層次豐富。在肯亞是穆斯林節慶與婚禮宴席的必備料理，也是「請客」場合的重要象徵菜色。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>蒙巴薩舊城區餐廳</strong> — 最道地的沿海香料飯聖地</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>奈洛比穆斯林聚居區</strong> — 各地清真餐廳午間均有提供</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4.Sukuma Wiki -->
+    <div class="food-card fade-up" data-cat="main">
+      <div class="food-img-wrap">
+        <img src="https://foreignfork.com/wp-content/uploads/2023/08/Sukuma-Wiki-14.jpg" alt="蘇庫馬威基Sukuma Wiki" loading="lazy">
+        <span class="food-badge badge-main"><i class="fa-solid fa-bowl-rice"></i> 主食料理</span>
+        <span class="country-tag">🇰🇪/🇹🇿 兩國共有a</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">蘇庫馬威基</div>
+        <div class="food-name-en">Sukuma Wiki</div>
+        <div class="food-desc">
+          史瓦希里語意為「度過難關」，是一種將羽衣甘藍（或類似綠色蔬菜）切絲後，加入番茄與洋蔥炒製的國民配菜，常與烏加利搭配。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>所有傳統餐廳與家庭料理</strong> — 幾乎每一餐都會端上，隨處可見</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各野奢營地的自助餐區</strong> — 通常與玉米湖或肉類一同提供</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Githeri -->
+    <div class="food-card fade-up" data-cat="main">
+      <div class="food-img-wrap">
+        <img src="https://wfg32p.s3.amazonaws.com/media/dishes/githeri_6005.jpg" alt="吉特里 Githeri" loading="lazy">
+        <span class="food-badge badge-main"><i class="fa-solid fa-store"></i> 主食料理</span>
+        <span class="country-tag">🇰🇪 Kenya</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">吉特里</div>
+        <div class="food-name-en">Githeri</div>
+        <div class="food-desc">
+           是一種源自東非肯亞的傳統家常料理，主要由玉米粒與豆類（如紅豆或斑豆）混合而成，加入加入番茄、洋蔥及當地香料慢火燉煮而成。這道菜營養豐富且具飽足感，是當地許多部族（如基庫尤人、梅魯人等）的平價主食。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>所有傳統餐廳與家庭料理</strong> — 為家常料理，隨處可見</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各野奢營地的自助餐區</strong> — 經常出現的料理之一</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 Ndizi Nyam -->
+    <div class="food-card fade-up" data-cat="main">
+      <div class="food-img-wrap">
+        <img src="https://img.magnific.com/premium-photo/banana-stew-ndizi-na-nyama-tanzanian-dish_980224-5492.jpg" alt="香蕉牛肉燉菜Ndizi Nyama" loading="lazy">
+        <span class="food-badge badge-main"><i class="fa-solid fa-campground"></i> 主食料理</span>
+        <span class="country-tag">🇹🇿 Tanzania</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">香蕉牛肉燉菜</div>
+        <div class="food-name-en">Ndizi Nyama</div>
+        <div class="food-desc">
+          是一道經典的東非坦尚尼亞傳統佳餚。在史瓦希里語中，「Ndizi」意為香蕉，「Nyama」則意為肉（通常指牛肉）。使用未成熟的綠色大蕉搭配牛肉和濃郁椰奶，口感類似馬鈴薯，帶有鹹甜交織的獨特風味。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>所有傳統餐廳與家庭料理</strong> — 為經典料理，隨處可見</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各野奢營地的自助餐區</strong> — 經常出現的料理之一</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 Chipsi Mayai -->
+    <div class="food-card fade-up" data-cat="street">
+      <div class="food-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b3/Chipsi_mayai_%28zege%29.jpg/960px-Chipsi_mayai_%28zege%29.jpg" alt="薯條煎蛋 Chipsi Mayai" loading="lazy">
+        <span class="food-badge badge-street"><i class="fa-solid fa-store"></i> 街頭小吃</span>
+        <span class="country-tag">🇹🇿 Tanzania</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">薯條煎蛋</div>
+        <div class="food-name-en">Chipsi Mayai</div>
+        <div class="food-desc">
+          坦尚尼亞最受歡迎的平民街頭小吃，做法極其簡單卻令人欲罷不能：<strong>現炸薯條直接鋪入蛋液中</strong>，快速煎成薯條蛋煎餅，外皮金黃酥香、薯條保有嚼勁。幾乎每個街頭小攤都有販售，通常搭配番茄洋蔥辣醬（Kachumbari）食用。Chipsi＝薯條，Mayai＝蛋，名字精準描述這道料理的一切。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>坦尚尼亞各地街頭攤販</strong> — 阿魯沙市場周邊尤其密集</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>當地小型餐廳（Mama Lishe）</strong> — 價格實惠，分量十足</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 Mandazi -->
+    <div class="food-card fade-up" data-cat="street">
+      <div class="food-img-wrap">
+        <img src="https://www.jocooks.com/wp-content/uploads/2012/09/mandazi-1-20.jpg" alt="東非炸糕 Mandazi" loading="lazy">
+        <span class="food-badge badge-street"><i class="fa-solid fa-store"></i> 街頭小吃</span>
+        <span class="country-tag">🇰🇪🇹🇿 兩國共有</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">東非炸糕</div>
+        <div class="food-name-en">Mandazi</div>
+        <div class="food-desc">
+          東非版的炸麵包，以麵粉、椰奶與少許香料揉製後油炸，形狀多為<strong>三角形或圓形</strong>，外皮金黃酥脆，內層鬆軟帶有淡淡的椰香與茴香氣息。是肯亞與坦尚尼亞最常見的早餐與下午茶點心，幾乎所有市集攤販都有現炸販售，物美價廉。強烈建議搭配一杯 Chai Masala 一起享用，是最道地的在地早餐組合。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>全東非各地市集與早餐攤販</strong> — 清晨最新鮮，現炸現賣</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各野奢營地早餐自助台</strong> — 通常作為早餐甜點提供</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 薩穆薩Samosa -->
+    <div class="food-card fade-up" data-cat="street">
+      <div class="food-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/c/cf/Samosa-and-Chatni.jpg" alt="薩穆薩三角餃Samosa" loading="lazy">
+        <span class="food-badge badge-street"><i class="fa-solid fa-store"></i> 街頭小吃</span>
+        <span class="country-tag">🇰🇪🇹🇿 兩國共有</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">薩穆薩三角餃</div>
+        <div class="food-name-en">Samosa</div>
+        <div class="food-desc">
+          它就是源自印度的炸咖哩三角餃。但在肯亞與坦尚尼亞，當地人將其在地化，外皮炸得更為酥脆，內餡除了傳統的咖哩馬鈴薯泥與豌豆外，最主流、也最受歡迎的是滿滿的香料碎牛肉（Beef Sambusa）或雞肉餡。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>獵遊野餐盒</strong> — 全天獵遊時的紙盒午餐裡，十之八九會有</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各野奢營地下午茶</strong> — 經常與肯亞奶茶（Chai）一起出現</span></div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 Chai Masala -->
+    <div class="food-card fade-up" data-cat="drink">
+      <div class="food-img-wrap">
+        <img src="https://cdn.shopify.com/s/files/1/0758/6929/0779/files/Masala_Tea_-_Annams_Recipes_Shop_2_480x480.jpg?v=1732347934" alt="印度香料奶茶 Chai Masala" loading="lazy">
+        <span class="food-badge badge-drink"><i class="fa-solid fa-mug-hot"></i> 飲品甜點</span>
+        <span class="country-tag">🇰🇪 Kenya</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">印度香料奶茶</div>
+        <div class="food-name-en">Chai Masala</div>
+        <div class="food-desc">
+          在肯亞，Chai 不只是一杯茶，是一種生活方式。以紅茶葉、全脂牛奶、大量砂糖以及<strong>小荳蔻、薑、肉桂</strong>等香料一同熬煮，濃稠香甜、奶香四溢。幾乎所有餐廳、攤販都供應，且往往在早餐、午後或接待客人時自動端上。拒絕一杯 Chai 在當地有時會被視為不禮貌，建議入境隨俗、欣然接受。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>肯亞全境所有餐廳、攤販</strong> — 無所不在，價格極低</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各野奢營地早餐桌</strong> — 通常以精緻版呈現，搭配 Mandazi</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 Baobab Juice -->
+    <div class="food-card fade-up" data-cat="drink">
+      <div class="food-img-wrap">
+        <img src="https://aduna.com/cdn/shop/articles/Baobab_Colada_Web_ae580c17-1305-4f44-aef7-1dc472495c82.png?v=1774371135&width=1000" alt="猴麵包果汁 Baobab Juice" loading="lazy">
+        <span class="food-badge badge-drink"><i class="fa-solid fa-lemon"></i> 飲品甜點</span>
+        <span class="country-tag">🇰🇪🇹🇿 兩國共有</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">猴麵包果汁</div>
+        <div class="food-name-en">Baobab Juice</div>
+        <div class="food-desc">
+          以非洲生命之樹——<strong>猴麵包樹（Baobab）的果實</strong>製成，果肉呈天然粉末狀，溶於水或牛奶後呈現乳白色，口感酸甜清爽，帶有獨特的柑橘與香草混合風味。富含維生素 C、鈣質與抗氧化物，被稱為「非洲超級食物」。旅途中補充水分的同時嘗試一杯，是難得的在地體驗，購買時確認使用已過濾飲用水調製。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>坦尚尼亞各地市集與健康食品攤</strong> — 阿魯沙市場常見</span></div>
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>各野奢營地迎賓飲品</strong> — 通常作為 Game Drive 回營後的歡迎飲料</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 Tusker 啤酒 -->
+    <div class="food-card fade-up" data-cat="drink">
+      <div class="food-img-wrap">
+        <img src="https://www.oaks.delivery/wp-content/uploads/2017/09/blog-covers-21-1024x614.jpg" alt="啤酒" loading="lazy">
+        <span class="food-badge badge-drink"><i class="fa-solid fa-lemon"></i> 飲品甜點</span></span>
+        <span class="country-tag">>🇰🇪 Kenya</span>
+      </div>
+      <div class="food-body">
+        <div class="food-name-zh">Tusker 啤酒</div>
+        <div class="food-name-en">Tusker</div>
+        <div class="food-desc">
+          Tusker 啤酒是肯亞當之無愧的「國寶級啤酒」，也是全東非市場佔有率最高、最著名的拉格啤酒（Lager）。它的標誌是一隻非常醒目的大象頭，口號是「Bia Yangu, Nchi Yangu」（史瓦希里語：我的啤酒，我的家園）。
+        </div>
+        <div class="eat-section">
+          <div class="eat-label">📍 在哪裡嘗</div>
+          <div class="eat-spots">
+            <div class="eat-spot"><i class="fa-solid fa-circle-dot"></i><span><strong>無所不在</strong> — 市區的連鎖超市（如 Carrefour 肯亞家樂福）、街頭的合法酒品專賣店（Liquor Store）、餐廳，還是Safari入住的荒野帳篷營地酒吧，100% 都有供應。</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div><!-- /food-grid -->
+
+  <!-- TIP BOXES -->
+  <div class="tip-grid">
+    <div class="tip-box">
+      <div class="tip-label-head">💧 飲水安全</div>
+      <p>旅途中請<strong>只飲用瓶裝水或 Lodge 提供的過濾水</strong>，避免直接飲用自來水或街頭現榨果汁（除非確認以瓶裝水調製）。刷牙也建議使用瓶裝水，冰塊請謹慎確認來源。</p>
+    </div>
+    <div class="tip-box green-border">
+      <div class="tip-label-head green">🥗 飲食衛生</div>
+      <p>街頭小吃選擇<strong>現點現做、高溫烹調</strong>的攤位，避免已盛放於室溫的熟食。Nyama Choma 等烤肉類攤位需確認肉品全熟。隨身攜帶腸胃藥以備不時之需，是謹慎旅人的必備準備。</p>
+    </div>
+    <div class="tip-box red-border">
+      <div class="tip-label-head red">🕌 飲食禁忌</div>
+      <p>肯亞與坦尚尼亞有大量穆斯林人口，部分餐廳<strong>不供應豬肉與酒精</strong>。Ramadan（齋戒月）期間，部分街頭攤販白天不營業。進入清真寺附近飲食區時，建議尊重當地風俗。</p>
+    </div>
+  </div>
+
+</div>
+</div>
+
+<footer>
+  <p>九十路埃及05團 <strong>Safari 小隊</strong> · 肯亞 &amp; 坦尚尼亞 · 2026 / 07 / 08–19</p>
+  <p style="margin-top:8px; opacity:0.6; font-size:12px;">Hakuna Matata · 行程規劃由 Splendid Vacations 與 Alex Masila 團隊聯合呈獻</p>
+</footer>
+
+<script>
+  const filterBtns = document.querySelectorAll('.filter-btn');
+  const foodCards  = document.querySelectorAll('.food-card');
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const filter = btn.dataset.filter;
+      foodCards.forEach(card => {
+        const show = filter === 'all' || card.dataset.cat === filter;
+        card.classList.toggle('hidden', !show);
+      });
+    });
+  });
+</script>
+</body>
+</html>
