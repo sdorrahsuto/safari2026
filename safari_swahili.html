@@ -194,6 +194,7 @@ body {
     padding: 0 2rem 100px;
   }
 
+
   /* ── 功能面板 ── */
   .panel {
     display: none;
@@ -201,6 +202,7 @@ body {
   .panel.active {
     display: block;
   }
+
 
   /* ── 分類標題 ── */
 
@@ -764,6 +766,46 @@ body {
   background: rgba(45,74,45,0.1);
 }
 
+/* ── 遊獵英語懸浮分類標籤列 ── */
+.safari-subnav {
+  position: sticky;
+  top: 53px;
+  left: 0; right: 0;
+  z-index: 150;
+  display: none;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(26,18,11,0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(212,163,89,0.2);
+  padding: 16px;
+}
+.safari-subnav.visible {
+  display: flex;
+}
+.safari-subnav a {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 18px;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+  color: var(--text-muted);
+  border: 1px solid transparent;
+  transition: all .3s ease;
+}
+.safari-subnav a:hover {
+  background: rgba(212, 163, 89, 0.1);
+  color: var(--gold-amber);
+  border-color: var(--gold-amber);
+}
+.safari-subnav a.active {
+  background: rgba(212, 163, 89, 0.1);
+  color: var(--gold-amber);
+  border-color: var(--gold-amber);
+}
+
 /* ── FOOTER頁尾 ── */
 footer {
   background: #0F0A06;
@@ -796,6 +838,7 @@ footer strong { color: var(--gold-amber); }
   <span class="current"><i class="fa-solid fa-language"></i> WORD</span>
 </nav>
 
+
 <!-- 固定側邊切換按鈕 -->
 <div class="mode-switcher">
   <button class="mode-btn active" onclick="switchMode('phrases')" id="btn-phrases">
@@ -817,16 +860,18 @@ footer strong { color: var(--gold-amber); }
   <p class="hero-desc">一生中學會最多生態英文的時刻來了<br>HAKUNA MATATA!</p>
 </section>
 
+
 <main>
 
  <div class="panel active" id="panel-phrases">
       <div class="ai-header-deco" style="padding-top: 60px;">
-        <h2>史瓦希林語</h2>
+        <h2>史瓦希里語</h2>
         <p>Kiswahili<br>旅途中，幾句簡單的問候將會讓你與當地人的距離瞬間拉近。</p>
       </div>
 
+
     <!-- 問候致意 -->
-    <div class="category-section">
+    <div class="category-section" id="section-greetings">
       <div class="section-header">
         <span class="section-title">🙏 問候致意 Greetings</span>
       </div>
@@ -920,7 +965,7 @@ footer strong { color: var(--gold-amber); }
     </div>
 
     <!-- 日常實用 -->
-    <div class="category-section">
+    <div class="category-section" id="section-everyday">
       <div class="section-header">
         <span class="section-title">🛒 日常實用 Everyday Phrases</span>
       </div>
@@ -975,15 +1020,21 @@ footer strong { color: var(--gold-amber); }
 
   <!-- ═══════════════════════════════ 遊獵英語面板 ═══════════════════════════════ -->
   <div class="panel" id="panel-safari">
-    <div class="safari-panel">
 
+    <!-- 遊獵英語懸浮子導覽 -->
+    <div class="safari-subnav visible" id="safari-subnav">
+      <a href="#safari-landscape"><i class="fa-solid fa-earth-americas"></i> 地形名稱</a>
+      <a href="#safari-flora"><i class="fa-solid fa-leaf"></i> 植物名稱</a>
+      <a href="#safari-behaviour"><i class="fa-solid fa-paw"></i> 動物行為</a>
+</div>
+    <div class="safari-panel">
       <div class="ai-header-deco" style="padding-top: 60px;">
         <h2>遊獵英語</h2>
         <p>Safari 途中最實用的英文詞彙庫 · 地形 · 植物 · 動物行為</p>
       </div>
 
       <!-- ── 地形名稱 ── -->
-      <div class="category-section">
+      <div class="category-section" id="safari-landscape">
         <div class="section-header">
           <span class="section-title">🌍 地形名稱 Landscape &amp; Terrain</span>
         </div>
@@ -1074,7 +1125,7 @@ footer strong { color: var(--gold-amber); }
       </div>
 
       <!-- ── 植物名稱 ── -->
-      <div class="category-section">
+      <div class="category-section" id="safari-flora">
         <div class="section-header">
           <span class="section-title">🌿 植物名稱 Flora &amp; Vegetation</span>
         </div>
@@ -1145,7 +1196,7 @@ footer strong { color: var(--gold-amber); }
       </div>
 
       <!-- ── 動物行為 ── -->
-      <div class="category-section">
+      <div class="category-section" id="safari-behaviour">
         <div class="section-header">
           <span class="section-title">🐾 動物行為 Animal Behaviour</span>
         </div>
@@ -1377,7 +1428,7 @@ footer strong { color: var(--gold-amber); }
     document.querySelectorAll('.mode-btn').forEach(b => b.classList.remove('active'));
     document.getElementById('panel-' + mode).classList.add('active');
     document.getElementById('btn-' + mode).classList.add('active');
-  }
+}
 
   /* ── 翻譯方向 ── */
   function setDirection(dir) {
