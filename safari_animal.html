@@ -2261,6 +2261,7 @@ footer strong { color: var(--gold-amber); }
 </div>
 
 </section>
+
 <section id="gazelle-section">
 <div class="section">
   <h2 class="section-title">🦌 動物介紹</h2>
@@ -2540,29 +2541,14 @@ footer strong { color: var(--gold-amber); }
         </div>
       </div>
       
-      <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
-        <i class="fa-solid fa-circle-check"></i>
-        IUCN 紅色名錄：<strong>無危 (Least Concern)</strong>
-      </div>
-    </div>
-
-    <div class="profile-content">
-      <a href="#search-section" class="back-to-search-btn"><i class="fa-solid fa-magnifying-glass"></i> 返回動物搜尋</a>
-      <div class="profile-names">
-        <div class="name-zh">疣豬</div>
-        <div class="name-en">Common Warthog</div>
-        <div class="name-sw">斯瓦希里語：<strong>Pumbaa</strong></div>
-        <div class="name-sci">Phacochoerus africanus</div>
-      </div>
-
-      <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab(event, 'wtab-overview')">生態總覽</button>
-        <button class="tab-btn" onclick="switchTab(event, 'wtab-behavior')">趣味行為</button>
-        <button class="tab-btn" onclick="switchTab(event, 'wtab-tips')">觀察小語</button>
+            <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'warthog-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'warthog-tab-behavior')">趣味行為</button>
+        <button class="tab-btn" onclick="switchTab(event, 'warthog-tab-tips')">觀察小語</button>
       </div>
 
       <div class="tab-panels">
-        <div class="tab-panel active" id="wtab-overview">
+        <div class="tab-panel active" id="warthog-tab-overview">
           <div class="prose">
             <p>疣豬是東非稀樹草原最普遍、最有個性的居民。體型健壯，最明顯特徵是臉頰突出的肉瘤與靈活鼻頭。牠們採取「掘土防禦」策略：危急時以前蹄與鼻頭迅速挖掘地洞藏身，是草原生態圈的重要推手。</p>
           </div>
@@ -2573,12 +2559,12 @@ footer strong { color: var(--gold-amber); }
             </li>
             <li>
               <span class="fi">👩‍🍼</span>
-              <div><strong>社會結構：</strong>由母疣豬與幼崽組成緊密的「家族群體」。成年雄性則會離開，形成鬆散的「單身漢群體」。</div>
+              <div><strong>社會結構：</strong>由母疣豬與幼崽組成緊密的「家族群體」，母疣豬會共同照顧幼崽，甚至會照顧不屬於自己的幼崽。成年雄性則會離開，形成鬆散的「單身漢群體」，雄性成員間常透過鬥爭來爭奪社會階級或交配權。</div>
             </li>
           </ul>
         </div>
 
-        <div class="tab-panel" id="wtab-behavior">
+        <div class="tab-panel" id="warthog-tab-behavior">
           <div class="prose">
             <p>疣豬展現了許多迷人的行為：</p>
             <ul class="feature-list">
@@ -2598,9 +2584,9 @@ footer strong { color: var(--gold-amber); }
           </div>
         </div>
 
-        <div class="tab-panel" id="wtab-tips">
+        <div class="tab-panel" id="warthog-tab-tips">
           <div class="prose">
-            <p>若在 Safari 途中看到草叢中出現<strong>「豎立的尾巴」</strong>，那絕對是疣豬正在快速移動。若看到牠們在白蟻丘上「拱土」，那是正在尋找礦物質或昆蟲幼蟲。若發現附近<strong>疣豬焦慮奔跑</strong>，那極大機率代表附近有<strong>大型掠食者</strong>，請務必提醒駕駛提高警覺。</p>
+            <p>若在 Safari 途中看到草叢中出現<strong>「豎立的尾巴」</strong>，那絕對是疣豬正在快速移動。若看到牠們在白蟻丘上「拱土」，那是正在尋找礦物質或昆蟲幼蟲。<br><br>若發現附近<strong>疣豬焦慮奔跑</strong>，那極大機率代表附近有<strong>大型掠食者</strong>，請務必提醒駕駛提高警覺。</p>
           </div>
         </div>
       </div>
@@ -2608,6 +2594,8 @@ footer strong { color: var(--gold-amber); }
   </div>
 </div>
 </section>
+
+
 
 <footer>
   <p>九十路埃及05團 <strong>Safari 小隊</strong> · 肯亞 &amp; 坦尚尼亞 · 2026 / 07 / 08–19</p>
