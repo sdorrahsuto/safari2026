@@ -45,9 +45,16 @@ body {
   align-items: center;
   gap: 16px;
   border-bottom: 1px solid rgba(212,163,89,0.2);
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 200;
+}
+
+/* hero 補償 fixed nav 高度，避免內容被遮住 */
+.hero {
+  padding-top: 50px;
 }
 .top-nav a {
   color: var(--text-muted);
@@ -1915,7 +1922,7 @@ img {
 <section id="leopard-section">
 <div class="section">
   <h2 class="section-title">🐆 動物介紹</h2>
-  <p class="section-sub">潛行大師：草原上的隱形獵手</p>
+  <p class="section-sub">潛行大師：五霸中最難捉摸的隱形獵手</p>
 
   <div class="animal-profile">
     <div class="profile-visual">
@@ -1929,26 +1936,40 @@ img {
 
       <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">體重</div>
-          <div class="stat-value">30 - 90 kg</div>
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">40 - 90 kg</div>
+          <div class="stat-sub">♀ 平均約 28 - 60 kg</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">棲息習性</div>
-          <div class="stat-value">獨居</div>
+          <div class="stat-label">♂ 肩高</div>
+          <div class="stat-value">60 - 70 cm</div>
+          <div class="stat-sub">體型粗壯、肌肉密度高</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">爬樹負重</div>
+          <div class="stat-value">達 2-3× 體重</div>
+          <div class="stat-sub">曾拖 125 kg 幼長頸鹿上樹</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">獵物種類</div>
+          <div class="stat-value">90+ 種</div>
+          <div class="stat-sub">貓科中食性最廣的物種</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">活動高峰</div>
-          <div class="stat-value">清晨 / 夜晚</div>
+          <div class="stat-value">清晨 / 黃昏</div>
+          <div class="stat-sub">夜間也高度活躍</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">爬樹能力</div>
-          <div class="stat-value">卓越 (可攜帶獵物)</div>
+          <div class="stat-label">領域面積</div>
+          <div class="stat-value">6 - 1,000 km²</div>
+          <div class="stat-sub">雄性領域可數倍於雌性</div>
         </div>
       </div>
-      
+
       <div class="iucn-badge">
-        <i class="fa-solid fa-circle-exclamation"></i>
-        IUCN 紅色名錄：<strong>易危 (Vulnerable)</strong>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危（Vulnerable）</strong>
       </div>
     </div>
 
@@ -1961,147 +1982,158 @@ img {
       </div>
 
       <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab(event, 'leotab-overview')">生態總覽</button>
-        <button class="tab-btn" onclick="switchTab(event, 'leotab-skill')">生存絕技</button>
-        <button class="tab-btn" onclick="switchTab(event, 'leotab-tips')">觀察小語</button>
-        <button class="tab-btn" onclick="switchTab(event, 'leotab-where')">觀賞地點</button>
+        <button class="tab-btn active" onclick="switchTab(event, 'lp-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'lp-tab-skill')">生存絕技</button>
+        <button class="tab-btn" onclick="switchTab(event, 'lp-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'lp-tab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
-        <div class="tab-panel active" id="leotab-overview">
+        <div class="tab-panel active" id="lp-tab-overview">
           <div class="prose">
-            <p>花豹是五霸 (Big Five) 中<strong>最難以捉摸的成員</strong>，也是全球分布最廣的大型貓科動物，從非洲莽原到亞洲叢林皆有其蹤跡。牠們以極佳的隱蔽性與獨立的生活型態聞名，身上的玫瑰斑 (Rosettes) 是完美的天然迷彩，能讓牠們在草叢與樹影間瞬間消失。</p>
-            <p>花豹是貓科動物中<strong>適應力最強</strong>的物種——牠們能在沙漠、雨林、高山草原、甚至城市邊緣存活。相較於獅子與獵豹需要開闊草原，花豹對棲地的選擇靈活得多，這也是牠們在人類活動壓縮下相對存活較佳的原因。</p>
+            <p>
+              花豹是 Big Five 中<strong>最難以捉摸的成員</strong>，也是全球分布最廣的大型貓科——從非洲莽原、中東、南亞到俄羅斯遠東皆有其蹤跡，卻因極致的隱蔽性而讓人幾乎感覺不到牠的存在。身上的<em>玫瑰斑（Rosettes）</em>是自然界最精緻的迷彩，使牠在草叢與樹影間瞬間消失。
+            </p>
+            <p>
+              相較於獅子需要廣闊獵場、獵豹依賴開闊視野，花豹是貓科中<strong>棲地適應力最強的物種</strong>，能在沙漠、雨林、高山草原乃至城市邊緣獨立生存，這也是牠在人類活動壓縮下相對存活較佳的根本原因。
+            </p>
           </div>
 
-          <h4 style="margin-top: 20px; padding-bottom: 10px; border-bottom: 2px solid #d4af37; color: #d4af37; display: inline-block;">🔍 鑑別指南：花豹 (Leopard) vs. 獵豹 (Cheetah)</h4>
-          <table style="width: 100%; border-collapse: collapse; margin-top: 15px; font-size: 0.9em; color: #eee; background-color: rgba(255,255,255,0.05);">
-            <thead>
-              <tr style="border-bottom: 2px solid #444;">
-                <th style="padding: 12px; text-align: left; color: #d4af37;">特徵</th>
-                <th style="padding: 12px; text-align: center;">花豹 (Leopard)</th>
-                <th style="padding: 12px; text-align: center;">獵豹 (Cheetah)</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr style="border-bottom: 1px solid #333;">
-                <td style="padding: 10px;"><strong>花紋</strong></td>
-                <td style="padding: 10px; text-align: center;">玫瑰斑（空心環狀）</td>
-                <td style="padding: 10px; text-align: center;">實心圓點</td>
-              </tr>
-              <tr style="border-bottom: 1px solid #333;">
-                <td style="padding: 10px;"><strong>臉部淚痕</strong></td>
-                <td style="padding: 10px; text-align: center;">無明顯淚痕</td>
-                <td style="padding: 10px; text-align: center;">明顯黑色淚溝</td>
-              </tr>
-              <tr style="border-bottom: 1px solid #333;">
-                <td style="padding: 10px;"><strong>體型結構</strong></td>
-                <td style="padding: 10px; text-align: center;">厚實、肌肉發達</td>
-                <td style="padding: 10px; text-align: center;">修長、腰部纖細</td>
-              </tr>
-              <tr style="border-bottom: 1px solid #333;">
-                <td style="padding: 10px;"><strong>爬樹行為</strong></td>
-                <td style="padding: 10px; text-align: center;">頻繁、擅長</td>
-                <td style="padding: 10px; text-align: center;">極少爬樹</td>
-              </tr>
-              <tr>
-                <td style="padding: 10px;"><strong>性格</strong></td>
-                <td style="padding: 10px; text-align: center;">神秘、高度警覺</td>
-                <td style="padding: 10px; text-align: center;">相對溫和、日行性</td>
-              </tr>
-            </tbody>
-          </table>
-          <p style="margin-top: 15px; font-size: 0.85em; color: #aaa; font-style: italic;">
-            💡 快速判斷法：在樹上 = 幾乎肯定是花豹；高速奔馳於開闊草原 = 幾乎肯定是獵豹。
-          </p>
-
-          <ul class="feature-list" style="margin-top: 20px;">
-            </li>
-          </ul>
-        </div>
-
-        <!-- 生存絕技 -->
-        <div class="tab-panel" id="leotab-skill">
-          <div class="prose">
-            <p>花豹擁有貓科動物中<strong>最全面的生存技能組合</strong>：極靜的潛行能力、卓越的爬樹技術、驚人的力量重量比，以及高度的機會主義飲食策略，讓牠在其他大型掠食者強烈競爭的環境中仍能找到自己的生態位。</p>
-            <p>面對獅子與鬣狗的搶食威脅，花豹演化出了最獨特的食物儲存策略：<strong>將獵物垂直拖至樹梢</strong>，有時甚至將超過自身體重兩三倍的屍體懸掛於高枝，這需要極為強大的頸部與前肢肌力。</p>
-          </div>
           <ul class="feature-list">
             <li>
               <span class="fi">🌿</span>
-              <div><strong>世界級的偽裝大師：</strong>花豹的玫瑰斑花紋可讓牠在斑駁的光影中幾乎完全消失。研究發現，花豹能在距離獵物 5 公尺內潛行而不被發現，這比任何其他大型貓科動物都更接近目標後才發動攻擊。</div>
+              <div><strong>玫瑰斑的迷彩物理學：</strong>花豹斑紋的空心環狀「玫瑰斑」能模擬樹葉間碎散光影，在斑駁的林下環境中產生高效的視覺分解效果。研究顯示，花豹能在距離獵物<strong>僅 5 公尺內</strong>潛行而不被察覺，是所有大型貓科中突擊距離最短的物種。</div>
             </li>
             <li>
+              <span class="fi">🌑</span>
+              <div><strong>黑豹之謎：</strong>所謂的「黑豹（Black Panther）」並非獨立物種，而是花豹的<strong>黑色素過量變異個體（Melanistic Leopard）</strong>。在強光下仍可隱約看見玫瑰斑花紋，黑色素在東南亞花豹中更為常見，非洲偶有記錄，馬賽馬拉附近近年亦有影像紀錄。</div>
+            </li>
+            <li>
+              <span class="fi">🗺️</span>
+              <div><strong>氣味標記的隱形疆界：</strong>花豹以尿液、糞便與爪痕標記領域，雄性領域可達 <strong>1,000 km²</strong>，並與多隻雌性的較小領域重疊。牠幾乎完全不發出吼叫宣示領域，而是靠氣味傳遞訊息——讓其在草原上幾乎「聽不到存在」。</div>
+            </li>
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>夜行性的真正程度：</strong>花豹視網膜的視桿細胞密度極高，夜視能力是人類的<strong>6 倍以上</strong>，在月光下即可精準狩獵。研究顯示東非花豹超過 70% 的狩獵行為發生在日落後，這也是牠在白天的 Safari 中如此難以目擊的根本原因。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>花豹是唯一一種會將獵物<strong>搬上樹儲藏</strong>的大型貓科。曾有記錄顯示一隻 60 kg 的雌豹，獨自將一具 <strong>125 kg 的長頸鹿幼獸</strong>拖上 5 公尺高的金合歡樹——這相當於人類用牙齒咬住 3 倍體重的物體垂直攀爬。頸部與前肢的肌肉密度是同體重貓科的 1.5 倍，正是為此演化。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="lp-tab-skill">
+          <div class="prose">
+            <p>
+              花豹擁有貓科動物中<strong>最全面的生存技能組合</strong>：極靜的潛行、卓越的攀樹、驚人的力量重量比，以及高度機會主義的食性策略，讓牠在獅子、鬣狗、野狗的強烈競爭中仍能穩定找到生態位。
+            </p>
+            <p>
+              牠的核心生存哲學是<em>「避免衝突、單打獨鬥、把食物藏好」</em>——三個策略加在一起，讓花豹成為非洲草原上<strong>最具韌性的大型掠食者</strong>。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
               <span class="fi">🌳</span>
-              <div><strong>垂直儲糧策略：</strong>為了避免獵物被獅子或鬣狗搶奪，花豹習慣將獵殺後的重型食物拖至樹梢上方享用，曾有記錄顯示花豹將重達 125 kg 的長頸鹿幼獸拖上 5 公尺高的金合歡樹，是其最具指標性的行為。</div>
+              <div><strong>垂直儲糧策略：</strong>面對獅子與鬣狗的搶奪，花豹將獵物<strong>拖上樹梢</strong>是最聰明的對策。樹上的食物無法被獅子或鬣狗取得，讓牠可以從容地在數天內慢慢享用，大幅提高每次狩獵的能量回報率。</div>
             </li>
             <li>
               <span class="fi">🎯</span>
-              <div><strong>機會主義的廣泛食性：</strong>花豹的獵物種類超過 90 種，從甲蟲、兔子、狒狒，到青斑羚、黑斑羚乃至幼年長頸鹿皆可。這種極高的飲食彈性是牠在食物匱乏時期仍能存活的關鍵。</div>
-            </li>
-            <li>
-              <span class="fi">💧</span>
-              <div><strong>耐渴能力卓越：</strong>花豹能從獵物的血液與肌肉中攝取水分，因此在乾旱環境中可長達數週不直接飲水。這使牠能在其他大型掠食者無法生存的半乾旱地帶開拓棲地。</div>
+              <div><strong>90+ 種獵物的機會主義：</strong>花豹的菜單從甲蟲、蟾蜍、兔子、蛇，到黑斑羚、疣豬、狒狒乃至幼年長頸鹿，超過 <strong>90 種已記錄獵物</strong>。食物匱乏時牠甚至捕食蝗蟲——這種極端彈性是牠在乾旱年份和棲地壓縮中依然存活的關鍵。</div>
             </li>
             <li>
               <span class="fi">🐾</span>
-              <div><strong>潛行速度的反直覺：</strong>花豹在接近獵物時速度極慢——研究計時顯示，牠有時需要花費超過 30 分鐘「爬行」最後 50 公尺，每一步落腳都刻意避開任何可能發出聲音的枯葉或樹枝，展現出驚人的耐心與動作控制力。</div>
+              <div><strong>30 分鐘爬行最後 50 公尺：</strong>花豹的潛行速度慢得反直覺——研究計時顯示，牠有時花費超過 <strong>30 分鐘「爬行」最後 50 公尺</strong>，每步落腳都刻意迴避枯葉與樹枝，展現出任何大型貓科中最極致的耐心與動作控制力。</div>
+            </li>
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>從獵物身上喝水：</strong>花豹能從血液與肌肉組織直接攝取水分，在乾旱環境中可<strong>長達數週不直接飲水</strong>，讓牠能深入其他掠食者無法生存的半乾旱地帶，進一步擴大生態位。</div>
             </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔍 花豹 vs. 獵豹 快速鑑別</div>
+            <p><strong>花豹</strong>——玫瑰斑（空心環狀）、體型粗壯厚實、無眼下淚紋、頭部寬大、常在樹上或陰影中、晨昏與夜行。<strong>獵豹</strong>——實心黑色圓斑、體型修長纖細、眼下有黑色淚溝、頭小頸長、白天在開闊地活動。<em>快速法則：看到在樹上的 = 幾乎肯定是花豹；正在全速衝刺的 = 幾乎肯定是獵豹。</em></p>
+          </div>
         </div>
 
-        <!-- 觀察要點 -->
-        <div class="tab-panel" id="leotab-tips">
+        <div class="tab-panel" id="lp-tab-where">
           <div class="prose">
-            <p>觀察花豹需要<strong>極大的耐心與運氣</strong>——即便是最資深的導遊，也無法保證每次都能找到花豹。但正因如此，一旦目擊，其震撼感往往遠超過獅子或大象。</p>
+            <p>花豹的隱蔽性使目擊率因地因時差異極大，選擇<strong>正確地點</strong>能大幅提高相遇機率。以下是本次行程沿途的頂級花豹觀察熱點：</p>
           </div>
-          <ul class="feature-list">
-            <li>
-              <span class="fi">🌲</span>
-              <div><strong>從樹梢開始搜索：</strong>Safari 時建議留意馬賽馬拉河岸邊的金合歡樹梢，若看到樹上有「不尋常的物體」（如獵物屍體、下垂的蹄肢），那極大機率是花豹的藏身處。即使看不見花豹本身，懸掛的獵物就是牠在附近的最有力証據。</div>
-            </li>
-            <li>
-              <span class="fi">🐒</span>
-              <div><strong>跟著猴群的警報聲：</strong>狒狒與疣猴是花豹最敏感的「預警系統」。當牠們突然發出連串高頻警戒叫聲並迅速向樹梢集中，往往代表附近有花豹正在移動。有經驗的導遊都懂得傾聽靈長類動物的警報，比直接搜索更有效率。</div>
-            </li>
-            <li>
-              <span class="fi">🕐</span>
-              <div><strong>最佳時段：清晨與黃昏：</strong>花豹是典型的晨昏活動型動物，尤其是日出後 1 小時內，牠們剛完成夜間狩獵或正要出發覓食，是最容易被目擊的時間窗口。強烈建議安排清晨首班 Safari。</div>
-            </li>
-            <li>
-              <span class="fi">📵</span>
-              <div><strong>保持絕對安靜：</strong>花豹對人類的聲音和動作極為敏感，是所有五霸中最容易因干擾而消失的動物。在觀察期間，車內應盡量保持靜默，避免突然的手勢或閃光燈，才能讓牠自然展現行為，而非倉皇隱入草叢。</div>
-            </li>
-            <li>
-              <span class="fi">📷</span>
-              <div><strong>拍攝建議：</strong>使用長焦鏡頭（300mm 以上）並保持最大光圈以應對林下低光環境。若發現花豹在樹上休息，嘗試以仰角取景，利用背光或逆光捕捉其剪影，往往比清晰的正面照更具藝術張力。</div>
-            </li>
-          </ul>
-        </div>
 
-        <!-- 觀賞地點 -->
-        <div class="tab-panel" id="leotab-where">
-          <div class="prose">
-            <p>花豹的隱蔽性使得目擊率因地因時而異，選擇<strong>對的地點</strong>能大幅提高相遇機率。以下幾個東非地點因豹口密度高或棲地開闊，是業界公認最佳的花豹觀察點。</p>
-          </div>
           <ul class="feature-list">
             <li>
-              <span class="fi">🇰🇪</span>
-              <div><strong>馬賽馬拉 (Masai Mara)：</strong>沿馬拉河的河岸林地是花豹最常被目擊的地帶，高大的金合歡樹提供理想的瞭望與儲糧點。Mara North 與 Olare Motorogi 私人保護區因遊客管制嚴格，目擊品質尤佳。</div>
+              <span class="fi">⭐</span>
+              <div>
+                <strong>馬賽馬拉河岸林地（肯亞，頂級推薦）</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Mara River 河岸金合歡帶</span>
+                  <span class="loc-tag">Mara North Conservancy</span>
+                  <span class="loc-tag">Olare Motorogi Conservancy</span>
+                </div>
+              </div>
             </li>
             <li>
               <span class="fi">🇹🇿</span>
-              <div><strong>塞倫蓋提北部 (Serengeti North)：</strong>Lobo 地區的岩丘地形（Kopjes）是花豹鍾愛的棲地，高聳的花崗岩礁不僅提供絕佳的視野，也成為牠們儲存獵物的天然冰箱。</div>
+              <div>
+                <strong>坦尚尼亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti 北部 Lobo 岩丘區</span>
+                  <span class="loc-tag">Ngorongoro（Lerai 森林）</span>
+                  <span class="loc-tag">Tarangire NP（河岸林）</span>
+                </div>
+              </div>
             </li>
             <li>
-              <span class="fi">🪨</span>
-              <div><strong>恩戈羅恩戈羅 (Ngorongoro)：</strong>火山口封閉地形使豹的密度相當高，且因地形開闊少遮蔽，一旦發現後可進行長時間觀察。Lerai 森林是花豹最喜愛的藏匿地點，當地導遊通常熟知個別花豹的習慣路線。</div>
-            </li>
-            <li>
-              <span class="fi">🌿</span>
-              <div><strong>山布魯 (Samburu)：</strong>位於肯亞北部的山布魯保護區擁有特殊的「北方五霸」，其中花豹密度極高。乾燥的灌木叢地形反而讓花豹更容易被發現，且此地的豹相對習慣於遊客車輛，行為展示更為自然。</div>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>其他肯亞觀賞點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Samburu NR（北方五霸）</span>
+                  <span class="loc-tag">Laikipia 私人保護區</span>
+                  <span class="loc-tag">Tsavo West NP</span>
+                </div>
+              </div>
             </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>花豹攝影的最高境界是拍到牠<strong>在樹上俯視獵物或進食</strong>的畫面。請使用 300mm 以上長焦、最大光圈應對林下低光，並以仰角取景利用逆光捕捉剪影——往往比清晰的正面照更具張力。清晨 6:30–8:30 是牠結束夜間狩獵、尚未隱入陰影的最佳拍攝窗口。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="lp-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌲</span>
+              <div><strong>從樹梢開始搜索，而非地面：</strong>花豹白天多在樹上休息。搜索時優先掃視河岸金合歡樹的中高樹枝——若看到「不自然的形狀」或懸掛的蹄肢，即使看不到花豹，<strong>懸掛的獵物就是牠在附近的最有力證據</strong>，此時靜候常能等到牠重返進食。</div>
+            </li>
+            <li>
+              <span class="fi">🐒</span>
+              <div><strong>靈長類警報是最靈敏的探測器：</strong>狒狒與疣猴對花豹的感知遠比人類敏銳。當牠們突然發出連串高頻警戒叫聲並向樹梢集中逃竄，<strong>幾乎必定代表花豹正在移動</strong>。有經驗的導遊都優先聆聽靈長類的警報，比盲目搜索視野快 10 倍。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>黃金時段：日出後第一個小時：</strong>花豹在日出後 1 小時內最活躍——剛結束夜間狩獵或正準備出發，在陰影尚淺前出現在開闊地的機率最高。這也是最適合辨識個體、觀察完整行為的時間窗口。<strong>強烈建議安排清晨首班 Safari。</strong></div>
+            </li>
+            <li>
+              <span class="fi">📵</span>
+              <div><strong>保持絕對靜默——比任何技巧都重要：</strong>花豹是五霸中對人類干擾最敏感的物種，任何突然的聲響、手勢或閃光燈都可能讓牠在 10 秒內消失入草叢。車內靜默、引擎熄火、緩慢移動，是決定目擊品質的首要條件，遠重於選擇地點或時間。</div>
+            </li>
+            <li>
+              <span class="fi">🌃</span>
+              <div><strong>夜間 Game Drive 大幅提升機率：</strong>若住宿地點提供夜間遊獵，花豹的目擊機率可提升數倍。探照燈下花豹眼睛會反射出鮮亮的橙黃色眼光，且夜間牠更不受遊客車輛干擾，行為更自然完整。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>花豹過去百年間全球族群減少超過 <strong>75%</strong>，棲地範圍縮減至歷史分布的 25–37%。儘管 IUCN 仍列為「易危」，部分地區亞種（如阿姆爾花豹）已極度瀕危不足 100 隻。東非的花豹相對穩定，但棲地農業化、道路建設與人獸衝突仍造成持續壓力。私人保護區的獵豹個體命名與長期追蹤計畫，是目前東非花豹保育的重要數據基礎。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -2128,24 +2160,38 @@ img {
         <div class="stat-item">
           <div class="stat-label">最高時速</div>
           <div class="stat-value">110 - 120 km/h</div>
+          <div class="stat-sub">0→100 km/h 僅需 3 秒</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">狩獵風格</div>
-          <div class="stat-value">日間衝刺</div>
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">35 - 72 kg</div>
+          <div class="stat-sub">貓科中體型相對輕盈</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">特徵標記</div>
-          <div class="stat-value">眼下黑淚痕</div>
+          <div class="stat-label">衝刺距離</div>
+          <div class="stat-value">200 - 500 m</div>
+          <div class="stat-sub">超過即過熱被迫放棄</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">爪子構造</div>
-          <div class="stat-value">半伸縮 (增加抓地力)</div>
+          <div class="stat-label">狩獵成功率</div>
+          <div class="stat-value">約 50%</div>
+          <div class="stat-sub">貓科中最高，但常遭搶奪</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">休息散熱</div>
+          <div class="stat-value">15 - 30 分鐘</div>
+          <div class="stat-sub">衝刺後體溫升至 41°C</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外總數</div>
+          <div class="stat-value">約 7,000 隻</div>
+          <div class="stat-sub">非洲全境，族群持續下滑</div>
         </div>
       </div>
-      
+
       <div class="iucn-badge">
-        <i class="fa-solid fa-circle-exclamation"></i>
-        IUCN 紅色名錄：<strong>易危 (Vulnerable)</strong>
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危（Vulnerable）</strong>
       </div>
     </div>
 
@@ -2158,25 +2204,157 @@ img {
       </div>
 
       <div class="tabs">
-        <button class="tab-btn active" onclick="switchTab(event, 'ctab-overview')">生態總覽</button>
-        <button class="tab-btn" onclick="switchTab(event, 'ctab-speed')">極速奧秘</button>
-        <button class="tab-btn" onclick="switchTab(event, 'ctab-tips')">觀察小語</button>
+        <button class="tab-btn active" onclick="switchTab(event, 'ch-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ch-tab-speed')">極速解剖</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ch-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ch-tab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
-        <div class="tab-panel active" id="ctab-overview">
+        <div class="tab-panel active" id="ch-tab-overview">
           <div class="prose">
-            <p>獵豹是世界上跑得最快的陸生動物，牠們的身體構造完全為了「速度」而演化。不同於獅子與花豹，獵豹傾向於在<strong>日間</strong>活動，這能避免與其他強大的夜行性掠食者發生衝突。<br><br>對獨居的獵豹來說，受傷等於無法奔跑，無法奔跑就意味著餓死。因此面對強敵時，牠們會果斷放棄獵物以保全性命。</p>
+            <p>
+              獵豹是<strong>地球上跑得最快的陸生動物</strong>，也是貓科中演化路線最獨特的物種——牠的爪子無法完全收縮、不會爬樹、不在夜間狩獵，幾乎在所有方面都與其他大型貓科背道而馳，卻在白日的開闊草原上找到了屬於自己無可取代的生態位。
+            </p>
+            <p>
+              代價是極度脆弱的生存處境：體型輕盈意味著<strong>無法守護獵物</strong>，衝刺後的長時間過熱散熱期使牠成為鬣狗與獅子的搶奪目標，遺傳多樣性極低更讓整個物種徘徊在脆弱的邊緣。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">😢</span>
+              <div><strong>眼下黑色淚痕的功能：</strong>獵豹眼角至嘴角的<strong>黑色「淚紋」</strong>並非裝飾，而是功能性結構——如同棒球選手在眼下塗黑防眩光，淚紋能吸收強烈日光的反射，使獵豹在正午強光下追逐獵物時依然保持銳利視力。</div>
+            </li>
+            <li>
+              <span class="fi">📣</span>
+              <div><strong>不會吼叫的大型貓科：</strong>獵豹的舌骨構造與獅、豹不同，<strong>無法發出低沉吼叫</strong>，取而代之的是一系列高頻的鳴叫聲——包括類似鳥鳴的「嘁嘁聲（Chirp）」、呼喚幼崽的高頻叫聲，以及滿足時的「咕嚕聲（Purr）」，更接近家貓的聲音。</div>
+            </li>
+            <li>
+              <span class="fi">🧬</span>
+              <div><strong>遺傳瓶頸的生死危機：</strong>約一萬年前的大規模滅絕事件使獵豹族群幾近滅絕，倖存個體的後代遺傳多樣性極低——同一族群個體間的<strong>基因相似度高達 99% 以上</strong>，使其對新型疾病幾乎毫無抵抗差異，任何傳染病都可能造成區域性滅族。</div>
+            </li>
+            <li>
+              <span class="fi">🏆</span>
+              <div><strong>打工豹的殘酷現實：</strong>獵豹費盡全力衝刺捕獲獵物後，體溫高達 41°C，<strong>必須靜臥散熱 15–30 分鐘才能進食</strong>。此時牠幾乎毫無防禦力，鬣狗、獅子、甚至狒狒都可能在此時衝來搶奪。研究估計東非獵豹有高達 50% 的獵物最終被搶走。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>獵豹是唯一一種<strong>人類古代就成功馴養用於狩獵</strong>的大型野生貓科動物。從古埃及法老、蒙兀兒皇帝阿克巴（據說同時飼養超過 1,000 隻獵豹）到中世紀歐洲貴族，獵豹一度是身分地位的象徵。然而牠在圈養環境下繁殖率極低，幾乎所有宮廷獵豹都是從野外直接捕捉，此舉對野生族群造成的壓力延續數個世紀。</p>
           </div>
         </div>
-        <div class="tab-panel" id="ctab-speed">
+
+        <div class="tab-panel" id="ch-tab-speed">
           <div class="prose">
-            <p>獵豹的加速度比跑車還快，從 0 加速到時速 100 公里僅需 3 秒。牠們強壯的尾巴就像「方向舵」，在高速急轉彎時協助平衡。此外，牠們的爪子無法完全縮回，這提供了絕佳的抓地力，使其能如釘鞋般在草原上衝刺。<br><br>獵豹以極速衝刺捕獵後，身體會嚴重過熱且精疲力竭，需要休息 15 到 30 分鐘才能進食，此時是牠們防禦力最弱、最容易被搶的時刻。<br><br>傳聞獵豹常因此而被搶奪獵物 aka「打工豹」。</p>
+            <p>
+              獵豹的身體是一件<strong>為極速而精密設計的活體機器</strong>——每一個解剖特徵都指向同一個演化目標：在最短時間內達到最高速度，並在劇烈運動中維持方向控制。
+            </p>
+            <p>
+              然而，所有這些極速適應都伴隨著嚴苛的代價，使獵豹成為大型貓科中<em>最脆弱、最需要依靠技術而非蠻力生存</em>的物種。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🦴</span>
+              <div><strong>彈簧般的脊椎：</strong>獵豹的脊椎異常靈活，奔跑時脊椎如彈簧般交替彎曲與伸展，使四肢的有效步幅大幅增加。每次完整步伐可跨越<strong>7–8 公尺</strong>，高速時每秒踏步僅約 3.5 次，卻能維持超過 100 km/h 的速度。</div>
+            </li>
+            <li>
+              <span class="fi">🔩</span>
+              <div><strong>釘鞋爪：半伸縮的抓地革命：</strong>獵豹的爪子只能<strong>部分收縮</strong>（不像其他貓科能完全收入爪鞘），近乎永久暴露在外，功能如同田徑釘鞋，在高速轉向時提供無可替代的地面抓握力，代價是爪尖提前磨損、無法用於攀爬。</div>
+            </li>
+            <li>
+              <span class="fi">💨</span>
+              <div><strong>擴大的鼻腔與心肺系統：</strong>獵豹的鼻腔、氣管與肺容積相對體型異常寬大，讓牠在高速衝刺時能快速大量換氣。奔跑中每次呼吸頻率可達<strong>每分鐘 150 次</strong>（靜息約 16 次），確保肌肉的持續供氧。</div>
+            </li>
+            <li>
+              <span class="fi">🎯</span>
+              <div><strong>方向舵尾巴：</strong>獵豹尾巴長達 70–80 公分，末端扁平如槳。高速追逐中，尾巴快速向反方向甩動，提供<strong>即時的慣性補償</strong>，使獵豹能在全速奔跑中完成幾乎直角的急轉彎——這是任何其他大型貓科都無法做到的動作。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">⚡ 速度的代價</div>
+            <p>為了極致速度，獵豹犧牲了力量——<strong>體型輕盈（最重僅 72 kg）使牠無法壓制大型獵物</strong>，只能以喉嚨窒息法（Throat grip）殺死獵物，有時需長達 5 分鐘。這也是牠幾乎只獵殺中小型羚羊的原因，遠比同等體型的花豹保守。面對鬣狗或獅子時，牠幾乎從不反抗——放棄獵物是唯一選擇，因為受傷就意味著死亡。</p>
           </div>
         </div>
-        <div class="tab-panel" id="ctab-tips">
+
+        <div class="tab-panel" id="ch-tab-where">
           <div class="prose">
-            <p>觀察獵豹時，請留意牠們眼下的<strong>「黑色淚痕」</strong>。這些淚痕能減少陽光折射，讓牠們在強光下也能精準盯緊獵物。獵豹性格相對害羞，若您在 Safari 途中看到牠們站在白蟻丘上，那是牠們在利用高地勢掃視獵物的標準姿勢。</p>
+            <p>獵豹偏好<strong>開闊的短草平原與稀樹草原</strong>，需要足夠的視野進行長距離觀察與高速追逐。本次行程的主要園區均有穩定族群，屬於中等難度的目擊物種——比花豹容易，比獅子難。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">⭐</span>
+              <div>
+                <strong>馬賽馬拉（肯亞）— 世界頂級觀豹地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR 中北部</span>
+                  <span class="loc-tag">Mara North Conservancy</span>
+                  <span class="loc-tag">Mara Triangle</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti 中部與南部</span>
+                  <span class="loc-tag">Ngorongoro 火口底部</span>
+                  <span class="loc-tag">Tarangire NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>其他肯亞觀賞點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Amboseli NP</span>
+                  <span class="loc-tag">Laikipia 私人保護區</span>
+                  <span class="loc-tag">Samburu NR</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>獵豹是日行性動物，<strong>清晨 6:30–10:00 與傍晚 16:00–18:30</strong> 是活動與狩獵最頻繁的時段。衝刺追獵的畫面需要至少 <strong>1/2000s 快門</strong>，但往往可遇不可求；更穩定且具美感的畫面是捕捉牠站在白蟻丘頂端眺望的輪廓剪影——清晨逆光下尤其動人。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="ch-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識獵豹 vs. 花豹（最常混淆）：</strong><strong>獵豹</strong>——實心黑色圓斑、體型修長纖細、眼下有黑色淚紋、頭部較小、白天在開闊地活動；<strong>花豹</strong>——玫瑰花形空心斑（rosette）、體型粗壯、頭部寬大、常在樹上或陰影中、晨昏與夜間活動。</div>
+            </li>
+            <li>
+              <span class="fi">🗼</span>
+              <div><strong>白蟻丘是最佳守候標的：</strong>獵豹習慣站上草原中突出的白蟻丘或低矮灌木頂端，以高地視野掃視獵物。若看到一隻貓科動物站在白蟻丘頂長時間凝視遠方，幾乎可確認是<strong>正在搜尋獵物的獵豹</strong>，此時靜候有機會目擊完整追獵過程。</div>
+            </li>
+            <li>
+              <span class="fi">👁️</span>
+              <div><strong>跟著禿鷹找獵殺現場：</strong>若看到禿鷹在某處空中盤旋聚集卻未降落，可能代表有獵豹剛完成狩獵正在散熱休息——禿鷹等待獵豹離開才會降落。請導遊向該方向搜索，有機會目擊<strong>散熱臥伏或進食中的獵豹</strong>。</div>
+            </li>
+            <li>
+              <span class="fi">🤱</span>
+              <div><strong>母豹帶幼崽是夢幻場景：</strong>獵豹幼崽頸背有白色長毛（擬態蜜獾的警戒色以嚇阻天敵），7 月正值部分幼崽成長期。若遭遇帶 1–5 隻幼崽的母豹，請保持最大靜默——母豹對人類干擾極度敏感，任何異動都可能讓牠帶著幼崽迅速離開。</div>
+            </li>
+            <li>
+              <span class="fi">⏳</span>
+              <div><strong>耐心等待散熱期的結束：</strong>若遭遇剛完成狩獵、正在散熱臥伏的獵豹，這是難得可以<strong>長時間近距離靜態觀察</strong>的機會。散熱期通常 15–30 分鐘，之後牠會開始進食。全程靜止等待，往往能觀察到完整的進食行為甚至鬣狗前來搶奪的戲劇場面。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>全球野生獵豹數量約 7,000 隻，過去一個世紀下滑超過 90%。除棲地喪失與人獸衝突外，<strong>非法寵物貿易</strong>是當前最嚴峻的新興威脅——主要來自中東地區的需求，幼崽在運送途中死亡率高達 70%。遺傳多樣性極低使任何傳染病都可能造成區域性滅絕，獵豹是當前非洲保育體系中最需要主動干預的大型貓科。</p>
           </div>
         </div>
       </div>
@@ -5942,6 +6120,1300 @@ img {
 </div>
 </section>
 
+<section id="honeybadger-section">
+<div class="section">
+  <h2 class="section-title">🦡 動物介紹</h2>
+  <p class="section-sub">小巨人：體型雖小卻無所畏懼的非洲平頭哥</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://pimg.1px.tw/daddypoppy/1606788822-3559201891-g.jpg" alt="野生蜜獾" loading="lazy" />
+        <div class="img-caption">
+          <span>非洲草原蜜獾 · Honey Badger in the Wild</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">身長</div>
+          <div class="stat-value">55 - 77 cm</div>
+          <div class="stat-sub">加尾巴可達 1 公尺</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">體重</div>
+          <div class="stat-value">6 - 16 kg</div>
+          <div class="stat-sub">雄性明顯大於雌性</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">爪子長度</div>
+          <div class="stat-value">~ 3 cm</div>
+          <div class="stat-sub">挖掘力驚人、可破岩層</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">皮膚厚度</div>
+          <div class="stat-value">~ 6 mm</div>
+          <div class="stat-sub">防蜂螫、刀砍、咬傷</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">奔跑速度</div>
+          <div class="stat-value">約 30 km/h</div>
+          <div class="stat-sub">持久力強、可長距離追蹤</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">分布範圍</div>
+          <div class="stat-value">非洲 / 亞洲</div>
+          <div class="stat-sub">從撒哈拉到印度次大陸</div>
+        </div>
+      </div>
+
+  <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
+        <i class="fa-solid fa-circle-check"></i>
+        IUCN 紅色名錄：<strong>無危（Least Concern）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-names">
+        <div class="name-zh">蜜獾</div>
+        <div class="name-en">Honey Badger</div>
+        <div class="name-sw">斯瓦希里語：<strong>Nyegere</strong></div>
+        <div class="name-sci">Mellivora capensis</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'hb-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'hb-tab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'hb-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'hb-tab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="hb-tab-overview">
+          <div class="prose">
+            <p>
+              蜜獾被《金氏世界紀錄》認定為<strong>世界上最大膽的哺乳動物</strong>，體型雖僅如一隻小型柯基犬，卻敢於正面挑戰獅子、豹與眼鏡蛇。牠隸屬鼬科（Mustelidae），與水獺、貂共享近親關係。
+            </p>
+            <p>
+              蜜獾最令人嘆為觀止之處在於其<strong>近乎無敵的防禦體質</strong>——極厚且鬆弛的皮膚使其可在被咬住後反身攻擊；而牠分泌的惡臭腺體（類似臭鼬），更讓大多數掠食者望而卻步。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🛡️</span>
+              <div><strong>刀槍不入的鬆弛皮膚：</strong>皮膚厚達約 6 mm，且異常<strong>鬆弛有彈性</strong>，當獅子等動物咬住頸部時，蜜獾能在皮囊內自由旋轉並反咬回去，許多掠食者因此放棄攻擊。</div>
+            </li>
+            <li>
+              <span class="fi">🐍</span>
+              <div><strong>蛇毒免疫力：</strong>蜜獾對多種毒蛇的神經毒素（包括眼鏡蛇與鼓腹毒蛇）具有<strong>部分免疫能力</strong>。被蛇咬傷後雖會短暫昏迷，但通常能在數小時內自行清醒並繼續活動。</div>
+            </li>
+            <li>
+              <span class="fi">🍯</span>
+              <div><strong>與蜜嚮導鳥的傳奇共生：</strong>蜜嚮導鳥（Honeyguide）以特殊鳴聲引領蜜獾找到蜂巢，蜜獾以強大爪力破壞蜂巢後，鳥類趁機取食蠟質與殘餘蜂蛹，形成東非草原上<strong>最著名的跨物種合作</strong>之一。</div>
+            </li>
+            <li>
+              <span class="fi">🧠</span>
+              <div><strong>高智商解題能力：</strong>蜜獾在圈養環境中展現出<strong>使用工具</strong>的能力——曾被觀察到將石塊、木棍堆疊成台階，用以逃脫圍欄或取得高處食物。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>蜜獾的臭腺在逃脫危險時還有特殊用途：牠們會將腺體分泌物抹在蜂巢周圍，<strong>麻痺並驅散蜜蜂</strong>，讓自己能從容取食蜂蜜而不被大量螫傷。即便被螫上數百針，牠也能無動於衷地繼續進食。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="hb-tab-behavior">
+          <div class="prose">
+            <p>
+              蜜獾大多獨居，除繁殖季節外鮮少與同類接觸，活動範圍可廣達 <strong>500 平方公里</strong>。牠們屬於機會主義的<em>雜食性掠食者</em>，從小型哺乳動物、爬蟲類、昆蟲到水果、蜂蜜無一不取。
+            </p>
+            <p>
+              牠們<strong>晝夜皆可活動</strong>，但在人類活動頻繁地區傾向夜間外出。遭遇威脅時的策略是先釋放惡臭、再展示兇猛反擊意圖，而非優先逃跑。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">💪</span>
+              <div><strong>敢戰獅豹的無畏個性：</strong>有野外紀錄顯示單隻蜜獾曾<strong>驅逐獅群</strong>保護自己的獵物，或從豹的爪下搶奪食物——這並非罕見的個案，而是蜜獾的典型行為模式。</div>
+            </li>
+            <li>
+              <span class="fi">⛏️</span>
+              <div><strong>挖掘高手：</strong>前爪長而強壯，能在極短時間內挖穿堅硬的地面，既用於捕捉地棲獵物（如穿山甲、鼠類），也會直接<strong>挖掘臨時洞穴</strong>作為棲身與哺育後代之所。</div>
+            </li>
+            <li>
+              <span class="fi">🔄</span>
+              <div><strong>廣食性的機會掠食：</strong>食譜涵蓋眼鏡蛇、蠍子、蜥蜴、烏龜、地棲鳥類、漿果、根莖等超過 <strong>60 種食物</strong>，是東非草原上食物鏈靈活度最高的掠食者之一。</div>
+            </li>
+            <li>
+              <span class="fi">👶</span>
+              <div><strong>獨力育幼：</strong>雌性單獨育幼，每胎通常產 1–2 隻幼崽，哺育期長達 14–16 個月。幼崽跟隨母親學習獵食技巧，期間母親展現出<strong>極強的護幼攻擊性</strong>，比平時更為兇猛。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>蜜獾是草原生態系的<strong>機會主義調節者</strong>：牠們獵殺大量毒蛇與小型齧齒類，有效壓制局部族群的爆炸性增長；挖掘行為也翻鬆土壤，促進植物種子傳播，對棲地健康貢獻不容小覷。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="hb-tab-where">
+          <div class="prose">
+            <p>蜜獾分布廣泛，幾乎遍及整個撒哈拉以南非洲及南亞地區，但因個體獨居且活動範圍龐大，在 Safari 途中屬於<strong>難得一見的驚喜物種</strong>。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Tsavo West NP</span>
+                  <span class="loc-tag">Samburu NR</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Ruaha NP</span>
+                  <span class="loc-tag">Selous GR</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>蜜獾屬夜間與晨昏活動物種</strong>，清晨 6:00–9:00 的 Game Drive 是目擊機率最高的時段。開闊的短草平原與半乾旱灌叢地帶是牠們最常現身的環境。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影提示</div>
+            <p>蜜獾體型矮小、動作迅速且顏色對比鮮明（黑白分明），拍攝時建議使用<strong>連拍模式</strong>與至少 400mm 焦段，並保持車輛完全靜止。若能拍到牠正在挖掘或與蜂巢互動的畫面，是極為珍稀的影像紀錄。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="hb-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>把握清晨黃金時段：</strong>蜜獾在日出後的 1–2 小時內活動最頻繁，此時牠們會在開闊地面搜尋食物，是 Safari 車輛最容易發現的時機。傍晚 17:00 後也值得注意。</div>
+            </li>
+            <li>
+              <span class="fi">🐦</span>
+              <div><strong>跟著蜜嚮導鳥找蜜獾：</strong>若看到小型棕色鳥類（蜜嚮導鳥 Honeyguide）反覆在同一片灌叢附近發出急促的「churr」鳴叫，可請導遊緩慢靠近——附近極有可能有蜜獾活動。</div>
+            </li>
+            <li>
+              <span class="fi">⚠️</span>
+              <div><strong>切勿下車或靠近：</strong>蜜獾雖體型小，但防禦攻擊性極強，受到逼迫時會毫不猶豫地<strong>主動衝向威脅者</strong>。請務必保持在車輛內並維持安全距離。</div>
+            </li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識特徵：</strong>蜜獾外形極具辨識度——<strong>上半身白色或銀灰色、下半身全黑</strong>，四肢粗短有力，行走時呈現特有的蹣跚搖擺步態，與體型相近的獴或貓鼬科動物明顯不同。</div>
+            </li>
+            <li>
+              <span class="fi">🎥</span>
+              <div><strong>目擊即是大獎：</strong>在所有東非 Safari 常見物種中，蜜獾的目擊率僅次於土豚，屬於資深 Safari 玩家的<strong>「清單必打卡」物種</strong>。許多跑了十數次東非的旅客仍未曾親眼見過，請珍惜每一次相遇。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>蜜獾目前 IUCN 列為「無危」，但在農業地帶因<strong>捕食家禽與蜂箱</strong>而遭牧民與養蜂人大量誘捕毒殺，局部族群壓力不可忽視。南非等國已推廣「蜜獾友善養蜂箱」計畫，以物理防護取代殺滅，為人獸共存提供可行範例。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="ostrich-section">
+<div class="section">
+  <h2 class="section-title">🦤 動物介紹</h2>
+  <p class="section-sub">奔馳巨鳥：不靠翅膀征服草原的速度高手</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://a-z-animals.com/media/2023/10/GettyImages-125916995-600x400.jpg" alt="野生非洲鴕鳥" loading="lazy" />
+        <div class="img-caption">
+          <span>非洲鴕鳥 · Common Ostrich</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">♂ 身高</div>
+          <div class="stat-value">2.1 - 2.8 m</div>
+          <div class="stat-sub">地球上最高的鳥類</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">100 - 156 kg</div>
+          <div class="stat-sub">♀ 平均約 90 - 110 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">奔跑速度</div>
+          <div class="stat-value">70 km/h</div>
+          <div class="stat-sub">持續巡航可達 50 km/h</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">步幅長度</div>
+          <div class="stat-value">3 - 5 m</div>
+          <div class="stat-sub">每步跨幅最大可達 5 公尺</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">蛋的重量</div>
+          <div class="stat-value">1.2 - 1.9 kg</div>
+          <div class="stat-sub">地球上最大的鳥蛋</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">眼睛直徑</div>
+          <div class="stat-value">~ 5 cm</div>
+          <div class="stat-sub">陸生動物中最大的眼睛</div>
+        </div>
+      </div>
+
+  <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
+        <i class="fa-solid fa-circle-check"></i>
+        IUCN 紅色名錄：<strong>無危（Least Concern）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-names">
+        <div class="name-zh">非洲鴕鳥</div>
+        <div class="name-en">Common Ostrich</div>
+        <div class="name-sw">斯瓦希里語：<strong>Mbuni</strong></div>
+        <div class="name-sci">Struthio camelus</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'os-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'os-tab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'os-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'os-tab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="os-tab-overview">
+          <div class="prose">
+            <p>
+              非洲鴕鳥是<strong>地球上現存最大、最重的鳥類</strong>，演化上已放棄飛行能力，轉而將全部資源投入奔跑與體型。牠是兩足動物中<strong>速度最快的物種</strong>，時速可達 70 公里，能以 50 公里的穩定速度長距離奔跑超過 30 分鐘。
+            </p>
+            <p>
+              在東非，可見到兩個亞種：分布於馬賽馬拉與塞倫蓋提的<em>馬賽鴕鳥</em>（雄性頸部呈粉紅色），以及分布於肯亞北部索馬利亞邊境的<em>索馬利鴕鳥</em>（2014 年獨立為新物種，雄性頸部呈藍灰色）。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">👁️</span>
+              <div><strong>陸生動物最大的眼睛：</strong>直徑約 5 公分的眼球甚至<strong>比牠自己的腦袋還大</strong>，在扁平的草原環境中視野廣達 330°，能在 3.5 公里外偵測到移動的掠食者。</div>
+            </li>
+            <li>
+              <span class="fi">🦵</span>
+              <div><strong>致命的踢擊武器：</strong>鴕鳥只有兩根腳趾（其他鳥類有三至四根），每根長爪可達 10 公分。一記前踢力道估計超過<strong>2,000 牛頓</strong>，足以擊碎人類骨骼，甚至殺死獅子。</div>
+            </li>
+            <li>
+              <span class="fi">🥚</span>
+              <div><strong>紀錄保持的巨蛋：</strong>一顆蛋重達 1.2–1.9 公斤，相當於 20–25 顆雞蛋，蛋殼厚度約 2 公釐，強度足以承受一名成年人站立其上而不破裂。</div>
+            </li>
+            <li>
+              <span class="fi">🌡️</span>
+              <div><strong>高效率的體溫調節：</strong>無飛行功能的翅膀並非完全無用——在高溫時展開翅膀可增加散熱面積，寒冷夜晚則收攏覆蓋裸露腿部，發揮<strong>體溫調節</strong>的關鍵作用。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>「鴕鳥把頭埋進沙裡逃避危險」是著名的錯誤迷思。實際上，牠們是將蛋埋在沙地孵化，並會定期低頭翻動蛋，遠看像是頭插沙中。面對真正威脅時，鴕鳥的第一反應是<strong>全力奔跑</strong>，而非躲藏。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="os-tab-behavior">
+          <div class="prose">
+            <p>
+              鴕鳥通常以<strong>5 至 50 隻的鬆散群體</strong>活動，常與斑馬、牛羚等有蹄類混群，形成互補的警戒系統——鴕鳥提供超遠距離視力，有蹄類提供靈敏的嗅覺與聽覺。
+            </p>
+            <p>
+              繁殖季節（通常為 3–9 月）時，雄鴕鳥會展開<strong>精彩的求偶舞蹈</strong>：蹲低身體，左右交替揮動黑白相間的翅膀，發出如低沉鼓聲般的<em>轟隆鳴叫</em>（booming call），在草原上可傳遞超過 1 公里。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">👑</span>
+              <div><strong>一夫多妻的共同孵蛋制：</strong>一隻優勢雄鴕鳥（Alpha male）與多隻雌性交配，所有雌性將蛋產入<strong>同一個公共巢穴</strong>。主要雌性（Major hen）會將自己的蛋優先移到中心位置，以確保孵化率。</div>
+            </li>
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>輪班孵蛋策略：</strong>白天由羽色較淺的<strong>雌鳥</strong>孵蛋（與沙色環境融合），夜晚由全黑的<strong>雄鳥</strong>孵蛋（在黑暗中隱形），是完美的偽裝輪班機制。</div>
+            </li>
+            <li>
+              <span class="fi">🤝</span>
+              <div><strong>與有蹄類的感官聯盟：</strong>鴕鳥的超遠視力彌補了斑馬與牛羚嗅覺強但視力較弱的缺點，雙方形成<strong>互補的警戒網路</strong>，一旦鴕鳥拔腿奔跑，周圍所有動物立刻跟隨——這是草原上著名的「警報傳遞效應」。</div>
+            </li>
+            <li>
+              <span class="fi">⚔️</span>
+              <div><strong>雄性領域爭奪：</strong>雄鴕鳥以脖子顏色深淺顯示情緒狀態——<strong>越鮮紅代表越興奮或具攻擊性</strong>。雄性之間的領域衝突常伴隨誇張的翅膀展示與低鳴，極少升級至肉體衝突。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>鴕鳥的大型蛋殼在孵化後成為草原上重要的<strong>礦物質來源</strong>，許多小型動物（如獴、蜥蜴）會啃食破碎蛋殼以補充鈣質。放棄飛行、轉而在地面稱霸，使鴕鳥成為開闊草原生態系中最具代表性的「草原設計師」之一。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="os-tab-where">
+          <div class="prose">
+            <p>非洲鴕鳥廣泛分布於東非的開闊草原、半乾旱灌叢與沙質平原，本次行程中幾乎所有園區皆有機會目擊，是相對容易觀察的大型動物。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞最佳目擊地點（馬賽鴕鳥亞種）</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Amboseli NP</span>
+                  <span class="loc-tag">Tsavo East NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Ngorongoro CA</span>
+                  <span class="loc-tag">Tarangire NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>索馬利鴕鳥（Somali Ostrich）</strong>需前往肯亞北部的 Samburu NR 或 Buffalo Springs，辨識特徵是雄性頸部為藍灰色（而非粉紅色），腿部鱗片也更為明顯。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>繁殖季節（3–9 月）是拍攝雄鳥求偶舞蹈的最佳時機——蹲低展翅、左右交替拍動的動作極為壯觀，建議使用<strong>連拍模式</strong>捕捉翅膀全展開的瞬間。清晨逆光下拍攝頸部鮮紅色的雄鳥側影，也是難得的藝術畫面。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="os-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識雌雄與亞種：</strong>雄鴕鳥羽色<strong>黑白分明</strong>，繁殖季頸部與腿部轉為鮮紅或藍灰（依亞種）；雌鳥與未成年個體全身<strong>棕灰色</strong>，顏色低調，作為孵蛋時的保護色。</div>
+            </li>
+            <li>
+              <span class="fi">📏</span>
+              <div><strong>用鴕鳥當草原尺規：</strong>鴕鳥身高 2.5 公尺是絕佳的視覺參考基準——當牠們與斑馬、牛羚同框時，可直觀比較各物種的體型比例，也是構圖時的天然前景元素。</div>
+            </li>
+            <li>
+              <span class="fi">👶</span>
+              <div><strong>尋找巢穴與幼雛：</strong>若看到雌鳥或雄鳥長時間蹲伏在地面不動，附近可能有<strong>地面巢穴</strong>。幼雛出生後 3 天即可跟隨父母奔跑，一群由成鳥帶領的雛鳥隊伍是極為珍貴的拍攝題材。</div>
+            </li>
+            <li>
+              <span class="fi">⚠️</span>
+              <div><strong>繁殖季保持安全距離：</strong>護巢雄鳥攻擊性極強，受到逼迫時會<strong>正面踢擊</strong>。請務必保持車輛距離，切勿步行接近或發出挑釁性聲音。導遊通常能從雄鳥的頸色判斷其情緒狀態。</div>
+            </li>
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>觀察混群警戒行為：</strong>若看到鴕鳥突然抬頭佇立並長時間凝視某個方向，通知導遊朝同方向搜索——牠的視力是草原上<strong>最可靠的早期預警系統</strong>，附近很可能有正在靠近的大型掠食者。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>非洲鴕鳥目前 IUCN 列為「無危」，但野生族群在北非已幾近滅絕，東非與南非的族群相對穩定。主要威脅是<strong>棲地農業化、羽毛與皮革的商業獵捕</strong>，以及部分地區以鴕鳥蛋為食的採集行為。肯亞與坦尚尼亞的國家公園體系為現存野生族群提供了重要庇護。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="aardvark-section">
+<div class="section">
+  <h2 class="section-title">🐷 動物介紹</h2>
+  <p class="section-sub">非洲幽靈：夜幕工程師，Safari 最稀有的夢幻目擊</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://www.awf.org/sites/default/files/styles/species_image/public/2020-04/SpeciesPage_Aardvark02_Challenges.webp?h=29c6c1f6&itok=2cCy0_BqG" alt="野生土豚" loading="lazy" />
+        <div class="img-caption">
+          <span>土豚 · Aardvark at Night</span>
+          <strong>Sub-Saharan Africa</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">身長</div>
+          <div class="stat-value">1.0 - 1.3 m</div>
+          <div class="stat-sub">加尾巴全長可達 2.2 m</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">體重</div>
+          <div class="stat-value">40 - 82 kg</div>
+          <div class="stat-sub">雄性略大於雌性</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">舌頭長度</div>
+          <div class="stat-value">~ 30 cm</div>
+          <div class="stat-sub">分泌黏液可黏附白蟻</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">挖掘速度</div>
+          <div class="stat-value">極快</div>
+          <div class="stat-sub">2 分鐘可沒入土中消失</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">每晚進食</div>
+          <div class="stat-value">50,000 隻</div>
+          <div class="stat-sub">白蟻與螞蟻為主食</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">活動時間</div>
+          <div class="stat-value">純夜行</div>
+          <div class="stat-sub">日落後出洞，黎明前返回</div>
+        </div>
+      </div>
+
+  <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
+        <i class="fa-solid fa-circle-check"></i>
+        IUCN 紅色名錄：<strong>無危（Least Concern）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-names">
+        <div class="name-zh">土豚</div>
+        <div class="name-en">Aardvark</div>
+        <div class="name-sw">斯瓦希里語：<strong>Muhanga</strong></div>
+        <div class="name-sci">Orycteropus afer</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'av-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'av-tab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'av-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'av-tab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="av-tab-overview">
+          <div class="prose">
+            <p>
+              土豚是<strong>管齒目（Tubulidentata）的唯一現存物種</strong>——牠不屬於任何一個現代哺乳動物大類，在演化樹上孤懸一支，是非洲大陸最古老的哺乳動物譜系之一，存在已超過 <strong>5,500 萬年</strong>。
+            </p>
+            <p>
+              儘管外表酷似豬與食蟻獸的混合體，土豚與兩者<strong>毫無親緣關係</strong>。其最近的親戚反而是象、蹄兔與海牛，共同構成「非洲獸總目（Afrotheria）」。牠是 Safari 玩家公認的<em>終極夢幻目擊物種</em>，許多資深旅客跑遍東非仍緣慳一面。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">👃</span>
+              <div><strong>超級嗅覺探測器：</strong>土豚的鼻腔內有多達 <strong>9 塊鼻甲骨</strong>（人類僅 3 塊），嗅覺靈敏度極高，能在夜間於地表偵測數十公分以下的白蟻地道，精確定位後再開挖。</div>
+            </li>
+            <li>
+              <span class="fi">⛏️</span>
+              <div><strong>2 分鐘消失術：</strong>前爪極為強壯，爪形如鑿子，面對威脅時能以驚人速度在堅硬土地上垂直下挖——<strong>2 分鐘內即可讓整個身體沒入地下</strong>，讓獅子等天敵束手無策。</div>
+            </li>
+            <li>
+              <span class="fi">🏠</span>
+              <div><strong>草原公寓的建設者：</strong>土豚廢棄的洞穴是草原生態系的關鍵資產，疣豬、野狗、蜜獾、貓頭鷹、南非穿山甲等數十種動物會直接使用廢棄土豚洞作為棲身之所，牠因此被稱為<strong>「生態系工程師」</strong>。</div>
+            </li>
+            <li>
+              <span class="fi">🦷</span>
+              <div><strong>獨特的管狀牙齒：</strong>「管齒目」名稱來自其牙齒的獨特結構——每顆臼齒由數百根細小的<strong>六角形牙本質管束</strong>組成，無琺瑯質覆蓋，終生持續生長，是哺乳動物中獨一無二的牙齒型態。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>土豚是南非開普敦語（Afrikaans）中「大地之豬（Aarde + vark）」的意思，也是英語字典中<strong>字母 A 開頭最靠前的動物詞條</strong>之一。每晚牠能行走 10–30 公里搜尋食物，一生挖掘的洞穴總數可超過數千個，幾乎每晚都在不同地點挖新洞。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="av-tab-behavior">
+          <div class="prose">
+            <p>
+              土豚是<strong>嚴格的獨居夜行動物</strong>，日間在深達 3 公尺的自挖洞穴中沉睡。日落後出洞，以緩慢的「之字形」路線在地面搜索白蟻與螞蟻巢穴，有時單晚行走超過 <strong>30 公里</strong>。
+            </p>
+            <p>
+              牠的視力極差，對顏色幾乎不敏感，完全依靠<em>嗅覺與聽覺</em>在黑暗中導航。大型豎起的驢耳能獨立旋轉，精準定位地下白蟻群的活動聲響。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🐜</span>
+              <div><strong>高效率的白蟻清除機：</strong>土豚以黏性長舌一次黏取大量白蟻，厚實的皮膚與閉合的鼻孔可防止白蟻反咬與入侵。單次進食一座大型白蟻丘後，可讓該群落需要數週才能重建，<strong>有效調控白蟻族群密度</strong>。</div>
+            </li>
+            <li>
+              <span class="fi">🌧️</span>
+              <div><strong>雨季後的播種者：</strong>土豚偶爾也採食一種特殊的地下果實——<strong>「土豚黃瓜（Aardvark Cucumber, Cucumis humifructus）」</strong>，這是一種完全依賴土豚取食並透過糞便傳播種子的植物，兩者形成高度專一的協同演化關係。</div>
+            </li>
+            <li>
+              <span class="fi">🛡️</span>
+              <div><strong>防禦策略：逃跑第一，反擊備用：</strong>遭遇危險時首選逃入洞穴或快速下挖；若被逼到無路可退，會翻身仰躺，以強而有力的<strong>後腿踢擊</strong>與爪子抵抗掠食者。</div>
+            </li>
+            <li>
+              <span class="fi">👶</span>
+              <div><strong>慢速繁殖：</strong>每胎通常僅產<strong>1隻幼崽</strong>，孕期約 7 個月。幼崽在洞穴中度過最初 2 週，2 個月後開始跟隨母親外出覓食，約 6 個月大時獨立，繁殖率極低使族群恢復能力有限。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>土豚挖掘的洞穴系統對草原生態的重要性遠超表面所見：廢棄洞穴為<strong>逾 30 種脊椎動物</strong>提供現成庇護所，洞穴結構也改善土壤通氣性與雨水滲透，是乾旱草原中的隱形基礎設施。失去土豚的地區，多種依賴其洞穴的物種族群均出現明顯下滑。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="av-tab-where">
+          <div class="prose">
+            <p>土豚廣布於撒哈拉以南的非洲大陸，偏好白蟻丘密集的開闊草原、灌叢地與疏林環境。因純夜行特性，絕大多數目擊發生在<strong>夜間 Game Drive</strong> 期間。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞最佳目擊機會</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR（夜間）</span>
+                  <span class="loc-tag">Laikipia 私人保護區</span>
+                  <span class="loc-tag">Tsavo West NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞最佳目擊機會</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP（夜間）</span>
+                  <span class="loc-tag">Ruaha NP</span>
+                  <span class="loc-tag">Selous GR</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>私人保護區勝過國家公園：</strong>允許夜間 Game Drive 的私人牧場（如 Laikipia 高原的各 Conservancy）是目擊土豚機率最高的選擇，部分營地的嚮導甚至掌握當地土豚的固定出沒路線。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影提示</div>
+            <p>夜間拍攝土豚的最大挑戰是<strong>光線與對焦</strong>。車頂探照燈下土豚的眼睛不會像貓科動物一樣強烈反光，建議使用 ISO 3200 以上、快門速度至少 1/125s，並預先對焦在導遊探照燈照射的區域邊緣。拍到清晰的土豚照片，在 Safari 攝影圈中是<strong>極受尊崇的成就</strong>。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="av-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>夜間 Game Drive 是唯一可靠方法：</strong>土豚目擊幾乎 100% 發生在日落後。選擇提供夜間遊獵的住宿地點是前提，建議出發前明確告知導遊「Aardvark 是優先目標」，讓他們特別留意白蟻丘密集地帶。</div>
+            </li>
+            <li>
+              <span class="fi">🐜</span>
+              <div><strong>白天找線索，晚上守株待兔：</strong>白天 Game Drive 時留意地面上<strong>新鮮的大型爪痕挖掘痕跡</strong>與鬆動土堆——這是土豚前一晚的覓食遺跡。通知導遊記下位置，夜間可回該區域守候。</div>
+            </li>
+            <li>
+              <span class="fi">🔦</span>
+              <div><strong>靜默接近原則：</strong>土豚聽覺極為靈敏。發現目標後，請立即示意全車<strong>停止交談</strong>，關閉任何非必要光源，讓導遊以最低速度緩慢接近。任何突然的聲響或強光都可能讓牠在 10 秒內消失入洞。</div>
+            </li>
+            <li>
+              <span class="fi">⏱️</span>
+              <div><strong>目擊窗口極短，做好心理準備：</strong>土豚的平均目擊持續時間僅 <strong>1–5 分鐘</strong>，一旦感到不安全便會快速離開或下挖。相機預設好設定、享受當下的每一秒，比焦慮地調整參數更重要。</div>
+            </li>
+            <li>
+              <span class="fi">🗺️</span>
+              <div><strong>辨識土豚 vs. 疣豬洞穴：</strong>土豚洞入口通常<strong>橢圓形、直徑 30–50 cm</strong>，洞口邊緣土壤鬆散新鮮；疣豬洞多為既有土豚廢洞改建，洞口較圓且常有疣豬進出留下的蹄印與毛髮。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>土豚目前 IUCN 列為「無危」，但其族群調查極度困難——純夜行、獨居、且廣大活動範圍使準確計數幾乎不可能。主要威脅包括<strong>農業擴張破壞白蟻棲地</strong>、道路建設切斷活動廊道，以及部分文化中將土豚視為不祥之兆而進行的人為迫害。作為草原生態系工程師，牠的消失將對數十種依賴其洞穴的物種造成連鎖性衝擊。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="mongoose-section">
+<div class="section">
+  <h2 class="section-title">🦡 動物介紹</h2>
+  <p class="section-sub">草原特工隊：機智、團結、蛇毒免疫的小型掠食者</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://www.awf.org/sites/default/files/styles/horizontal_image/public/2020-04/Website_SpeciesPage_DwarfMongoose03_02_Solutions.jpg?h=05d4a2d9&itok=ROKnh7aS" alt="野生條紋蒙哥群體" loading="lazy" />
+        <div class="img-caption">
+          <span>條紋蒙哥群體 · Banded Mongoose</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">身長</div>
+          <div class="stat-value">30 - 75 cm</div>
+          <div class="stat-sub">依物種差異，不含尾巴</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">體重</div>
+          <div class="stat-value">0.3 - 5 kg</div>
+          <div class="stat-sub">矮蒙哥最小，白尾蒙哥最大</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">東非物種數</div>
+          <div class="stat-value">10+ 種</div>
+          <div class="stat-sub">常見者含條紋、矮型、白尾等</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">群體規模</div>
+          <div class="stat-value">5 - 40 隻</div>
+          <div class="stat-sub">條紋蒙哥可達 40 隻以上</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">奔跑速度</div>
+          <div class="stat-value">約 20 km/h</div>
+          <div class="stat-sub">短距離靈活衝刺</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">壽命</div>
+          <div class="stat-value">6 - 10 年</div>
+          <div class="stat-sub">野外；圈養可達 20 年</div>
+        </div>
+      </div>
+
+  <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
+        <i class="fa-solid fa-circle-check"></i>
+        IUCN 紅色名錄：<strong>無危（Least Concern，多數物種）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-names">
+        <div class="name-zh">蒙哥（獴）</div>
+        <div class="name-en">Mongoose</div>
+        <div class="name-sw">斯瓦希里語：<strong>Nguchiro</strong></div>
+        <div class="name-sci">Family Herpestidae（獴科）</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'mg-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'mg-tab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'mg-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'mg-tab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="mg-tab-overview">
+          <div class="prose">
+            <p>
+              東非草原上活躍著超過 <strong>10 種蒙哥</strong>，從獨居夜行的白尾蒙哥，到多達 40 隻成群活動的條紋蒙哥，展現出截然不同的生存策略。蒙哥屬於獴科（Herpestidae），與貓鼬科（Meerkat 所屬的 Suricata）為近親，但兩者<strong>並非同一種動物</strong>。
+            </p>
+            <p>
+              牠們最著名的特性是對<em>蛇毒的部分免疫力</em>，以及令人驚嘆的<strong>團隊協作能力</strong>——條紋蒙哥群體會集體對抗遠比自身龐大的天敵，甚至驅逐年輕的花豹。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🐍</span>
+              <div><strong>蛇毒部分免疫的秘密：</strong>蒙哥的菸鹼型乙醯膽鹼受體（nAChR）發生了特定的<strong>胺基酸突變</strong>，使眼鏡蛇等蛇的神經毒素無法與受體有效結合，因此能對抗並獵殺毒蛇——但此免疫力並非完全無敵，大量毒液仍可造成傷害。</div>
+            </li>
+            <li>
+              <span class="fi">🧠</span>
+              <div><strong>聰明的砸殼技術：</strong>蒙哥無法用嘴直接咬開堅硬的蛋或甲蟲。牠們會用前腳抓取後，<strong>以後腿站立並將獵物用力拋向石頭或地面</strong>，直到破開，是觀察性學習與工具式行為的典型案例。</div>
+            </li>
+            <li>
+              <span class="fi">👃</span>
+              <div><strong>嗅腺標記的社交語言：</strong>蒙哥的肛腺與臉頰腺極為發達，群體成員會以肛腺互相標記——<strong>在彼此身上摩擦留下氣味</strong>，形成群體獨有的「氣味身分證」，有助於黑暗中或草叢裡辨識同伴。</div>
+            </li>
+            <li>
+              <span class="fi">🫂</span>
+              <div><strong>集體哺育幼崽（Communal pup-rearing）：</strong>條紋蒙哥群體中，所有成年個體共同照顧幼崽，包括餵食、清潔與守衛。每隻幼崽還有專屬的<strong>「保姆個體（Escort）」</strong>全程陪同，即使非親生父母亦盡心照料。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>條紋蒙哥群體之間存在<strong>跨群體傳染病傳播</strong>的研究案例：結核病（Bovine TB）可在相鄰群體的衝突接觸中傳遞，使蒙哥成為研究野生動物流行病學的重要模式物種，相關研究已在烏干達伊麗莎白女王國家公園持續追蹤超過 20 年。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="mg-tab-behavior">
+          <div class="prose">
+            <p>
+              東非最常見的<strong>條紋蒙哥（Banded Mongoose, Mungos mungo）</strong>是日行性群居動物，群體每天清晨出洞後以緊密隊形集體覓食，行進間持續發出低頻聯絡叫聲，成員間距離幾乎不超過 <strong>10 公尺</strong>。
+            </p>
+            <p>
+              相較之下，<em>矮蒙哥（Dwarf Mongoose）</em>是非洲最小的肉食目動物，常以白蟻丘為巢，與犀鳥（Hornbill）形成東非草原上另一組著名的<strong>互利共生組合</strong>。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🦅</span>
+              <div><strong>矮蒙哥與犀鳥的跨物種聯盟：</strong>犀鳥跟在矮蒙哥群體旁覓食翻出的昆蟲，同時負責<strong>空中警戒</strong>；蒙哥則提供地面覓食時翻動的獵物。雙方甚至會等待對方——犀鳥若先出現，會在蒙哥洞口「催促」牠們出來，是東非最受研究者記錄的共生行為之一。</div>
+            </li>
+            <li>
+              <span class="fi">⚔️</span>
+              <div><strong>群體對抗大型掠食者：</strong>遭遇花豹或蛇時，條紋蒙哥群體會聚集成緊密球形，同步向威脅方向衝刺並發出響亮的集體警戒聲，製造混亂讓掠食者<strong>無法鎖定單一目標</strong>，甚至成功嚇退花豹。</div>
+            </li>
+            <li>
+              <span class="fi">📢</span>
+              <div><strong>豐富的聲音溝通系統：</strong>條紋蒙哥擁有超過 <strong>12 種不同的鳴叫聲</strong>，涵蓋移動聯絡音、不同類型天敵的特定警報（空中威脅 vs. 地面威脅不同聲調）、社交問候與求偶聲，是小型哺乳動物中溝通系統最複雜的物種之一。</div>
+            </li>
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>白尾蒙哥：獨居的夜行者：</strong>白尾蒙哥（White-tailed Mongoose）是東非體型最大的蒙哥，完全獨居且夜行，以白色蓬鬆尾巴為辨識特徵，專門捕食毒蛇，對神經毒素的免疫力在蒙哥中最為顯著。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>蒙哥在草原生態中扮演<strong>中層掠食者調節者</strong>的角色：大量獵食蛇類、蠍子、蜈蚣等有毒動物，同時控制白蟻、蜣螂等昆蟲族群密度。牠們的洞穴使用（尤其是矮蒙哥利用白蟻丘）也促進白蟻丘的風化與礦物質循環。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="mg-tab-where">
+          <div class="prose">
+            <p>蒙哥廣泛分布於東非各類型棲地，從開闊草原到林緣地帶皆有，日行性的條紋蒙哥與矮蒙哥在 Safari 途中目擊率相當高，是難得<strong>容易近距離觀察的小型肉食動物</strong>。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Amboseli NP</span>
+                  <span class="loc-tag">Samburu NR</span>
+                  <span class="loc-tag">Tsavo East NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Ngorongoro CA</span>
+                  <span class="loc-tag">Tarangire NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>白蟻丘密集地帶是尋找矮蒙哥的關鍵：</strong>塞倫蓋提與坦桑尼亞北部的開闊草原上，高聳的白蟻丘頂端常有矮蒙哥擔任「哨兵」站崗，並伴隨數隻黃嘴犀鳥（Yellow-billed Hornbill）跟隨覓食。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影提示</div>
+            <p>條紋蒙哥群體移動快速，建議使用<strong>連拍模式</strong>並預留足夠的畫面空間。最佳構圖是捕捉群體集體抬頭警戒的瞬間——數十隻蒙哥同時豎直身體、轉向同一方向的畫面極具視覺震撼力。矮蒙哥站在白蟻丘頂端眺望的側影，則是東非 Safari 最具代表性的小動物攝影題材之一。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="mg-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識東非三大常見蒙哥：</strong><strong>條紋蒙哥</strong>——體側有明顯深色橫紋，群居日行；<strong>矮蒙哥</strong>——體型最小（約 0.3 kg），棕紅色，常與犀鳥同行；<strong>白尾蒙哥</strong>——體型最大，白色蓬鬆尾巴，獨居夜行，遭遇多在夜間 Game Drive。</div>
+            </li>
+            <li>
+              <span class="fi">🐦</span>
+              <div><strong>找犀鳥就找到矮蒙哥：</strong>若看到數隻黃嘴犀鳥在矮草地上跳躍覓食，仔細搜索周圍——矮蒙哥群體幾乎一定在 20 公尺內。反之，矮蒙哥群體受到驚嚇後衝回白蟻丘，也會帶著犀鳥一起撤退。</div>
+            </li>
+            <li>
+              <span class="fi">⏰</span>
+              <div><strong>早出晚歸的覓食規律：</strong>條紋蒙哥通常在<strong>日出後 30–60 分鐘</strong>出洞，在洞口「曬太陽暖身」約 15 分鐘後開始移動覓食，傍晚日落前 1 小時返回洞穴。這兩個時段在固定巢穴附近守候效果最好。</div>
+            </li>
+            <li>
+              <span class="fi">🐍</span>
+              <div><strong>目擊蒙哥捕蛇是極稀有的大獎：</strong>若看到條紋蒙哥群體突然聚集並發出急促高頻的警戒聲，同時圍繞某個草叢反覆試探衝刺，<strong>立刻請導遊停車靜待</strong>——附近很可能有蛇，有機會目擊蒙哥以接力輪攻方式對抗毒蛇的罕見行為。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>蒙哥對車輛相對不敏感：</strong>與許多小型哺乳動物不同，條紋蒙哥群體在習慣遊獵車輛的保護區內<strong>警戒心較低</strong>，有時會在車旁數公尺的距離繼續覓食，是難得可以長時間近距離行為觀察的物種。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>多數東非蒙哥物種目前 IUCN 列為「無危」，族群穩定。主要威脅是農業地區因<strong>捕食家禽而遭人為毒殺</strong>，以及部分地區的傳統醫學需求。棲地適應性強、繁殖率高，使蒙哥成為東非保育壓力相對較小、但生態重要性常被低估的小型掠食者。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="kingfisher-section">
+<div class="section">
+  <h2 class="section-title">🐦 動物介紹</h2>
+  <p class="section-sub">水邊寶石：東非最璀璨的俯衝獵手</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/Alcedo_atthis_-England-8_%28cropped%29.jpg" alt="巨翠鳥雄鳥" loading="lazy" />
+        <div class="img-caption">
+          <span>巨翠鳥雄鳥 · Giant Kingfisher ♂</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">東非物種數</div>
+          <div class="stat-value">約 15 種</div>
+          <div class="stat-sub">涵蓋水域與林地多種生境</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">體長範圍</div>
+          <div class="stat-value">12 - 46 cm</div>
+          <div class="stat-sub">侏翠鳥至巨翠鳥</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">俯衝速度</div>
+          <div class="stat-value">約 40 km/h</div>
+          <div class="stat-sub">入水前折疊翅膀、精準垂直</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">命中率</div>
+          <div class="stat-value">約 70%</div>
+          <div class="stat-sub">遠優於多數猛禽的狩獵成功率</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">停懸高度</div>
+          <div class="stat-value">5 - 10 m</div>
+          <div class="stat-sub">藍耳翠鳥可懸停偵測獵物</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">棲地類型</div>
+          <div class="stat-value">水域 / 林地</div>
+          <div class="stat-sub">河流、湖岸、草原疏林均有</div>
+        </div>
+      </div>
+
+  <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
+        <i class="fa-solid fa-circle-check"></i>
+        IUCN 紅色名錄：<strong>無危（Least Concern，多數物種）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-names">
+        <div class="name-zh">翠鳥（多物種）</div>
+        <div class="name-en">Kingfisher</div>
+        <div class="name-sw">斯瓦希里語：<strong>Sululwe</strong></div>
+        <div class="name-sci">Family Alcedinidae（翠鳥科）</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'kf-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'kf-tab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'kf-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'kf-tab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="kf-tab-overview">
+          <div class="prose">
+            <p>
+              東非擁有約 <strong>15 種翠鳥</strong>，從僅 12 公分、體重不到 15 克的<em>非洲侏翠鳥（African Dwarf Kingfisher）</em>，到體長 46 公分、全非洲最大的<em>巨翠鳥（Giant Kingfisher）</em>，幾乎佔據所有水域與林地生態位。牠們都是翠鳥科（Alcedinidae）成員，卻在食性與棲地上高度分化。
+            </p>
+            <p>
+              Safari 途中最常見、也最容易辨識的是<strong>帶魚翠鳥（Pied Kingfisher）</strong>——黑白相間的羽色加上懸停俯衝的獨特狩獵方式，是非洲水域最具代表性的鳥類之一，也是全世界<strong>體型最大的懸停覓食鳥</strong>。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🎯</span>
+              <div><strong>生物工程級的精準俯衝：</strong>翠鳥的眼睛具有<strong>雙重視網膜中央凹</strong>，能同時精準對焦空中與水面，並自動補償水中光線折射造成的視覺偏差——這讓牠的水中命中率高達 70%，遠勝多數猛禽的 20–30%。</div>
+            </li>
+            <li>
+              <span class="fi">🚄</span>
+              <div><strong>新幹線的設計原型：</strong>日本新幹線 500 系的<strong>子彈型車頭</strong>正是仿照帶魚翠鳥的喙部曲線設計，以解決列車穿越隧道時的音爆噪音問題——這是生物仿生學最著名的案例之一，工程師中崎哲也本人就是觀鳥者。</div>
+            </li>
+            <li>
+              <span class="fi">🌈</span>
+              <div><strong>結構色的物理奇蹟：</strong>翠鳥的藍綠色羽毛並非色素造成，而是羽毛微結構對光線的<strong>奈米級干涉與散射</strong>。這也是為何翠鳥標本即使數百年後顏色依然鮮豔，卻無法用染料複製出一模一樣的色澤。</div>
+            </li>
+            <li>
+              <span class="fi">🏠</span>
+              <div><strong>在土崖鑽洞為巢：</strong>大多數翠鳥以強健的喙在<strong>河岸土崖或沙堤</strong>上水平鑽掘長達 30–100 公分的巢洞，雌雄共同挖掘，卵就產在隧道最深處的圓形巢室，避免地面天敵的侵擾。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>帶魚翠鳥是極少數能夠<strong>真正懸停（Hovering）</strong>的非蜂鳥鳥類——牠以每秒約 8 次的振翅速度在水面 5–10 公尺上方定點停懸，眼睛鎖定水中獵物最長達 <strong>20 秒</strong>，確認後再以閉眼垂直俯衝入水，幾乎每次出水都帶著一條魚。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="kf-tab-behavior">
+          <div class="prose">
+            <p>
+              不同物種的翠鳥採用截然不同的狩獵策略：帶魚翠鳥靠<strong>主動懸停偵測</strong>，馬拉凱特翠鳥（Malachite Kingfisher）從低矮棲枝<strong>靜待俯衝</strong>，而林地型的條紋翠鳥（Striped Kingfisher）則幾乎不吃魚，轉而<strong>捕食昆蟲與蜥蜴</strong>。
+            </p>
+            <p>
+              繁殖季節中，雄鳥會以<em>獻魚求偶</em>的儀式向雌鳥示好——將魚頭朝前銜至雌鳥面前，若雌鳥接受即完成配對。這個行為同時測試雄鳥的<strong>覓食能力與領域品質</strong>。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🐟</span>
+              <div><strong>以魚為鑰匙的社會制度：</strong>帶魚翠鳥社群中存在「幫手制（Helper system）」——未配對的雄性（通常是前一年的幼鳥）會協助親代育幼，換取未來配對機會。研究顯示，有幫手的巢，幼鳥存活率<strong>提升約 30%</strong>。</div>
+            </li>
+            <li>
+              <span class="fi">⚡</span>
+              <div><strong>閉眼入水的盲目精準：</strong>翠鳥在接觸水面的瞬間會<strong>閉上眼睛</strong>（由瞬膜保護），完全依靠俯衝前的彈道計算命中目標。整個入水到出水的過程不到半秒，用慢動作攝影才能完整看清。</div>
+            </li>
+            <li>
+              <span class="fi">💎</span>
+              <div><strong>馬拉凱特翠鳥的水岸寶石：</strong>體長僅 13 公分的馬拉凱特翠鳥（Malachite Kingfisher）以孔雀石般的藍綠色頭頂著稱，常靜棲於水面蘆葦或低枝上，是東非最受攝影者追捧的水鳥之一。</div>
+            </li>
+            <li>
+              <span class="fi">🌳</span>
+              <div><strong>林地翠鳥的非典型生活：</strong>灰頭翠鳥（Grey-headed Kingfisher）與條紋翠鳥完全不依賴水源，棲息於乾燥疏林，以螳螂、蜥蜴、蚱蜢為食，顛覆「翠鳥必須住在水邊」的直覺，展現翠鳥科驚人的<strong>生態適應幅度</strong>。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>翠鳥是水體健康的<strong>生物指標物種</strong>：對水質汙染與棲地破壞高度敏感，翠鳥族群的消長直接反映河流與湖岸生態系的健康狀況。保育學者常以翠鳥的繁殖成功率作為水域生態監測的標準指標之一。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="kf-tab-where">
+          <div class="prose">
+            <p>翠鳥幾乎出現在本次行程所有有水域的地點，沿河道與湖岸緩慢行駛時最容易發現。林地型物種則需在疏林 Game Drive 時特別留意低枝。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara（馬拉河沿岸）</span>
+                  <span class="loc-tag">Lake Naivasha</span>
+                  <span class="loc-tag">Samburu（尤阿索尼羅河）</span>
+                  <span class="loc-tag">Lake Nakuru NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti（河道水池）</span>
+                  <span class="loc-tag">Ngorongoro（火口湖）</span>
+                  <span class="loc-tag">Lake Manyara NP</span>
+                  <span class="loc-tag">Selous GR（盧伏河）</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>馬拉河渡口是翠鳥熱點：</strong>馬賽馬拉的牛羚渡河等待期間，河岸樹枝上常同時可見<strong>巨翠鳥、帶魚翠鳥與馬拉凱特翠鳥</strong>三種同框，是難得一見的多物種翠鳥比較機會。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影提示</div>
+            <p>拍攝翠鳥俯衝入水的關鍵是<strong>預判而非反應</strong>——找到固定的覓食棲枝後架好相機對焦，等待俯衝而非追蹤移動。建議快門速度至少 <strong>1/2000s</strong> 才能凝結入水瞬間的水花，使用 AI 追蹤對焦模式並設定連拍每秒 10 張以上。清晨側光下，翠鳥結構色羽毛在強烈光線中顯色最為飽和鮮豔。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="kf-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識東非四大常見翠鳥：</strong><strong>帶魚翠鳥</strong>——黑白相間、最常懸停；<strong>巨翠鳥</strong>——體型最大，胸部棕紅色；<strong>馬拉凱特翠鳥</strong>——體型迷你，頭頂孔雀石藍綠；<strong>灰頭翠鳥</strong>——棲息乾燥疏林，頭部灰色、腹部橙紅，不在水邊出現。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>清晨水邊是黃金時段：</strong>日出後的 1–2 小時，翠鳥的覓食活動最為頻繁，且低角度側光使羽毛結構色顯色最為飽和。沿河道緩速行駛，掃視水面突出的<strong>枯枝、蘆葦莖頂與露出水面的岩石</strong>是發現翠鳥的最快方法。</div>
+            </li>
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>先聽再找：</strong>翠鳥飛行時常發出<strong>高頻尖銳的「ti-ti-ti」短促鳴聲</strong>，在濃密河岸植被中往往是聽到聲音再定位視覺比直接用眼睛搜索更有效率。熟悉各物種的鳴聲是識別的最快捷徑。</div>
+            </li>
+            <li>
+              <span class="fi">🎣</span>
+              <div><strong>守候固定棲枝事半功倍：</strong>翠鳥有強烈的<strong>固定領域與棲枝習慣</strong>——找到有俯衝入水行為的個體後，只需在 20–30 公尺外靜待，牠幾乎必定返回同一枝條，可在固定位置反覆拍攝不同動作。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>帶魚翠鳥懸停是最佳練習標的：</strong>懸停中的帶魚翠鳥相對靜止，是練習<strong>鳥類飛行攝影</strong>的理想入門對象，比追拍飛行中的猛禽容易得多。確認對焦穩定後再預判俯衝瞬間，成功率遠高於全程追焦。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>東非多數翠鳥物種目前族群穩定，但對<strong>水質汙染、農業除草劑造成的水生昆蟲減少</strong>，以及河岸土崖被人為破壞（導致無法築巢）高度敏感。馬拉河流域翠鳥多樣性的維持，與上游肯亞茶園的水源保護政策直接相關——這讓翠鳥成為倡導流域整合保育的重要旗艦物種。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="kori-bustard-section">
+<div class="section">
+  <h2 class="section-title">🦃 動物介紹</h2>
+  <p class="section-sub">巨翼行者：地球上能飛行的最重鳥類</p>
+
+  <div class="animal-profile">
+    <div class="profile-visual">
+      <div class="profile-img-wrap">
+        <img src="https://cdn.britannica.com/53/265453-050-F40378A3/Male-Kori-bustard-displaying-breeding-season-Ardeotis-kori-bird.jpg" alt="野生非洲布穀鳥" loading="lazy" />
+        <div class="img-caption">
+          <span>非洲鴇 · Kori Bustard</span>
+          <strong>Kenya / Tanzania</strong>
+        </div>
+      </div>
+
+      <div class="stat-grid">
+        <div class="stat-item">
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">7 - 19 kg</div>
+          <div class="stat-sub">可飛行鳥類中最重紀錄保持者</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">♂ 身高</div>
+          <div class="stat-value">約 1.2 m</div>
+          <div class="stat-sub">♀ 明顯較小，約 5–6 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">翼展</div>
+          <div class="stat-value">約 2.75 m</div>
+          <div class="stat-sub">飛行時壯觀但耗能極高</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">行走速度</div>
+          <div class="stat-value">約 20 km/h</div>
+          <div class="stat-sub">偏好步行而非飛行</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">壽命</div>
+          <div class="stat-value">約 26 年</div>
+          <div class="stat-sub">野外；圈養紀錄更長</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">食性</div>
+          <div class="stat-value">雜食</div>
+          <div class="stat-sub">昆蟲、蜥蜴、種子、樹膠均取食</div>
+        </div>
+      </div>
+
+      <div class="iucn-badge">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+        IUCN 紅色名錄：<strong>易危（Vulnerable）</strong>
+      </div>
+    </div>
+
+    <div class="profile-content">
+      <div class="profile-names">
+        <div class="name-zh">非洲鴇（科利鴇）</div>
+        <div class="name-en">Kori Bustard</div>
+        <div class="name-sw">斯瓦希里語：<strong>Tandawala</strong></div>
+        <div class="name-sci">Ardeotis kori</div>
+      </div>
+
+      <div class="tabs">
+        <button class="tab-btn active" onclick="switchTab(event, 'kb-tab-overview')">生態總覽</button>
+        <button class="tab-btn" onclick="switchTab(event, 'kb-tab-behavior')">行為特徵</button>
+        <button class="tab-btn" onclick="switchTab(event, 'kb-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'kb-tab-tips')">Safari 小技巧</button>
+      </div>
+
+      <div class="tab-panels">
+        <div class="tab-panel active" id="kb-tab-overview">
+          <div class="prose">
+            <p>
+              非洲鴇（Kori Bustard）是<strong>地球上能夠飛行的最重鳥類</strong>紀錄保持者，雄鳥最重可達 19 公斤，翼展將近 3 公尺。儘管具備飛行能力，牠幾乎全時間在地面行走覓食，<strong>只在受到嚴重威脅時才起飛</strong>，因為飛行對牠而言耗能極高。
+            </p>
+            <p>
+              牠是東非開闊草原的代表性大型地棲鳥，外型以細膩的<em>灰棕色細紋羽毛</em>與頸部鬆散的白色羽冠為特徵，行走時姿態優雅沉穩，在草原上相當顯眼卻往往被 Safari 初學者忽略。值得注意的是，「非洲布穀鳥」為民間俗稱，牠在分類上屬於<strong>鴇科（Otididae）</strong>，與布穀鳥毫無親緣關係。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">⚖️</span>
+              <div><strong>飛行極限的工程學困境：</strong>鳥類胸骨與飛行肌肉的結構，使能夠持續飛行的體重上限約為 12–15 公斤。非洲鴇雄鳥已逼近甚至突破此極限，起飛時需要長距離助跑，飛行姿態吃力，<strong>能飛卻盡量不飛</strong>是牠的生存哲學。</div>
+            </li>
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>阿拉伯膠的狂熱愛好者：</strong>非洲鴇是少數已知會主動取食<strong>金合歡樹分泌的阿拉伯膠（Gum Arabic）</strong>的鳥類，這種富含多醣的黏性分泌物能補充旱季水分不足時的能量，也是牠食性高度靈活的體現。</div>
+            </li>
+            <li>
+              <span class="fi">🐝</span>
+              <div><strong>蜂鳥的草原對應物：</strong>非洲鴇與蜜嚮導鳥（Honeyguide）之間存在<strong>非正式的覓食共生</strong>——鴇在草地行走翻動的昆蟲為小型鳥類提供機會，附近常可觀察到數種小鳥跟隨覓食，形成以牠為核心的移動覓食鳥浪。</div>
+            </li>
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>極低的飲水需求：</strong>非洲鴇已高度適應乾旱草原，幾乎完全從食物中獲取水分，<strong>可長達數週不主動飲水</strong>。這使牠能在其他動物因旱季退縮的地帶繼續活動，成為草原上最耐旱的大型鳥類之一。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>非洲鴇雄鳥在鴇科中以<strong>性別二型性（Sexual Dimorphism）最極端</strong>著稱——雄鳥體重可達雌鳥的 3 倍以上。這種極端體型差異與牠的「雄性競爭不護幼」繁殖策略直接相關：雄鳥將全部資源投入體型以贏得求偶，對育幼完全不參與，幼鳥由母親單獨撫育。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="kb-tab-behavior">
+          <div class="prose">
+            <p>
+              非洲鴇是獨居或小型鬆散群活動的<strong>日行性地棲鳥</strong>，以緩慢而警覺的步態在開闊草地覓食，每天可行走超過 <strong>10 公里</strong>。牠的視力極為銳利，能在數百公尺外偵測威脅，並通常選擇用步行遠離而非飛行。
+            </p>
+            <p>
+              繁殖季（東非主要為 4–8 月）中，雄鳥會進行東非草原上最壯觀的<em>求偶炫耀展示</em>之一，吸引遠道而來的觀鳥者專程守候。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">💃</span>
+              <div><strong>膨脹頸囊的求偶展示：</strong>雄鳥求偶時會將頸部的<strong>鬆散羽毛向外全力膨脹</strong>，使頸圍增加數倍，同時尾羽上翻貼背、翅膀半展下垂，整體外型從修長變為蓬鬆球狀，並以緩慢的「踱步炫耀」在雌鳥前方來回展示，場面極為誇張壯觀。</div>
+            </li>
+            <li>
+              <span class="fi">🦅</span>
+              <div><strong>與猛禽的跟隨共生：</strong>非洲鴇體型巨大的行走會驚起大量草叢昆蟲，吸引<strong>鳶、蜂虎、卷尾等多種猛禽與小鳥</strong>在牠前後左右跟隨，形成以鴇為核心的「移動覓食車隊」，是草原上相當獨特的多物種聚集現象。</div>
+            </li>
+            <li>
+              <span class="fi">🐍</span>
+              <div><strong>主動捕蛇的勇猛一面：</strong>非洲鴇是已知會<strong>主動獵殺小型毒蛇</strong>的鳥類，以強健的喙精準攻擊蛇頭，並利用翅膀當盾牌抵擋反咬。目擊牠獵蛇是 Safari 中極為罕見的特殊行為紀錄。</div>
+            </li>
+            <li>
+              <span class="fi">👶</span>
+              <div><strong>母鳥單獨育幼的艱辛：</strong>雌鳥每次產 1–2 顆蛋，直接產在草地淺坑（無精心建造的巢），<strong>完全獨自孵化與育雛</strong>。幼鳥約 5 週後開始嘗試飛行，但跟隨母親學習覓食至少 9 個月，是鴇科中育幼期最長的物種之一。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>非洲鴇是開闊草原的<strong>大型昆蟲調控者</strong>，每日取食大量蝗蟲、蚱蜢、蠍子與甲蟲，在旱季昆蟲爆發期尤其重要。牠行走翻起的昆蟲同時惠及大量跟隨的小型鳥類，使牠成為草原鳥類群落中重要的<strong>非主動「資源製造者」</strong>。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="kb-tab-where">
+          <div class="prose">
+            <p>非洲鴇偏好<strong>開闊的短草平原與半乾旱稀樹草原</strong>，避開高草叢與茂密林地，在本次行程的主要園區中出現頻率相當穩定，屬於中等容易目擊的物種。</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR（開闊草原區）</span>
+                  <span class="loc-tag">Amboseli NP</span>
+                  <span class="loc-tag">Tsavo East NP</span>
+                  <span class="loc-tag">Samburu NR</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞最佳目擊地點</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti 短草平原</span>
+                  <span class="loc-tag">Ngorongoro 火口底部</span>
+                  <span class="loc-tag">Tarangire NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>恩戈羅恩戈羅火口底部是頂級地點：</strong>火口底部的開闊短草平原幾乎全年都能穩定目擊非洲鴇，且因地形封閉，牠們對遊獵車輛的警覺心較低，是觀察求偶展示與覓食行為最理想的場所之一。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影提示</div>
+            <p>非洲鴇體型大、行走緩慢，是草原上<strong>最容易構圖的大型地棲鳥</strong>。建議使用 300–500mm 焦段在車內拍攝，保持引擎熄火避免震動。雄鳥求偶展示時的<strong>頸羽全膨狀態</strong>是夢幻級題材，約在早晨 7:00–10:00 之間最常發生，發現後務必保持靜止耐心等待完整展示過程。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="kb-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識非洲鴇的關鍵特徵：</strong>體型是關鍵——站立身高約 1 公尺的大型地棲鳥，在草原上極為顯眼。羽色以<strong>灰棕色細波紋</strong>為主，頸部有白色鬆散羽冠，頭頂黑白條紋；飛行時翅膀內側為白色，與外側深色形成強烈對比。</div>
+            </li>
+            <li>
+              <span class="fi">🐦</span>
+              <div><strong>跟著「鳥浪」找非洲鴇：</strong>若在開闊草地看到數隻蜂虎、燕鷗或小型猛禽突然集中在某個區域低空盤旋或俯衝，仔細搜索地面——牠們很可能正在跟隨一隻緩步前行的非洲鴇，利用牠驚起的昆蟲覓食。</div>
+            </li>
+            <li>
+              <span class="fi">📅</span>
+              <div><strong>繁殖季守候求偶展示：</strong>7 月正好落在東非非洲鴇繁殖季中段，清晨是雄鳥求偶炫耀最活躍的時段。若發現雄鳥在同一區域反覆來回踱步且頸部羽毛開始蓬鬆，<strong>立刻請導遊停車熄火</strong>，耐心靜待頸囊全膨的完整展示。</div>
+            </li>
+            <li>
+              <span class="fi">👣</span>
+              <div><strong>偏好短草區域的覓食習慣：</strong>非洲鴇幾乎只在能清晰看到地面的<strong>短草或裸地區域</strong>活動，在長草季節後退縮至燒墾區、湖岸裸地或過度放牧的短草帶。掌握這個規律可大幅提高搜索效率。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>警覺距離遠，靜默接近是關鍵：</strong>非洲鴇的警覺性相當高，車輛距離 100 公尺以外通常會選擇步行離開。請導遊以最低速度<strong>側向接近而非正面逼近</strong>，並在牠停止警戒步行後靜待——通常在車輛停定 3–5 分鐘後牠會恢復正常覓食行為。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>非洲鴇目前 IUCN 列為「易危」，族群在過去數十年間持續下滑。主要威脅包括：<strong>農業擴張破壞開闊草原棲地、電力線碰撞死亡、盜獵取肉</strong>，以及部分地區傳統醫學的需求。體型大、繁殖率低（每年僅 1–2 隻幼鳥）使族群恢復極為緩慢，是東非草原鳥類保育中需要長期關注的旗艦物種。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
 <footer>
   <p>九十路埃及05團 <strong>Safari 小隊</strong> · 肯亞 &amp; 坦尚尼亞 · 2026 / 07 / 08–19</p>
   <p style="margin-top:8px; opacity:0.6; font-size:12px;">Hakuna Matata · 行程規劃由 Splendid Vacations 與 Alex Masila 團隊聯合呈獻</p>
@@ -5974,20 +7446,19 @@ const animals = [
   { zh: '岩蹄兔', en: 'Rock Hyrax', anchor: '#hyrax-section' },
   { zh: '藪貓', en: 'Serval', anchor: '#serval-section' },
   { zh: '非洲松鼠', en: 'African Ground Squirrel', anchor: '#ground-squirrel-section' },
-  { zh: '蜜獾', en: 'Honey Badger', anchor: null },
-  { zh: '非洲鴕鸟', en: 'Ostrich', anchor: null },
+  { zh: '蜜獾', en: 'Honey Badger', anchor:'#honeybadger-section' },
+  { zh: '非洲鴕鸟', en: 'Ostrich', anchor:'#ostrich-section' },
   { zh: '火鶴', en: 'Flamingo', anchor:'#flamingo-section' },
   { zh: '禿鷹', en: 'Vulture', anchor: '#vulture-section'},
   { zh: '非洲魚鷹', en: 'African Fish Eagle', anchor:'#fish-eagle-section'},
   { zh: '非洲禿鸛', en: 'Marabou Stork', anchor:'#marabou-section' },
   { zh: '非洲象', en: 'African Elephant', anchor: '#elephant-section' },
   { zh: '獰貓', en: 'Caracal', anchor: '#caracal-section' },
-  { zh: '土豚', en: 'Aardvark', anchor: null },
-  { zh: '蒙哥', en: 'Mongoose', anchor: null },
-  { zh: '翠鳥', en: 'Kingfisher', anchor: null },
+  { zh: '土豚', en: 'Aardvark', anchor:'#aardvark-section'  },
+  { zh: '蒙哥', en: 'Mongoose', anchor:'#mongoose-section' },
+  { zh: '翠鳥', en: 'Kingfisher', anchor:'#kingfisher-section' },
   { zh: '鱷魚', en: 'Nile Crocodile', anchor:'#crocodile-section' },
-  { zh: '藍牛羚', en: 'Blue Wildebeest', anchor: null },
-  { zh: '非洲布穀鳥', en: 'Kori Bustard', anchor: null },
+  { zh: '非洲鴇', en: 'Kori Bustard', anchor:'#kori-bustard-section'},
 ];
 
 // 初始隱藏所有動物介紹區塊
