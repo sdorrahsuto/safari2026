@@ -581,6 +581,245 @@ footer strong { color: var(--gold-amber); }
   to   { opacity:1; transform: translateY(0); }
 }
 .fade-up { animation: fadeUp .5s ease both; }
+
+/* ═══════════════════════════════════════════════════════════
+   RESPONSIVE & AUTO-SCALE
+   手機版修正：防止水平溢出 + 依顯示器解析度自動縮放
+═══════════════════════════════════════════════════════════ */
+
+/* 全域防止水平溢出 */
+html {
+  overflow-x: hidden;
+  max-width: 100vw;
+}
+body {
+  overflow-x: hidden;
+}
+
+/* 所有圖片不超出容器 */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* 文字折行防溢出 */
+.stat-value, .stat-sub, .stat-label,
+.name-sw, .name-sci, .name-zh, .name-en,
+.iucn-badge, .loc-tag, .fb-item, .niche-desc,
+.fun-fact p, .prose p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ── stat 數值使用 clamp 自動縮放 ── */
+.stat-item .stat-value {
+  font-size: clamp(13px, 4vw, 16px);
+  line-height: 1.3;
+}
+.stat-item .stat-label {
+  font-size: clamp(9px, 2.2vw, 10px);
+}
+.stat-item .stat-sub {
+  font-size: clamp(10px, 2.4vw, 11px);
+}
+
+/* ── 動物名稱使用 clamp 縮放 ── */
+.name-zh {
+  font-size: clamp(26px, 7vw, 44px) !important;
+}
+.name-en {
+  font-size: clamp(15px, 4.5vw, 26px) !important;
+}
+.hero-title {
+  font-size: clamp(30px, 8vw, 56px) !important;
+}
+
+/* ── 比較表格水平捲動容器 ── */
+.table-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 15px 0;
+  border-radius: 4px;
+}
+.table-scroll table {
+  min-width: 440px;
+  width: 100%;
+}
+
+/* iucn badge 允許折行 */
+.iucn-badge {
+  flex-wrap: wrap;
+}
+
+/* ══════════════════════════════════════
+   Breakpoint ≤ 768px：手機 / 小平板
+══════════════════════════════════════ */
+@media (max-width: 768px) {
+
+  .section {
+    padding: 48px 16px;
+  }
+
+  /* 動物介紹：左右兩欄 → 上下堆疊 */
+  .animal-profile {
+    grid-template-columns: 1fr !important;
+    gap: 32px;
+  }
+
+  /* 確保 profile 欄位不超寬 */
+  .profile-visual,
+  .profile-content {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  /* 共存區塊 */
+  .coexist-wrap {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  /* stat-grid 間距縮減 */
+  .stat-grid {
+    gap: 8px;
+  }
+  .stat-item {
+    padding: 10px 12px;
+  }
+
+  /* tab 按鈕縮小 */
+  .tab-btn {
+    padding: 10px 14px;
+    font-size: 12px;
+  }
+
+  /* iucn badge 縮小 */
+  .iucn-badge {
+    font-size: 11px;
+    padding: 6px 12px;
+  }
+
+  /* 圖片容器不超出 */
+  .profile-img-wrap {
+    max-width: 100%;
+  }
+  .savanna-scene {
+    max-width: 100%;
+  }
+}
+
+/* ══════════════════════════════════════
+   Breakpoint ≤ 480px：小手機
+══════════════════════════════════════ */
+@media (max-width: 480px) {
+
+  .section {
+    padding: 36px 12px;
+  }
+
+  /* stat-grid：兩欄 → 單欄 */
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* niche-grid：兩欄 → 單欄 */
+  .niche-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* feature-list 字體 */
+  .feature-list li {
+    font-size: 13px;
+  }
+  .prose p {
+    font-size: 13px;
+    line-height: 1.85;
+  }
+  .fun-fact p {
+    font-size: 13px;
+  }
+  .fun-fact {
+    padding: 12px 14px;
+  }
+
+  /* top nav */
+  .top-nav {
+    padding: 10px 14px;
+    gap: 8px;
+  }
+  .top-nav a, .top-nav .current {
+    font-size: 12px;
+  }
+
+  /* profile names */
+  .profile-names {
+    margin-bottom: 14px;
+    padding-bottom: 12px;
+  }
+  .name-sw, .name-sci {
+    font-size: 12px;
+  }
+
+  /* search */
+  .search-box input {
+    font-size: 13px;
+    padding: 12px 42px 12px 14px;
+  }
+
+  /* alphabet bar */
+  .alpha-btn {
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
+  }
+  .alpha-btn.all-btn {
+    min-width: 36px;
+    padding: 0 8px;
+    font-size: 12px;
+  }
+
+  /* section title */
+  .section-title {
+    font-size: 20px;
+  }
+
+  /* tab 按鈕更小 */
+  .tab-btn {
+    padding: 8px 12px;
+    font-size: 11px;
+  }
+
+  /* animal tags */
+  .animal-list-wrap {
+    padding: 16px;
+  }
+}
+
+/* ══════════════════════════════════════
+   Breakpoint ≤ 360px：超小螢幕
+══════════════════════════════════════ */
+@media (max-width: 360px) {
+
+  .section {
+    padding: 24px 10px;
+  }
+
+  .alpha-btn {
+    width: 26px;
+    height: 26px;
+    font-size: 11px;
+  }
+
+  .tab-btn {
+    padding: 7px 9px;
+    font-size: 11px;
+  }
+
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
 </head>
 <body>
@@ -2008,7 +2247,7 @@ footer strong { color: var(--gold-amber); }
             <h4 style="color:#d4af37; margin: 15px 0 10px;">🔍 鑑別指南：黑犀牛 vs. 白犀牛</h4>           
             <p><strong>黑犀牛：</strong>鉤狀上唇，頭部高抬，性格較具攻擊性。</p>
             <p><strong>白犀牛：</strong>名稱源自荷蘭語 "wijd"（意為寬廣），被誤聽為 "white"。擁有寬闊「方唇」，是專門吃草的「食草者 (Grazer)」，頭部常垂向地面，性格較溫和群居，常可見到母犀牛帶著幼犀牛活動。</p>
-            
+            </ul>
           </div>
           <ul class="feature-list">
 
@@ -3417,7 +3656,7 @@ footer strong { color: var(--gold-amber); }
               轉角牛羚是馬賽馬拉最具代表性的中型羚羊，以其<strong>深紅棕色皮毛、臉部與四肢的藍黑色光澤斑塊</strong>，以及雄性習慣獨自站立於白蟻丘制高點俯視草原的「<em>哨兵姿態</em>」而廣為人知。牠們是東非草原上跑速最快的羚羊之一，爆發力與耐力均屬一流。
             </p>
             <p>
-              轉角牛羚屬於<strong>狷羚亞科（Alcelaphinae）</strong>，與角馬（牛羚）、狷羚（Kongoni）同屬，是大遷徙生態系的重要成員。牠們偏好<strong>中高度草原</strong>，是食草生態分工中的重要環節，也是獅子、獵豹與鬣狗的重要獵物來源。
+              轉角牛羚屬於<strong>狷羚亞科（Alcelaphinae）</strong>，與角馬（牛羚）、哈特比斯特（Kongoni）同屬，是大遷徙生態系的重要成員。牠們偏好<strong>中高度草原</strong>，是食草生態分工中的重要環節，也是獅子、獵豹與鬣狗的重要獵物來源。
             </p>
           </div>
  
@@ -5223,6 +5462,50 @@ function switchTab(e, id) {
   e.target.classList.add('active');
   document.getElementById(id).classList.add('active');
 }
+
+/* ── 包裹所有比較表格，手機可水平捲動 ── */
+document.querySelectorAll('table').forEach(table => {
+  if (!table.closest('.table-scroll')) {
+    const wrapper = document.createElement('div');
+    wrapper.className = 'table-scroll';
+    table.parentNode.insertBefore(wrapper, table);
+    wrapper.appendChild(table);
+  }
+});
+
+/* ── 抓取顯示器解析度，自動設定 CSS 變數與斷點 class ── */
+function applyResolution() {
+  const el  = document.documentElement;
+  const vw  = window.innerWidth;
+  const vh  = window.innerHeight;
+  const dpr = window.devicePixelRatio || 1;
+
+  /* CSS 自訂屬性：供進階樣式使用 */
+  el.style.setProperty('--vw',  vw  + 'px');
+  el.style.setProperty('--vh',  vh  + 'px');
+  el.style.setProperty('--dpr', dpr);
+
+  /* 字型縮放比例：依視窗寬度線性插值（320px→0.82，390px→1.0，600px以上→1.0） */
+  const fontScale = Math.min(1, Math.max(0.82, vw / 390));
+  el.style.setProperty('--font-scale', fontScale);
+  el.style.setProperty('font-size', (16 * fontScale).toFixed(2) + 'px');
+
+  /* 移除舊斷點 class */
+  document.body.classList.remove('vp-xxs','vp-xs','vp-sm','vp-md','vp-lg','hi-dpi');
+
+  /* 依視窗寬度加入斷點 class */
+  if      (vw < 320)  document.body.classList.add('vp-xxs');
+  else if (vw < 480)  document.body.classList.add('vp-xs');
+  else if (vw < 640)  document.body.classList.add('vp-sm');
+  else if (vw < 1024) document.body.classList.add('vp-md');
+  else                document.body.classList.add('vp-lg');
+
+  /* Retina / 高 DPI 螢幕 */
+  if (dpr >= 2) document.body.classList.add('hi-dpi');
+}
+
+applyResolution();
+window.addEventListener('resize', applyResolution);
 </script>
 </body>
 </html>
