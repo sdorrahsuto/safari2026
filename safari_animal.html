@@ -2378,25 +2378,38 @@ img {
         </div>
       </div>
 
-<div class="stat-grid">
+      <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">體重</div>
+          <div class="stat-label">♂ 體重</div>
           <div class="stat-value">800 - 1,400 kg</div>
+          <div class="stat-sub">♀ 略小，約 700 - 900 kg</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">食性</div>
-          <div class="stat-value">瀏覽型 (食葉)</div>
+          <div class="stat-label">肩高</div>
+          <div class="stat-value">1.4 - 1.8 m</div>
+          <div class="stat-sub">體長約 3 - 3.8 m</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">視力</div>
-          <div class="stat-value">較差 (依賴聽覺)</div>
+          <div class="stat-label">前角長度</div>
+          <div class="stat-value">可達 130 cm</div>
+          <div class="stat-sub">角蛋白構成，可再生長</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">角成分</div>
-          <div class="stat-value">角蛋白 (與毛髮同)</div>
+          <div class="stat-label">奔跑速度</div>
+          <div class="stat-value">~ 55 km/h</div>
+          <div class="stat-sub">短距爆發力驚人</div>
         </div>
-      </div>
-      
+        <div class="stat-item">
+          <div class="stat-label">視力範圍</div>
+          <div class="stat-value">僅 30 m</div>
+          <div class="stat-sub">依賴嗅覺與聽覺補足</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外總數</div>
+          <div class="stat-value">約 6,500 頭</div>
+          <div class="stat-sub">IUCN 極危，持續復育中</div>
+        </div>
+      </div>      
       <div class="iucn-badge" style="background: rgba(234,56,0,0.2); border-color: rgba(255,153,51,0.5); color: var(--gold-amber);">
         <i class="fa-solid fa-circle-check"></i>
         IUCN 紅色名錄：<strong>極危 (Critically Endangered)</strong>
@@ -2414,9 +2427,9 @@ img {
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'rhino-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'rhino-biology')">生存絕技</button>
-        <button class="tab-btn" onclick="switchTab(event, 'rhino-tips')">觀察小語</button>
+        <button class="tab-btn" onclick="switchTab(event, 'rhino-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'rhino-tips')">Safari 小技巧</button>
       </div>
-
       <div class="tab-panels">
         <div class="tab-panel active" id="rhino-overview">
           <div class="prose">
@@ -2437,32 +2450,117 @@ img {
               <span class="fi">🌍</span>
               <div><strong>斷角實驗：</strong>為了保護犀牛，部分野生動物保護區採取「安全斷角」措施，即在麻醉狀態下修剪犀牛角。這雖然是一個爭議性的手段，但被證明能顯著降低盜獵者的興趣，有效提高個體生存率。</div>
             </li>
+            <li>
+              <span class="fi">🚨</span>
+              <div><strong>獨居且具攻擊性：</strong>黑犀牛視野差、性情多疑，受到驚擾時會以高達 55 km/h 的速度直線衝刺，是非洲最危險的動物之一，近距離遭遇時務必遵從嚮導指示。</div>
+            </li>
           </ul>
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>黑犀牛雖然體型龐大，卻是游泳高手，能輕鬆穿越河流。牠們的皮膚厚達 <strong>1.5 - 5 公分</strong>，看似堅不可摧，卻對日曬與蚊蟲相當敏感，這也是為何牠們每天都要在泥池中打滾！</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="rhino-biology">
           <div class="prose">
+            <p>
+              黑犀牛擁有一系列令人嘆為觀止的生理適應，讓牠們在嚴酷的非洲灌木叢中存活數千萬年。牠的祖先可追溯至<strong>5,000 萬年前</strong>的始新世，是地球上現存最古老的大型哺乳動物血脈之一。
+            </p>
+            <p>
+              儘管感官各有所長，黑犀牛倚賴<strong>靈敏的嗅覺與聽覺</strong>來彌補視力的不足，其嗅覺能力甚至被認為優於部分犬類。
+            </p>
+          </div>
           <ul class="feature-list">
             <li>
               <span class="fi">🛡️</span>
               <div><strong>盔甲般的頭盾 (Boss)：</strong>犀牛的角並非骨頭，而是由<strong>角蛋白 (Keratin)</strong> 組成的，與人類指甲成分相同，即便被切斷，如果基部未受損，角仍會持續生長。</div>
             </li>
             <li>
-              <span class="fi">🌲</span>
-              <div><strong>皮膚防禦：</strong>犀牛喜歡在泥濘中打滾（Mud wallowing），這不僅是為了降溫，更能在皮膚表面形成一層「防曬與防蟲層」，保護牠們厚達 2-5 公分的皮革。</div>
+              <span class="fi">💧</span>
+              <div><strong>泥浴：天然防曬與冷氣系統</strong>——犀牛無汗腺，無法透過流汗散熱。在泥濘中打滾（Mud wallowing）能在皮膚表面形成隔熱層，同時防止蚊蟲叮咬，是其每日必備的體溫管理儀式。</div>
             </li>
             <li>
               <span class="fi">🐦</span>
               <div><strong>警報器：</strong>與牠們共生的<strong>紅嘴牛椋鳥 (Oxpeckers)</strong> 是牠們的「警報器」，能幫忙清理寄生蟲，補足犀牛視力不足（僅 30 米有效範圍）的弱點。</div>
             </li>
 
+            <li>
+              <span class="fi">👃</span>
+              <div><strong>氣味地圖：領地標記語言</strong>——黑犀牛以尿液噴灑和固定糞堆（Midden）標記領地，一個糞堆可累積數十年，是野外最重要的「社群告示板」，傳遞性別、健康狀態等訊息。</div>
             </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>黑犀牛是非洲灌木叢的<strong>「修剪師」</strong>。牠們大量採食灌木嫩芽，能有效抑制特定植物的過度擴張，維持稀樹草原的植被多樣性，對整個生態系的健康平衡至關重要。</p>
           </div>
         </div>
-        <div class="tab-panel" id="rhino-tips">
+        <div class="tab-panel" id="rhino-where">
           <div class="prose">
-            <p>犀牛移動速度快且安靜，若觀察到牠們出現<strong>「噴氣」或「快速跺腳」</strong>，這是極高的危險訊號，請務必示意嚮導立即拉開距離。</p>
-            <p><em>攝影提示：建議利用望遠鏡或中長焦鏡頭，捕捉犀牛角部的紋理與耳部細節，並優先觀察是否有鳥類伴隨，那是牠們安穩棲息的象徵。</em></p>
+            <p>黑犀牛偏好茂密的灌木叢與多刺荊棘地帶，分布相對零散，本次 Safari 路線涵蓋數個仍有穩定族群的關鍵保護區：</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（馬賽馬拉國家保護區 & 奧佩傑塔保護區）</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Ol Pejeta Conservancy</span>
+                  <span class="loc-tag">Lewa Wildlife Conservancy</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（恩戈羅恩戈羅火山口 & 塞倫蓋提）</strong>
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Ngorongoro Crater</span>
+                  <span class="loc-tag">Serengeti NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>恩戈羅恩戈羅火山口是目前觀賞黑犀牛密度最高的地點之一</strong>。封閉的火山口地形提供天然屏障，估計有逾 20 頭個體在此棲居，是全球黑犀牛密度最高的區域之一。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>黑犀牛多在清晨與傍晚出沒。清晨在水源地附近等候是最有效的策略——犀牛飲水後往往會在附近泥池打滾，提供長時間的近距離觀察機會，是捕捉角部紋理與泥浴行為的絕佳時刻。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="rhino-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識黑犀牛的關鍵：唇型優先於體色</strong>——觀察頭部姿態，黑犀牛頭部高抬（因需採食灌木高處），白犀牛頭部垂低（因需低頭吃草）。若距離夠近，鉤狀上唇（黑）vs. 寬平方唇（白）一眼即可分辨。</div>
+            </li>
+            <li>
+              <span class="fi">🚨</span>
+              <div><strong>讀懂危險訊號：</strong>若犀牛出現<strong>大力「噴氣」、快速跺腳、耳朵前傾</strong>，是即將衝刺的高度警示。務必立即告知嚮導拉開距離，切勿發出聲響或突然移動。</div>
+            </li>
+            <li>
+              <span class="fi">⏰</span>
+              <div><strong>跟著牛椋鳥找犀牛：</strong>在灌木叢中若見到數隻紅嘴牛椋鳥低空急速飛行並在同一叢灌木間穿梭，極可能是有犀牛在附近休息。這比直接目視搜索效率高出許多。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>黃昏是最佳觀察窗口：</strong>黑犀牛白天多躲於濃蔭下避暑，日落前 1-2 小時才開始活躍覓食。請嚮導在已知活動區域的下風處靜待，避免牠靈敏的嗅覺提前察覺人車氣味。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>拍攝重點——角的紋理與耳部細節：</strong>建議使用中長焦鏡頭（200mm 以上），著重捕捉犀角粗礪的縱向纖維紋路與大而靈活的耳廓。若有牛椋鳥伴隨，那是牠們安穩棲息的象徵，也是最具故事性的構圖元素。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>黑犀牛族群在 1970 至 1990 年代遭受毀滅性盜獵，從約 65,000 頭暴跌至不足 2,500 頭。經過數十年的跨國保育合作，目前已回升至約 <strong>6,500 頭</strong>，是非洲保育史上最成功的復育案例之一，但仍遠未脫離滅絕危機。</p>
           </div>
         </div>
       </div>
@@ -2470,7 +2568,6 @@ img {
   </div>
 </div>
 </section>
-
 <section id="zebra-section">
 <div class="section">
   <h2 class="section-title">🦓 動物介紹</h2>
@@ -2481,27 +2578,41 @@ img {
       <div class="profile-img-wrap">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Plains_Zebra_Equus_quagga.jpg/500px-Plains_Zebra_Equus_quagga.jpg" />
         <div class="img-caption">
-          <span>斑馬 · Zebra</span>
+          <span>平原斑馬 · Plains Zebra</span>
           <strong>Kenya / Tanzania</strong>
         </div>
       </div>
 
       <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">體重</div>
+          <div class="stat-label">♂ 體重</div>
           <div class="stat-value">250 - 450 kg</div>
+          <div class="stat-sub">♀ 略輕，約 300 - 380 kg</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">社會性</div>
-          <div class="stat-value">高度群居</div>
+          <div class="stat-label">肩高</div>
+          <div class="stat-value">1.1 - 1.5 m</div>
+          <div class="stat-sub">體長約 2.1 - 2.5 m</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">主要威脅</div>
-          <div class="stat-value">獅子、鬣狗</div>
+          <div class="stat-label">奔跑速度</div>
+          <div class="stat-value">~ 65 km/h</div>
+          <div class="stat-sub">可維持長距離高速逃跑</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">條紋特徵</div>
           <div class="stat-value">獨一無二</div>
+          <div class="stat-sub">如指紋，個體間完全不同</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">群體結構</div>
+          <div class="stat-value">家族群居</div>
+          <div class="stat-sub">1 雄 + 數雌 + 幼崽為核心</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外壽命</div>
+          <div class="stat-value">約 20 - 25 年</div>
+          <div class="stat-sub">族群數量目前穩定</div>
         </div>
       </div>
       
@@ -2513,46 +2624,158 @@ img {
 
     <div class="profile-content">
       <div class="profile-names">
-        <div class="name-zh">斑馬</div>
-        <div class="name-en">Zebra</div>
+        <div class="name-zh">平原斑馬</div>
+        <div class="name-en"> PlainsZebra</div>
         <div class="name-sw">斯瓦希里語：<strong>Punda Milia</strong></div>
         <div class="name-sci">Equus quagga</div>
       </div>
 
+
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'ztab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'ztab-stripes')">條紋之謎</button>
-        <button class="tab-btn" onclick="switchTab(event, 'ztab-tips')">觀察小語</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ztab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'ztab-tips')">Safari 小技巧</button>
       </div>
+
 
       <div class="tab-panels">
         <div class="tab-panel active" id="ztab-overview">
           <div class="prose">
-            <p>斑馬是東非草原最常見的居民，也是馬科動物的代表。牠們採取「團體防禦」策略，利用群體活動時形成的視覺模糊效應，干擾掠食者的判斷。</p>
+            <p>
+              斑馬是東非草原數量最龐大的大型草食動物之一，也是<strong>大遷徙的先鋒部隊</strong>。每年七月，斑馬比牛羚更早抵達馬賽馬拉，啃食較長的粗硬草莖，為隨後跟進的牛羚「開路」，展現出草原生態系精妙的食性分工。
+            </p>
+            <p>
+              斑馬屬馬科動物，與馬、驢同源，但從未被人類成功馴化。牠們在社會結構、溝通方式與防禦策略上都展現出高度演化的群居智慧。
+            </p>
           </div>
-        </div>
-        <div class="tab-panel" id="ztab-stripes">
-          <div class="prose">
-            <p>關於斑馬為什麼有條紋，科學家有幾個主流理論：</p>
+
           <ul class="feature-list">
             <li>
-              <span class="fi">👁️</span>
-              <div><strong>視覺干擾 (Dazzle Effect)：</strong>高速移動時的黑白條紋讓獅子難以鎖定單一個體。</div>
+              <span class="fi">🌿</span>
+              <div><strong>大遷徙的開路先鋒：</strong>斑馬偏好啃食纖維粗長的草莖與莖頂，其消化系統能處理其他草食動物無法利用的低營養粗草，等於替後續的牛羚、瞪羚「清場」，是遷徙隊伍中不可取代的生態角色。</div>
             </li>
             <li>
+              <span class="fi">🏃</span>
+              <div><strong>鋸齒形逃跑策略：</strong>遭遇掠食者追擊時，斑馬不只依賴速度，更以快速的<strong>鋸齒形變向奔跑</strong>擺脫追擊，迫使獵豹、獅子等需要直線加速的掠食者不斷耗費能量修正方向。</div>
+            </li>
+            <li>
+              <span class="fi">👁️</span>
+              <div><strong>眼睛位於頭部兩側：</strong>斑馬的眼睛設計提供幾乎 360 度的廣角視野，能在低頭吃草時同時監控四面八方的威脅，是草原上高效率的預警系統。</div>
+            </li>
+            <li>
+              <span class="fi">💤</span>
+              <div><strong>站立睡眠的群體守夜：</strong>斑馬能站著進入淺眠，群體中始終有個體保持警醒輪班守夜；僅在深度睡眠時才臥倒，且必定有同伴在旁把風。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>斑馬的底色其實是<strong>黑色</strong>，白色條紋是後天色素缺失的結果——這與一般人直覺認為「白底黑紋」恰好相反！胚胎發育研究顯示，條紋寬窄、間距由色素細胞的擴散速度決定，因此每隻斑馬的圖案都與指紋一樣，終身獨一無二。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="ztab-stripes">
+          <div class="prose">
+            <p>
+              斑馬的條紋是自然界最迷人的謎題之一，科學家提出了多種假說，而近年研究顯示<strong>防蟲可能才是最主要的演化驅動力</strong>，而非傳統認為的偽裝或體溫調節。
+            </p>
+            <p>
+              目前主流假說並不互斥，條紋很可能同時服務於多種生存功能，在不同情境下各自發揮效用。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
               <span class="fi">🐝</span>
-              <div><strong>防蟲功能：</strong>研究發現，條紋能有效干擾吸血蠅類（如采采蠅）的降落。</div>
+              <div><strong>防蟲假說（目前最強證據）：</strong>2019 年加州大學研究將馬匹披上斑馬紋外衣後，發現吸血蠅的降落次數大幅減少。黑白條紋對蠅類的複眼產生偏振光干擾，使其無法正常降落，有效降低錐蟲病等蟲媒疾病的感染風險。</div>
+            </li>
+            <li>
+              <span class="fi">👁️</span>
+              <div><strong>視覺迷亂假說（Dazzle Effect）：</strong>群體高速奔跑時，數百道黑白條紋交錯閃動，形成強烈的視覺噪音，使掠食者難以鎖定並追蹤單一個體的輪廓與速度，提升整體存活率。</div>
+            </li>
+            <li>
+              <span class="fi">🌡️</span>
+              <div><strong>體溫調節假說：</strong>黑色條紋吸熱、白色條紋反熱，兩者溫差可在皮膚表面產生微氣流，理論上有助於散熱——但此假說的實驗支持目前仍有爭議。</div>
             </li>
             <li>
               <span class="fi">🦓</span>
-              <div><strong>個體識別：</strong>每隻斑馬的條紋皆像指紋一樣獨一無二，這有助於家庭成員間的辨識。</div>
+              <div><strong>個體識別功能：</strong>每隻斑馬的條紋圖案如同指紋，終身不變且獨一無二。研究顯示母斑馬與幼崽能透過條紋圖案快速在大群中相認，維繫家庭凝聚力。</div>
             </li>
-            </ul>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>斑馬與牛椋鳥同樣維持著共生關係——鳥類啄食皮膚上的蜱蟲，並在危險靠近時發出警示叫聲。斑馬也常與牛羚、瞪羚混群，利用各自不同的感官強項（斑馬視覺佳、牛羚嗅覺強）建立多層次的預警網絡。</p>
           </div>
         </div>
-        <div class="tab-panel" id="ztab-tips">
+
+        <div class="tab-panel" id="ztab-where">
           <div class="prose">
-            <p>Safari 時，您常會看到斑馬與角馬（Wildebeest）混在一起活動。這是一種絕佳的生存搭檔：斑馬負責警戒，角馬則運用敏銳嗅覺找尋水源，兩者互補以提高生存機率。</p>
+            <p>平原斑馬分布廣泛，是本次 Safari 路線中<strong>出現頻率最高的大型哺乳動物之一</strong>，幾乎每個保護區都能輕鬆見到。以下是特別值得留意的觀賞點：</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（馬賽馬拉國家保護區）</strong>——7 月大遷徙高峰期，可見數以萬計的斑馬與牛羚混群渡越馬拉河，是 Safari 行程中最震撼的群聚景觀。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Amboseli NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（塞倫蓋提國家公園 & 恩戈羅恩戈羅）</strong>——塞倫蓋提全年可見，乾季時在水源地附近可觀察到跨物種混群飲水的壯觀場面。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Ngorongoro CA</span>
+                  <span class="loc-tag">Tarangire NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>塔蘭吉雷國家公園是乾季觀察斑馬家族行為的絕佳地點</strong>——水源地集中，斑馬家族群與競爭群雄間的社會互動（驅趕、嘶鳴）在此格外頻繁且易於近距離觀察。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>清晨逆光拍攝是捕捉斑馬條紋魔力的黃金時機——低角度陽光穿透黑白條紋，在草地上投下規律陰影，構成極具張力的幾何畫面。若遇大群渡河，請嚮導停在下游側面角度，讓斑馬自然入鏡而不受車輛干擾。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="ztab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識斑馬亞種——肚皮是關鍵：</strong>本次行程主要見到的是<strong>平原斑馬（Equus quagga）</strong>。觀察腹部與腿部條紋：平原斑馬條紋延伸至腹部底端且較寬；若在肯亞北部看到腿部條紋稀少甚至消失的個體，可能是葛氏斑馬（Grevy's Zebra），體型也明顯更大、耳朵更圓。</div>
+            </li>
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>聽聲辨位：聽懂斑馬的警報語言</strong>——斑馬有豐富的聲音溝通，包括像驢叫的「嗚啊—嗚啊」哈叫聲（聯絡用）和短促高頻的「吠叫」（危險警報）。一旦聽到群體同時發出急促吠叫並開始移動，請立刻掃視周遭草叢尋找掠食者。</div>
+            </li>
+            <li>
+              <span class="fi">🤝</span>
+              <div><strong>觀察「互理毛（Mutual Grooming）」行為：</strong>兩隻斑馬面對面站立、互相用牙齒梳理對方頸部與背部，是家族成員間鞏固社會關係的重要儀式。這個動作通常發生在清晨或飲水後的休息時段，是難得一見的溫馨互動畫面。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>跟著斑馬找水源：</strong>旱季時斑馬每天定時在清晨與傍晚前往固定水源飲水，路徑高度規律。請嚮導提前埋伏在已知水源下風處，往往能一次拍到斑馬、牛羚、瞪羚等多物種同框飲水的壯觀場面。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>捕捉「腿部條紋特寫」：</strong>斑馬腿部條紋在個體間差異最大，且在陽光下紋理最清晰，是辨識個體與展現條紋細節的最佳拍攝部位。建議使用 200mm 以上鏡頭在車內穩定拍攝，避免驚動群體。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>平原斑馬目前 IUCN 列為「無危」，東非族群整體穩定，但部分地區因棲地破碎化與人類農業擴張，局部族群已出現下降趨勢。葛氏斑馬（Grevy's Zebra）情況則較危急，全球野生數量已不足 3,000 頭，列為「瀕危」，主要分布於肯亞北部，是行程中值得特別留意的稀有物種。</p>
           </div>
         </div>
       </div>
@@ -2560,7 +2783,6 @@ img {
   </div>
 </div>
 </section>
-
 <section id="wildebeest-section">
 <div class="section">
   <h2 class="section-title">🐃 動物介紹</h2>
@@ -2578,23 +2800,36 @@ img {
 
       <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">體重</div>
-          <div class="stat-value">160 - 270 kg</div>
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">165 - 290 kg</div>
+          <div class="stat-sub">♀ 略輕，約 140 - 260 kg</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">肩高</div>
+          <div class="stat-value">1.3 - 1.5 m</div>
+          <div class="stat-sub">體長約 1.7 - 2.4 m</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">遷徙規模</div>
-          <div class="stat-value">超過 150 萬頭</div>
+          <div class="stat-value">逾 150 萬頭</div>
+          <div class="stat-sub">世界最大陸地動物遷徙</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">主要天敵</div>
-          <div class="stat-value">獅子、鱷魚</div>
+          <div class="stat-label">同步產子期</div>
+          <div class="stat-value">2 - 3 週</div>
+          <div class="stat-sub">每年約 40 萬頭幼崽同步出生</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">壽命</div>
+          <div class="stat-label">奔跑速度</div>
+          <div class="stat-value">~ 80 km/h</div>
+          <div class="stat-sub">耐力出色，可長距離維持</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外壽命</div>
           <div class="stat-value">15 - 20 年</div>
+          <div class="stat-sub">族群數量目前穩定</div>
         </div>
       </div>
-      
       <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
         <i class="fa-solid fa-circle-check"></i>
         IUCN 紅色名錄：<strong>無危（Least Concern）</strong>
@@ -2611,62 +2846,153 @@ img {
 
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'wtab-overview')">生態總覽</button>
-        <button class="tab-btn" onclick="switchTab(event, 'wtab-migration')">黃金拍檔</button>
-        <button class="tab-btn" onclick="switchTab(event, 'wtab-tips')">觀察小語</button>
+        <button class="tab-btn" onclick="switchTab(event, 'wtab-migration')">斑馬黃金拍檔</button>
+        <button class="tab-btn" onclick="switchTab(event, 'wtab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'wtab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
         <div class="tab-panel active" id="wtab-overview">
           <div class="prose">
-            <p>牛羚（Wildebeest），常被稱為「角馬」，是馬科動物與牛科特徵的奇妙結合體。雖然外表看來有些笨拙，但牠們是維持非洲草原生態平衡的關鍵物種，透過大規模的攝食與遷徙，避免了某些特定草種的過度茂盛，維持了草原結構的多樣性。</p>
-           <p>每年百萬頭牛羚在大遷徙中排出的糞便，提供了大量的有機養分，是大草原得以維持肥沃的關鍵。</p>
-         <ul class="feature-list">
+            <p>
+              牛羚外表兼具牛的頭角、馬的身形與羚羊的腿，像是大自然「剩料拼裝」的產物——但這種看似笨拙的設計，卻孕育出地球上規模最壯闊的陸地遷徙。每年逾 <strong>150 萬頭</strong>牛羚偕同斑馬與瞪羚，在塞倫蓋提與馬賽馬拉之間循環往返，追逐雨水與新草。
+            </p>
+            <p>
+              牛羚不只是遷徙奇觀的主角，更是草原生態的關鍵驅動者：大規模攝食抑制草種過度擴張，每年數以百萬計的糞便為土壤補充有機養分，維繫整個生態系的肥沃循環。
+            </p>
+          </div>
+
+          <ul class="feature-list">
             <li>
               <span class="fi">🧬</span>
-              <div><strong>生存博弈：</strong>牛羚展現了驚人的「同步產子」策略。在短短的兩三週內，幾乎全群的母牛羚會同時生產。</div>
+              <div><strong>同步產子：掠食者飽和策略</strong>——每年 1–2 月，幾乎全群母牛羚在短短 <strong>2–3 週</strong>內同步產下約 40 萬頭幼崽。掠食者即使全力獵殺也消化不完，幼崽整體存活率因此大幅提升，是自然界最精妙的集體生存智慧之一。</div>
             </li>
             <li>
               <span class="fi">👶</span>
-              <div><strong>掠食者飽和（Predator Satiation）：</strong>透過在極短時間內產生大量幼雛，牛羚讓掠食者（獅子、獵豹、鬣狗）即便全力狩獵也吃不完，從而極大地提高了幼雛的存活率，這是在自然界中極為罕見的集體生存智慧。</div>
+              <div><strong>出生後 6 分鐘站立奔跑：</strong>幼崽出生後極短時間內即能站立，數分鐘內便開始跟隨母親奔跑。這種極端早熟是對草原高掠食壓力的直接演化回應——無法快速移動的幼崽，根本沒有生存機會。</div>
             </li>
-            </ul>
+            <li>
+              <span class="fi">🌧️</span>
+              <div><strong>追雨本能——草原的氣象預報員：</strong>牛羚能感知數百公里外的雷聲與雨水氣息，展現出令人稱奇的「追逐雨水」本能。跟著牛羚移動的方向，往往就能找到最鮮嫩的草原，也是嚮導判斷遷徙動向的重要線索。</div>
+            </li>
+            <li>
+              <span class="fi">♻️</span>
+              <div><strong>草原的施肥機器：</strong>150 萬頭牛羚每天排出的糞便量驚人，為塞倫蓋提土壤持續補充氮、磷等關鍵養分，研究估計每年貢獻的有機質相當於數十萬噸肥料，是大草原維持高生產力的隱藏引擎。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>牛羚的鬍鬚與濃密的頸毛讓牠們看起來像老頭子，但這些毛髮其實是社交訊號——雄性鬃毛越濃密，往往代表健康狀態越好，在求偶競爭中越占優勢。牠們的叫聲像低沉的「咕嚕」，大群齊鳴時聽起來就像一場奇異的低頻合唱。</p>
           </div>
         </div>
+
         <div class="tab-panel" id="wtab-migration">
           <div class="prose">
-            <p>您常會看到牛羚與斑馬混群，這並非巧合，而是互補的合作策略。</p>
-         <ul class="feature-list">
+            <p>
+              斑馬與牛羚混群並非偶然，而是數千年演化磨合出的<strong>互利共生夥伴關係</strong>。兩者在食性、感官與行為上高度互補，共同組成草原上最高效的生存聯盟。
+            </p>
+            <p>
+              理解這個關係，能讓你在 Safari 途中看到更多「背後的故事」，而不只是看見動物移動。
+            </p>
+          </div>
+
+          <ul class="feature-list">
             <li>
               <span class="fi">🌱</span>
-              <div><strong>不同的進食偏好：</strong>斑馬偏好啃食較粗、纖維較長的草莖，而牛羚則喜歡啃食被斑馬「清理」過後、露出的更嫩、蛋白質含量更高的短草芽。</div>
+              <div><strong>食性接力——斑馬開路、牛羚收割：</strong>斑馬偏好啃食纖維粗長的草莖頂端，其消化系統能處理低營養粗草；牛羚則緊隨其後，啃食被斑馬「清場」後露出的嫩短草芽，蛋白質含量更高。兩者幾乎不競爭食物，完美分工。</div>
             </li>
             <li>
               <span class="fi">👀</span>
-              <div><strong>感官互補：</strong>斑馬的視覺極佳，適合擔任「警戒官」；而牛羚的嗅覺與聽覺較靈敏，能更容易感知到隱藏在灌木中的掠食者。</div>
+              <div><strong>感官互補——斑馬的眼、牛羚的鼻：</strong>斑馬視覺出色，能遠距離偵測移動的掠食者；牛羚嗅覺與聽覺靈敏，能察覺潛伏在草叢中靜止不動的獅子。兩者組合形成幾乎無死角的 360° 預警系統。</div>
             </li>
-            </ul>
+            <li>
+              <span class="fi">🗺️</span>
+              <div><strong>斑馬領路、牛羚跟隨：</strong>在遷徙隊伍中，斑馬通常走在前方擔任「探路者」，熟悉地形與水源位置；牛羚依靠數量優勢跟隨，以龐大群體稀釋個體被獵殺的機率。</div>
+            </li>
+            <li>
+              <span class="fi">🤝</span>
+              <div><strong>混群也帶來競爭壓力的稀釋：</strong>掠食者在面對斑馬、牛羚、瞪羚數萬頭混合大群時，注意力被分散，任何單一個體被鎖定的概率大幅下降——這也是為什麼不同物種寧願混在一起，而非各自分群。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>牛羚大規模攝食能有效抑制特定草種的過度擴張，維持草原植被的多樣性與結構平衡。研究顯示，牛羚族群數量的變化，直接影響塞倫蓋提草原的林木覆蓋率——牛羚越多，草地越開闊；牛羚減少，灌木叢就會逐漸入侵蠶食草原。</p>
           </div>
         </div>
-        <div class="tab-panel" id="wtab-tips">
+
+        <div class="tab-panel" id="wtab-where">
           <div class="prose">
-            <p>牛羚對於雨季的感應極為敏銳，牠們似乎擁有「追逐雨水」的本能，跟著牛羚走往往就能找到最鮮綠的草原。</p>
-         <ul class="feature-list">
+            <p>牛羚全年都能在本次 Safari 路線的各大保護區見到，但<strong>7 月抵達馬賽馬拉的時機</strong>恰逢大遷徙高峰，是觀賞渡河壯觀場面的黃金窗口：</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（馬賽馬拉國家保護區）</strong>——7–10 月為牛羚大規模渡越馬拉河的高峰期，可見數以千計的牛羚在鱷魚環伺下前仆後繼衝入河中，是 Safari 最震撼的野生景觀。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Mara River Crossing</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（塞倫蓋提國家公園）</strong>——1–3 月為產仔季，可見數萬頭幼崽在短期內密集出生，以及獅群、獵豹、鬣狗趁機大肆獵食的生死對決。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP（南部）</span>
+                  <span class="loc-tag">Ngorongoro CA</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>馬拉河渡口是全球最具代表性的野生動物奇觀之一</strong>——牛羚在河岸邊聚集、徘徊、猶豫，最終由某隻個體率先躍入，引發數百甚至數千頭跟隨的「集體跳河」，過程中鱷魚伏擊隨時爆發，驚心動魄。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>渡河當下的混亂雖然驚險，但最具張力的畫面往往在<strong>渡河前的等待</strong>——數千頭牛羚擠在河岸邊騷動猶豫，配合清晨側光，能拍出塵土飛揚、層次豐富的史詩感群體照。請嚮導在太陽升起前抵達已知渡口等待，把握最佳光線。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="wtab-tips">
+          <ul class="feature-list">
             <li>
               <span class="fi">👂</span>
-              <div><strong>聽聲辨位：</strong>牛羚在受到威脅時會發出特殊的「咕嚕」聲。如果您在 Safari 聽到附近牛羚群發出焦慮的叫聲並開始奔跑，那極大機率代表附近有獅子或獵豹正在伏擊。</div>
+              <div><strong>聽懂牛羚的警報聲：</strong>牛羚平時發出低沉的「咕嚕—嗯」聯絡聲；一旦察覺威脅，會改為短促急促的高頻鼻叫並突然起跑。若聽到群體同時改變叫聲並開始騷動，立即掃視周圍草叢——附近幾乎可以確定有獅子或獵豹正在蹲伏等待。</div>
             </li>
             <li>
               <span class="fi">🔭</span>
-              <div><strong>河流渡口觀察：</strong>如果您有幸在馬拉河（Mara River）觀賞到大遷徙，那是觀察牛羚最震撼的時刻。儘管充滿危險，但這種面對死亡與生存的原始博弈，正是非洲大草原最真實的寫照。</div>
+              <div><strong>辨識雌雄：鬃毛與角是關鍵</strong>——雄性鬃毛更濃密、體型更壯，兩角向外彎曲後向內勾；雌性角較細短。幼崽出生時為淡褐色，數週後逐漸轉為成體的深灰藍色。</div>
             </li>
-            </ul>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>清晨尋找「哨兵個體」：</strong>牛羚群中通常有少數個體站在高地或邊緣持續警戒，清晨光線下牠們往往靜止不動、輪廓清晰，是拍攝「草原守望者」氛圍照的絕佳機會。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>渡河觀察的關鍵禮節：</strong>在等待渡河時，請嚮導將車輛停在<strong>下風處且不直對河岸</strong>，保持引擎熄火。牛羚極度敏感，任何突然的聲響或氣味都可能讓整批個體放棄渡河，讓場面就此解散。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>捕捉「同步奔跑」的幾何美感：</strong>大群牛羚受驚後同向奔逃時，會形成高度一致的方向與節奏，從高角度拍攝可得到如水流般的動態群體幾何構圖。請事先與嚮導溝通，保留一個視野開闊的停車位置以備不時之需。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>牛羚目前 IUCN 列為「無危」，塞倫蓋提族群約 <strong>150 萬頭</strong>，是東非保育成功的代表案例。然而，圍欄農業擴張持續切斷傳統遷徙廊道，使部分族群無法完成完整的年度循環。保護遷徙路徑的完整性，是維繫這場地球奇觀最重要的保育課題。</p>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 </section>
 
 <section id="gazelle-section">
@@ -2928,22 +3254,36 @@ img {
         </div>
       </div>
 
-      <div class="stat-grid">
+     <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">體重</div>
-          <div class="stat-value">60 - 100 kg</div>
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">60 - 150 kg</div>
+          <div class="stat-sub">♀ 較輕，約 45 - 75 kg</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">口部構造</div>
-          <div class="stat-value">靈活的拱土鼻頭</div>
+          <div class="stat-label">肩高</div>
+          <div class="stat-value">63 - 85 cm</div>
+          <div class="stat-sub">體長約 0.9 - 1.5 m</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">生態角色</div>
-          <div class="stat-value">掘土與鬆土</div>
+          <div class="stat-label">奔跑速度</div>
+          <div class="stat-value">~ 50 km/h</div>
+          <div class="stat-sub">短距離爆發力強</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">防禦警示</div>
-          <div class="stat-value">豎起的尾巴</div>
+          <div class="stat-label">獠牙長度</div>
+          <div class="stat-value">雄性達 60 cm</div>
+          <div class="stat-sub">上獠牙彎曲，可作武器</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">疣突數量</div>
+          <div class="stat-value">臉部 2–3 對</div>
+          <div class="stat-sub">雄性疣突較大、較多</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外壽命</div>
+          <div class="stat-value">約 15 年</div>
+          <div class="stat-sub">族群數量穩定廣布</div>
         </div>
       </div>
       
@@ -2964,49 +3304,147 @@ img {
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'warthog-tab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'warthog-tab-behavior')">趣味行為</button>
-        <button class="tab-btn" onclick="switchTab(event, 'warthog-tab-tips')">觀察小語</button>
+        <button class="tab-btn" onclick="switchTab(event, 'warthog-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'warthog-tab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
         <div class="tab-panel active" id="warthog-tab-overview">
           <div class="prose">
-            <p>疣豬是東非稀樹草原最普遍、最有個性的居民。體型健壯，最明顯特徵是臉頰突出的肉瘤與靈活鼻頭。牠們採取「掘土防禦」策略：危急時以前蹄與鼻頭迅速挖掘地洞藏身，是草原生態圈的重要推手。</p>
+            <p>
+              疣豬是東非稀樹草原上最有個性的居民——外表粗獷，臉上長著像「盔甲」般突起的肉疣，上顎一對彎曲的長獠牙，乍看有些滑稽，實則是歷經數百萬年演化出的高效生存機器。牠們就是《獅子王》中 Pumbaa 的原型。
+            </p>
+            <p>
+              疣豬屬豬科，但生活方式與家豬大相逕庭：牠們不怕乾旱、不需每天喝水，能夠完全依賴食物中的水分維生，是草原上適應力最強的中型草食動物之一。
+            </p>
           </div>
+
           <ul class="feature-list">
             <li>
-              <span class="fi">⚡</span>
-              <div><strong>生存挑戰：</strong>雖然疣豬短距離衝刺速度快，但由於體力有限，面對獅子、豹、鬣狗等頂級掠食者時，仍是主要的捕食對象。</div>
+              <span class="fi">🦷</span>
+              <div><strong>獠牙的雙重用途：</strong>雄性上獠牙可長達 60 公分，外彎如鉤，既是挖掘根莖的工具，也是對抗掠食者與同性競爭者的武器。面對獵豹或狗群時，疣豬常以獠牙朝下、直接衝撞的方式還擊，可刺穿對方腹部。</div>
+            </li>
+            <li>
+              <span class="fi">🧎</span>
+              <div><strong>跪地進食的獨特姿態：</strong>疣豬的前腿與脖子較短，無法像長頸鹿一樣輕鬆低頭。進食時牠們獨特地<strong>屈膝跪在前腿的腕墊上</strong>，用厚實的軟骨護墊承受體重，是草原上最容易辨識的進食姿勢之一。</div>
             </li>
             <li>
               <span class="fi">👩‍🍼</span>
-              <div><strong>社會結構：</strong>由母疣豬與幼崽組成緊密的「家族群體」，母疣豬會共同照顧幼崽，甚至會照顧不屬於自己的幼崽。成年雄性則會離開，形成鬆散的「單身漢群體」，雄性成員間常透過鬥爭來爭奪社會階級或交配權。</div>
+              <div><strong>母系小家庭結構：</strong>由母疣豬帶領幼崽組成緊密的「家族群（Sounder）」，母豬間會共同育幼，甚至為非親生幼崽哺乳。成年雄性平時獨居，僅在繁殖季節加入群體。</div>
+            </li>
+            <li>
+              <span class="fi">⚡</span>
+              <div><strong>逃跑速度超乎想像：</strong>儘管體型矮胖，疣豬短距離衝刺可達 50 km/h，遠超多數人的預期，是獵豹以外難以追上的速度。受驚時尾巴垂直豎起，帶領幼崽以直線全速逃竄，是 Safari 中最常見的快節奏場面之一。</div>
             </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>疣豬臉上的「疣突」並非真正的疣，而是由<strong>厚實的皮膚與軟骨</strong>組成的緩衝墊，在雄性打鬥時能保護眼睛免受對方獠牙割傷。雄性疣突比雌性更多、更大，是判斷性別的便利指標。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="warthog-tab-behavior">
           <div class="prose">
-            <p>疣豬展現了許多迷人的行為：</p>
-            <ul class="feature-list">
-              <li>
-                <span class="fi">🐖</span>
-                <div><strong>天線尾巴：</strong>奔跑時會將尾巴豎直如「天線」，這是家庭成員間的警示訊號，也能讓幼崽在草叢中緊跟母豬。</div>
-              </li>
-              <li>
-                <span class="fi">⛏️</span>
-                <div><strong>底層求生：</strong>疣豬能在極短時間內倒退著挖掘地洞，這項瞬間「消失」的絕活能極大提高在開闊地帶的存活率。</div>
-              </li>
-              <li>
-                <span class="fi">🐦</span>
-                <div><strong>共生關係：</strong>牠們與<strong>牛椋鳥</strong>互利共生，鳥兒棲息在疣豬背上清理寄生蟲，也補足了疣豬視力較弱的缺點。</div>
-              </li>
-            </ul>
+            <p>
+              疣豬擁有一系列讓人忍不住微笑的獨特行為，從天線般的尾巴到倒退入洞，每一個動作背後都藏著嚴肅的生存邏輯。
+            </p>
+            <p>
+              觀察疣豬行為，往往是 Safari 中最輕鬆愉快的時刻，因為牠們對車輛的警覺性相對低，常能在近距離長時間觀察。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">📡</span>
+              <div><strong>天線尾巴——家族的旗幟：</strong>奔跑時尾巴垂直豎起如天線，這不只是警示訊號，更讓跟隨的幼崽在高草叢中能清楚看到母豬位置。一旦危機解除、放鬆下來，尾巴就會自然垂落。</div>
+            </li>
+            <li>
+              <span class="fi">⛏️</span>
+              <div><strong>倒退入洞的生存絕技：</strong>疣豬通常「倒退著」鑽入土豚挖掘的廢棄地洞——面朝外、獠牙朝向洞口，如此一來遇到掠食者貿然伸爪時，正好迎來一臉獠牙的反擊。這個策略讓即便是花豹也會三思而行。</div>
+            </li>
+            <li>
+              <span class="fi">🐦</span>
+              <div><strong>與牛椋鳥的互利共生：</strong>疣豬是牛椋鳥最喜愛的「移動餐廳」，鳥兒棲息在牠們背上啄食蜱蟲與寄生蟲。疣豬視力較弱，牛椋鳥的警覺性正好補足這個弱點——是草原上最常見、最和諧的共生畫面之一。</div>
+            </li>
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>不需每天喝水的耐旱力：</strong>疣豬能從食物（草根、塊莖、水果）中獲取足夠水分，在旱季水源稀缺時仍能維持正常生活，是少數能在極端乾旱環境中自給自足的中型哺乳動物。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>疣豬是草原生態系的<strong>「翻土機」</strong>——拱土覓食的行為鬆動了板結土壤，有助於種子發芽與水分滲透；廢棄的地洞則被鼬、獴、狐蝠等數十種小型動物重複利用作為棲所，讓牠們成為草原地下生態系的隱形建造者。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="warthog-tab-where">
+          <div class="prose">
+            <p>疣豬分布廣泛，是本次 Safari 路線中<strong>幾乎每個保護區都能見到</strong>的常駐居民，尤其偏好開闊的短草地與散生的稀樹草原環境：</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（馬賽馬拉 & 安波塞利）</strong>——開闊短草區疣豬密度高，常可見到家族群在清晨一起跪地進食，是最佳觀察儀式性行為的地點。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Amboseli NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（塔蘭吉雷 & 塞倫蓋提）</strong>——塔蘭吉雷的疣豬密度尤其高，乾季在水源地附近常見多個家族群聚集，有時甚至與斑馬、黑斑羚同框飲水。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Tarangire NP</span>
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Ngorongoro CA</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>水源地附近是觀察疣豬最佳據點</strong>——旱季清晨，疣豬家族會在固定水源飲水，之後就地跪下拱土覓食，可長時間近距離觀察跪地進食姿態與幼崽互動，是親子行為觀察的絕佳機會。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>清晨逆光拍攝疣豬跪地進食是最具標誌性的構圖——低角度陽光讓疣突與獠牙的細節一覽無遺，同時幼崽在母豬身旁圍繞的畫面極具溫馨感。捕捉「尾巴天線」的奔跑瞬間則需要連拍模式，因為往往只有短短幾秒鐘的機會。</p>
           </div>
         </div>
 
         <div class="tab-panel" id="warthog-tab-tips">
-          <div class="prose">
-            <p>若在 Safari 途中看到草叢中出現<strong>「豎立的尾巴」</strong>，那絕對是疣豬正在快速移動。若看到牠們在白蟻丘上「拱土」，那是正在尋找礦物質或昆蟲幼蟲。<br><br>若發現附近<strong>疣豬焦慮奔跑</strong>，那極大機率代表附近有<strong>大型掠食者</strong>，請務必提醒駕駛提高警覺。</p>
+          <ul class="feature-list">
+            <li>
+              <span class="fi">📡</span>
+              <div><strong>看到「豎尾」就找掠食者：</strong>若在草叢中看到一根或數根垂直的「天線」快速移動，那就是疣豬正在逃跑。立刻往牠們來的反方向掃視——幾乎可以確定那個方向有獅子、花豹或獵豹在追蹤。</div>
+            </li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識雌雄——疣突數量是關鍵：</strong>雄性臉部有兩對疣突（眼下一對、嘴角一對），雌性通常只有一對或疣突較小不明顯。雄性獠牙也顯著更長、更彎曲。帶小疣豬的個體必定是母豬。</div>
+            </li>
+            <li>
+              <span class="fi">⛏️</span>
+              <div><strong>尋找白蟻丘附近的廢棄土豚洞：</strong>疣豬最愛使用土豚（Aardvark）遺棄的地洞，這類洞口通常較大、略呈橢圓形。清晨太陽剛升起時，疣豬常在洞口「日光浴暖身」後才出發覓食，是捕捉牠們靜態展示疣突與獠牙細節的好時機。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>不要小看疣豬的反擊能力：</strong>被逼入絕境的疣豬極具攻擊性，下獠牙雖短但鋒利，衝撞力道驚人。即便是花豹也有被重傷的紀錄。請勿在車外靠近落單且焦躁的疣豬，務必遵從嚮導指示。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>捕捉「跪地進食」的側面低角度：</strong>疣豬屈膝進食時，視線與車窗齊高的低角度拍攝效果最佳，能同時帶入疣突、獠牙與前腿腕墊的細節。建議使用車窗豆袋穩定，光圈 f/4–5.6 以保留足夠景深。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>疣豬目前 IUCN 列為「無危」，廣布撒哈拉以南非洲各地，東非族群穩定。由於適應力強、繁殖率高，且能利用其他動物廢棄的地洞，在棲地條件合適的地方往往能自行維持健康族群。牠們的最大威脅來自於人類農業侵占棲地與叢林肉貿易（Bushmeat）。</p>
           </div>
         </div>
       </div>
@@ -3032,23 +3470,36 @@ img {
 
       <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">社群單位</div>
-          <div class="stat-value">多雄多雌群體</div>
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">22 - 45 kg</div>
+          <div class="stat-sub">♀ 約 10 - 25 kg，顯著較輕</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">智商</div>
-          <div class="stat-value">極高 (解決問題能力)</div>
+          <div class="stat-label">肩高（四足）</div>
+          <div class="stat-value">50 - 70 cm</div>
+          <div class="stat-sub">直立可達 1 m 以上</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">群體規模</div>
+          <div class="stat-value">10 - 200 頭</div>
+          <div class="stat-sub">稱為「部隊（Troop）」</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">犬齒長度</div>
+          <div class="stat-value">雄性達 4 cm</div>
+          <div class="stat-sub">比例上超越多數掠食者</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">食性</div>
-          <div class="stat-value">雜食 (機會主義)</div>
+          <div class="stat-value">雜食（機會主義）</div>
+          <div class="stat-sub">草根、果實、小型脊椎動物</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">防禦警示</div>
-          <div class="stat-value">吠叫與顯齒</div>
+          <div class="stat-label">野外壽命</div>
+          <div class="stat-value">約 20 - 30 年</div>
+          <div class="stat-sub">族群分布廣泛且穩定</div>
         </div>
-      </div>
-      
+      </div>      
       <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
         <i class="fa-solid fa-circle-check"></i>
         IUCN 紅色名錄：<strong>無危 (Least Concern)</strong>
@@ -3066,39 +3517,146 @@ img {
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'baboon-tab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'baboon-tab-social')">社會與智慧</button>
-        <button class="tab-btn" onclick="switchTab(event, 'baboon-tab-tips')">觀察小語</button>
+        <button class="tab-btn" onclick="switchTab(event, 'baboon-tab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'baboon-tab-tips')">Safari 小技巧</button>
       </div>
-
       <div class="tab-panels">
         <div class="tab-panel active" id="baboon-tab-overview">
           <div class="prose">
-            <p>東非狒狒又稱橄欖狒狒，是適應力最強的靈長類動物之一。牠們活躍於草原與疏林地帶，擁有極佳的視力與聽力。作為機會主義者，牠們幾乎什麼都吃，從草根、種子到小型脊椎動物都在牠們的菜單上。</p>
+            <p>
+              東非狒狒又稱橄欖狒狒，是非洲分布最廣、適應力最強的靈長類動物之一。從雨林邊緣到乾旱稀樹草原，從海平面到海拔 4,000 公尺的高山地帶，牠們幾乎無所不在。作為機會主義的雜食者，牠們的菜單涵蓋草根、種子、昆蟲、蜥蜴乃至小羚羊幼崽。
+            </p>
+            <p>
+              狒狒擁有目前已知靈長類中最複雜的社會結構之一，其群體政治、同盟關係與情緒管理方式，令演化心理學家著迷了數十年。觀察一群狒狒，某種程度上就像是觀察一個高度壓縮的人類社會縮影。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🦷</span>
+              <div><strong>犬齒是社會地位的象徵：</strong>雄性犬齒可長達 4 公分，比例上超過許多掠食者，是爭奪階級、驚嚇對手的核心武器。展示犬齒的「哈欠」動作並非真的想睡覺，而是一種<strong>刻意的威嚇展示</strong>——在狒狒社會中稱為「打呵欠威嚇（Yawn Threat）」。</div>
+            </li>
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>草原的機會主義覓食者：</strong>狒狒能挖掘草根塊莖、翻石塊找蟲蠍、追逐並合力獵殺小型羚羊，甚至趁機搶奪獵豹剛捕獲的獵物。這種極端彈性的食性，讓牠們在乾旱年份仍能維持龐大族群。</div>
+            </li>
+            <li>
+              <span class="fi">👁️</span>
+              <div><strong>草原的天然預警系統：</strong>狒狒群體棲息在高大的金合歡樹上過夜，居高臨下的視野使其成為草原上最靈敏的「感測器」。一旦發現獅子或花豹，狒狒的連串急促吠叫會立刻警醒方圓數百公尺內的所有動物，包括長頸鹿、黑斑羚與斑馬。</div>
+            </li>
+            <li>
+              <span class="fi">🤱</span>
+              <div><strong>集體育幼的「阿姨行為」：</strong>非親生的雌性個體會主動接近、觸摸、甚至短暫照顧其他母狒狒的幼崽，稱為「Allomothering」。這種行為強化了雌性間的社會連結，同時讓年輕雌性獲得育幼經驗。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>狒狒是少數能夠對鏡子產生反應並辨識同伴面孔的動物之一。研究顯示，牠們能記住超過 <strong>50 個個體的臉孔與社會關係</strong>，並根據對方的階級地位調整自身行為——這種「心智理論」的雛形，曾被認為是人類獨有的能力。</p>
           </div>
         </div>
+
         <div class="tab-panel" id="baboon-tab-social">
           <div class="prose">
-            <p>狒狒展現了極為複雜的類人社交結構：</p>
-            <ul class="feature-list">
-              <li>
-                <span class="fi">👨‍👩‍👦‍👦</span>
-                <div><strong>階級與同盟：</strong>群體內有嚴格的階級制，但個體常透過互相理毛（Grooming）來建立政治同盟，這不僅是衛生行為，更是社交潤滑劑。</div>
-              </li>
-              <li>
-                <span class="fi">⚠️</span>
-                <div><strong>高度警覺：</strong>群體移動時，會有強壯的雄性擔任保鏢，在邊緣地帶守護成員。牠們擁有一套複雜的發聲系統，能區分不同的威脅（如獅子與獵豹的叫聲不同）。</div>
-              </li>
-            </ul>
+            <p>
+              狒狒的社會結構是非人靈長類中研究最透徹、也最令人稱奇的案例。牠們的「部隊（Troop）」是一個高度動態的政治場域，每天都在上演聯盟、背叛、和解與升遷。
+            </p>
+            <p>
+              肯亞安波塞利的長期研究計畫（自 1971 年至今，逾半世紀）已累積出人類對野生靈長類社會最完整的資料庫，許多顛覆性的發現都來自這群橄欖狒狒。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🤝</span>
+              <div><strong>理毛是政治貨幣（Social Grooming）：</strong>互相梳理毛髮並非只是衛生行為，而是狒狒社會中最重要的<strong>社交投資</strong>。為地位較高者理毛可換取保護與優先資源；為平輩理毛則鞏固同盟。理毛時間的分配，直接反映個體的社會策略。</div>
+            </li>
+            <li>
+              <span class="fi">👑</span>
+              <div><strong>雄性排名靠「同盟」而非純粹力量：</strong>頂級雄性的地位不只靠體型，更靠<strong>政治手腕</strong>——與其他雄性結盟、合力對抗競爭者往往比單打獨鬥更有效。研究發現，擁有穩固友誼的雄性壓力荷爾蒙（皮質醇）更低、壽命更長。</div>
+            </li>
+            <li>
+              <span class="fi">👩‍👧</span>
+              <div><strong>雌性階級世襲制：</strong>不同於雄性靠競爭決定地位，雌性的階級通常<strong>直接繼承自母親</strong>，幾乎終身不變。高階雌性的女兒從出生起就享有優先覓食權與更多保護，形成跨代的社會不平等。</div>
+            </li>
+            <li>
+              <span class="fi">🔊</span>
+              <div><strong>複雜的聲音語彙系統：</strong>狒狒擁有超過 <strong>30 種可辨識的叫聲</strong>，不同叫聲對應不同威脅類型（空中掠食者 vs. 地面掠食者）、社交情境與情緒狀態。研究者甚至發現狒狒能從叫聲判斷發聲者的身份、性別與社會地位。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>狒狒是重要的<strong>種子散播者</strong>——牠們吞食大量果實後在遠處排便，幫助多種樹木與灌木擴散族群。同時，狒狒在翻找食物時翻動土壤，促進土壤通氣與養分循環，是草原生態系中常被忽視但不可或缺的功能性角色。</p>
           </div>
         </div>
-        <div class="tab-panel" id="baboon-tab-tips">
+
+        <div class="tab-panel" id="baboon-tab-where">
           <div class="prose">
-            <p>觀察狒狒時，請特別留意牠們的「理毛」行為。若您看到狒狒群靜止不動且互相理毛，那是牠們在進行外交活動。</p>
-            <ul class="feature-list">
-              <li>
-                <span class="fi">⚠️</span>
-                <div><strong>特別提醒：</strong>在露營區附近遇到狒狒時請務必收好食物，牠們非常聰明，懂得開啟拉鍊或探尋人類背包，這是牠們展現「高智商」的表現，但也可能帶來麻煩。</div>
-              </li>
-            </ul>
+            <p>狒狒分布廣泛，本次 Safari 路線幾乎每個保護區都能見到。以下是特別值得留意觀察社會行為的地點：</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（安波塞利國家公園）</strong>——全球最著名的狒狒長期研究基地，族群已被研究逾 50 年，個體全數有記錄，是觀察完整社會行為的最佳地點。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Amboseli NP</span>
+                  <span class="loc-tag">Masai Mara NR</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（恩戈羅恩戈羅火山口 & 塞倫蓋提）</strong>——火山口內的封閉生態系使狒狒群密度較高，加上多種掠食者共存，可觀察到更頻繁的警戒行為與掠食者互動。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Ngorongoro Crater</span>
+                  <span class="loc-tag">Serengeti NP</span>
+                  <span class="loc-tag">Tarangire NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>傍晚「回樹」是最佳觀察時機</strong>——狒狒日落前必須回到固定的過夜大樹，此時整個部隊集中、活動頻繁，可一次觀察到理毛、追逐、幼崽玩耍與雄性競爭展示等多種行為。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>清晨群體從過夜樹木下樹後的 1 小時是黃金窗口——狒狒此時精力充沛，理毛、玩耍、幼崽吸奶等行為密集發生，光線也最為柔和。建議使用 300mm 以上長焦，在車內靜候而非追逐，等待行為自然發展。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="baboon-tab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識性別與年齡——臀部與犬齒是關鍵：</strong>雄性體型明顯更大、頸部鬃毛濃密；發情雌性臀部呈鮮豔的粉紅色腫脹（性皮腫脹，Sexual Swelling），是排卵期的視覺訊號，在群體中一眼即見。幼崽為黑色，約 6 個月後毛色轉為成體的橄欖褐色。</div>
+            </li>
+            <li>
+              <span class="fi">👀</span>
+              <div><strong>看「哈欠」就知道誰是老大：</strong>雄性對競爭者展示「打呵欠威嚇」時，動作緩慢而刻意，犬齒完全暴露並停頓數秒。若旁邊的個體立刻迴避或低頭，那個打呵欠的雄性通常就是該群的優勢個體。</div>
+            </li>
+            <li>
+              <span class="fi">🚨</span>
+              <div><strong>狒狒急叫是最可靠的掠食者警報：</strong>狒狒連續的「呃啊—呃啊」急促高頻叫聲代表掠食者近在咫尺。聽到這個叫聲後立刻掃視周遭樹冠（花豹）或草叢地面（獅子）——這往往比直接搜索更快找到掠食者蹤跡。</div>
+            </li>
+            <li>
+              <span class="fi">⚠️</span>
+              <div><strong>露營區與休息站附近務必收好食物：</strong>狒狒對人類食物的執著程度驚人，牠們能開啟拉鍊、撕開包裝、甚至破窗進入車內取食。一旦習慣從人類處獲得食物，該個體通常必須被移除。保護牠們，從不餵食開始。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>觀察理毛的「方向性」：</strong>注意誰在幫誰理毛——通常是地位較低者主動為地位較高者服務。若看到兩隻雄性互相理毛，那很可能是一段正在形成的政治同盟；若突然中斷並轉身離開，往往意味著談判破裂。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>橄欖狒狒目前 IUCN 列為「無危」，是非洲分布最廣的狒狒物種，族群整體穩定。然而在農業區邊緣，狒狒因為破壞農作物而遭到大量毒殺與獵殺，是人獸衝突最嚴重的物種之一。了解並尊重牠們的行為邊界，是維繫這份共存關係的第一步。</p>
           </div>
         </div>
       </div>
@@ -3988,20 +4546,34 @@ img {
 
       <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">社會制度</div>
-          <div class="stat-value">高度群居 (阿爾法制)</div>
+          <div class="stat-label">體重</div>
+          <div class="stat-value">18 - 36 kg</div>
+          <div class="stat-sub">雌雄體型相近</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">群體規模</div>
+          <div class="stat-value">2 - 30 頭</div>
+          <div class="stat-sub">稱為「Pack」，核心為繁殖對</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">狩獵成功率</div>
-          <div class="stat-value">約 60% - 80%</div>
+          <div class="stat-value">60 - 80%</div>
+          <div class="stat-sub">遠超獅子（25%）的狩獵效率</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">狩獵風格</div>
-          <div class="stat-value">耐力長跑追逐</div>
+          <div class="stat-label">追逐速度</div>
+          <div class="stat-value">持續 60 km/h</div>
+          <div class="stat-sub">可維持高速奔跑逾 5 公里</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">特徵標記</div>
-          <div class="stat-value">不規則花斑與白尾尖</div>
+          <div class="stat-label">花紋特徵</div>
+          <div class="stat-value">每隻獨一無二</div>
+          <div class="stat-sub">黑、白、棕三色不規則斑塊</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外總數</div>
+          <div class="stat-value">約 6,600 頭</div>
+          <div class="stat-sub">IUCN 瀕危，持續下降中</div>
         </div>
       </div>
       
@@ -4022,34 +4594,145 @@ img {
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'wilddogtab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'wilddogtab-strategy')">狩獵戰術</button>
-        <button class="tab-btn" onclick="switchTab(event, 'wilddogtab-tips')">觀察小語</button>
+        <button class="tab-btn" onclick="switchTab(event, 'wilddogtab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'wilddogtab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
         <div class="tab-panel active" id="wilddogtab-overview">
           <div class="prose">
-            <p>非洲野狗又被稱為「彩繪犬」，每隻個體身上的花紋都如同指紋般獨一無二，擁有像雷達一樣的大圓耳，聽覺極佳。<br>牠們是生物界社會性最強的掠食者，整個群體（Pack）會全心全意照顧幼崽及傷病成員，這種極高的利他行為在自然界中極為罕見。</p>
+            <p>
+              非洲野狗又稱「彩繪犬（Painted Dog）」，每隻個體的黑白棕三色花紋如指紋般獨一無二。牠們擁有雷達般的巨大圓耳，視力與聽覺俱佳。野狗是目前已知<strong>社會性最強的掠食者</strong>——整個群體全心全意照顧幼崽與傷病成員，利他行為的程度在自然界中幾乎無出其右。
+            </p>
+            <p>
+              然而牠們也是非洲最瀕危的大型掠食者之一，全球野生數量僅約 6,600 頭，在 Safari 行程中遭遇野狗是難得一見的幸運時刻。
+            </p>
           </div>
-        </div>
-        <div class="tab-panel" id="wilddogtab-strategy">
-          <div class="prose">
-            <p>野狗的狩獵成功率遠超獅子，秘密在於「戰術」：</p>
+
           <ul class="feature-list">
             <li>
-              <span class="fi">🚀</span>
-              <div><strong>長跑耐力：</strong>野狗不依賴爆發力伏擊，而是透過長距離的「馬拉松式追逐」，以時速近 50 公里將獵物拖到力竭。</div>
+              <span class="fi">🗳️</span>
+              <div><strong>民主投票決定是否出發狩獵：</strong>野狗出發前有一套獨特的「打噴嚏投票」機制——群體成員透過連續打噴嚏來表達意願，噴嚏數量達到門檻（約 10 次）時狩獵才正式展開。地位較高的個體只需較少票數，低階成員則需更多。這是目前已知非人動物中最接近民主決策的行為之一。</div>
             </li>
             <li>
-              <span class="fi">⚔️</span>
-              <div><strong>分工合作：</strong>狩獵時，部分成員在前方追逐，部分成員則預判路線進行攔截，這種精密的戰術配置讓牠們捕獵成功率高達 70% 以上，遠高於獅子。</div>
+              <span class="fi">🤒</span>
+              <div><strong>傷者優先的反哺照護：</strong>群體成員受傷後，健康個體會主動減慢步伐、縮短狩獵距離，並將食物反哺給無法參與狩獵的傷病成員與哺乳中的母犬。這種高度的利他行為讓野狗群即便在成員受傷時仍能維持穩定運作。</div>
             </li>
             <li>
-            </ul>
+              <span class="fi">👂</span>
+              <div><strong>唧唧聲是群體的黏合劑：</strong>野狗在出發狩獵前後會發出輕柔的「唧唧（hoo）」接觸叫聲，類似鳥鳴，用於確認彼此位置與凝聚士氣。這種聲音在靜謐的草原上可傳達數百公尺，是辨識野狗群存在最可靠的聽覺線索。</div>
+            </li>
+            <li>
+              <span class="fi">🧬</span>
+              <div><strong>只有阿爾法對才能繁殖：</strong>每個群體中只有地位最高的一對雄雌（Alpha Pair）負責生育，其餘成員全力協助育幼，稱為「幫手制度（Helper System）」。這確保了有限資源集中用於最優秀的後代，是野狗成功維持群體的關鍵。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>非洲野狗是犬科家族中唯一一種前腳<strong>只有四趾</strong>（其他犬科有五趾）的物種，這讓牠們在長距離追逐中更加輕盈省力。牠們的學名 <em>Lycaon pictus</em> 意為「彩繪的狼」，完美呼應了牠們獨一無二的藝術家花紋。</p>
           </div>
         </div>
-        <div class="tab-panel" id="wilddogtab-tips">
+
+        <div class="tab-panel" id="wilddogtab-strategy">
           <div class="prose">
-            <p>野狗是非常脆弱的物種，極易受到人類干擾與犬瘟熱傳播。觀察時請保持<strong>絕對靜音</strong>，因為野狗極度敏感。若您在 Safari 途中看到牠們，那是極其幸運的時刻，請留意牠們互相<strong>打招呼時發出的「唧唧」聲</strong>，這是牠們凝聚群體士氣的方式。</p>
+            <p>
+              非洲野狗的狩獵成功率高達 60–80%，遠超獅子（約 25%）與花豹（約 38%）。秘密不在速度或力量，而在於<strong>無與倫比的團隊默契與耐力</strong>。
+            </p>
+            <p>
+              一場完整的野狗狩獵可能持續 30 分鐘至 1 小時，涵蓋偵察、追逐、輪換、圍堵與分食多個階段，每個環節都有精密的分工。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🏃</span>
+              <div><strong>馬拉松式耐力追逐：</strong>野狗不依賴爆發力伏擊，而是以穩定的 55–60 km/h 長距離追逐，讓獵物在逃跑中逐漸體溫過熱、肌肉酸化至力竭。即便是最快的黑斑羚在持續高速逃跑 5 公里後也難逃被追上的命運。</div>
+            </li>
+            <li>
+              <span class="fi">🔄</span>
+              <div><strong>輪換領跑——永不疲憊的接力戰術：</strong>追逐過程中，帶頭的個體體力下降時，後方的隊友會自動超前接替領跑，使整個群體始終保持新鮮體力。獵物面對的是一支「永不疲憊的接力隊」，而自己卻在全力奔逃中獨自耗盡體能。</div>
+            </li>
+            <li>
+              <span class="fi">🗺️</span>
+              <div><strong>預判截擊——非線性圍堵：</strong>部分成員不直接追逐獵物，而是預判逃跑路線進行側翼截擊，迫使獵物改變方向，消耗更多體力。這種需要空間預判能力的戰術，被研究者視為野狗智力的重要體現。</div>
+            </li>
+            <li>
+              <span class="fi">🍖</span>
+              <div><strong>公平分食，幼崽與傷者優先：</strong>狩獵成功後的分食同樣井然有序——幼崽與無法出獵的成員優先獲得食物，由健康成員反哺（regurgitate）已消化一半的肉食。這套食物分配機制確保了整個群體的存活率，而非只有最強壯者受益。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>野狗的高效狩獵對草原生態系有深遠影響——牠們主要獵取老弱病殘的草食動物，有效清除族群中的弱勢個體，維持獵物族群的整體健康。研究也顯示，野狗的存在能間接調節獵物的空間分布，避免草食動物過度集中於某區域而造成植被崩潰。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="wilddogtab-where">
+          <div class="prose">
+            <p>非洲野狗是本次 Safari 路線中<strong>最難遭遇的頂級物種之一</strong>，需要運氣與正確的時機。以下是機率相對較高的地點：</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（塞倫蓋提 & 塔蘭吉雷）</strong>——塞倫蓋提擁有東非最穩定的野狗族群之一，乾季時在開闊草地追逐黑斑羚的機率相對較高。塔蘭吉雷也有固定族群記錄。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP（北部）</span>
+                  <span class="loc-tag">Tarangire NP</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（馬賽馬拉）</strong>——馬賽馬拉的野狗族群數量較少，但每年仍有固定目擊記錄，清晨活動高峰時遭遇機率最高。嚮導間的無線電聯絡網絡是找到野狗的最有效方式。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>清晨 6–9 點是遭遇野狗的黃金時段</strong>——野狗在日出前後最為活躍，此時體溫適宜長距離奔跑。一旦嚮導透過無線電得知野狗位置，務必立刻前往——牠們移動速度極快，幾分鐘內就可能消失在視野之外。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>野狗出發狩獵前的「問候儀式（Greeting Ceremony）」是最具戲劇張力的拍攝時機——群體成員興奮地互相嗅聞、舔舐、發出唧唧叫聲，情緒高漲地準備出發，整個場面充滿了動感與情感。使用連拍模式並預先對焦在群體中心，捕捉這段只持續 1–2 分鐘的珍貴儀式。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="wilddogtab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>先聽再看——用耳朵找野狗：</strong>野狗的「唧唧（hoo-hoo）」接觸叫聲細柔似鳥鳴，在靜謐的清晨可傳達數百公尺。請嚮導熄火後靜聽——這往往比視覺搜索更早發現野狗群的存在位置。</div>
+            </li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識個體——花紋是身份證：</strong>每隻野狗的黑白棕三色花紋終身不變且獨一無二，研究者據此建立個體資料庫。觀察時可嘗試記錄幾隻個體的背部或肩部花紋特徵，保育組織的 App（如 Wild Me）可協助你的記錄貢獻實際研究數據。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>保持絕對靜音——野狗極度敏感：</strong>野狗是所有 Safari 物種中對人類干擾最敏感的之一，犬瘟熱等人畜共通疾病可透過接觸傳播造成毀滅性影響。觀察時引擎保持低速怠速或熄火，嚴禁任何突然聲響，與群體保持至少 50 公尺距離。</div>
+            </li>
+            <li>
+              <span class="fi">⏰</span>
+              <div><strong>遇到野狗請立刻放棄其他計畫：</strong>非洲野狗全球僅剩約 6,600 頭，稀有程度遠超獅子與花豹。一旦嚮導確認野狗蹤跡，請毫不猶豫調整當天行程跟隨——哪怕錯過了預定的大貓搜索，這個決定幾乎在事後都不會後悔。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>追逐場面用高速連拍鎖定：</strong>野狗狩獵時速度極快且方向多變，建議預先設定快門優先（1/1600s 以上）＋高速連拍（10fps 以上），以 AI 伺服追焦（Canon）或 AF-C 追蹤模式（Nikon/Sony）鎖定奔跑中的個體。寧可事後從大量連拍中挑選清晰畫面，而非追求單張完美構圖。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>非洲野狗是非洲大陸最瀕危的大型掠食者，全球野生數量約 <strong>6,600 頭</strong>，主要分布於東非與南非的零散保護區。最大威脅包括：棲地破碎化（導致群體無法維持足夠規模）、與家犬接觸傳播的犬瘟熱與狂犬病，以及農業區的人獸衝突陷阱。每一次野外目擊記錄，都是珍貴的保育數據。</p>
           </div>
         </div>
       </div>
@@ -4057,7 +4740,6 @@ img {
   </div>
 </div>
 </section>
-
 <section id="hyrax-section">
 <div class="section">
   <h2 class="section-title">🪨 動物介紹</h2>
@@ -4073,22 +4755,36 @@ img {
         </div>
       </div>
 
-      <div class="stat-grid">
+    <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">演化分類</div>
-          <div class="stat-value">大象遠親 (蹄兔目)</div>
+          <div class="stat-label">體重</div>
+          <div class="stat-value">1.8 - 5.4 kg</div>
+          <div class="stat-sub">體型似豚鼠，雌雄相近</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">棲息地</div>
-          <div class="stat-value">岩石裂縫與露頭</div>
+          <div class="stat-label">體長</div>
+          <div class="stat-value">30 - 70 cm</div>
+          <div class="stat-sub">無尾或僅有短殘尾</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">行為特徵</div>
-          <div class="stat-value">集體日光浴</div>
+          <div class="stat-label">演化近親</div>
+          <div class="stat-value">大象 · 海牛</div>
+          <div class="stat-sub">同屬非洲獸總目</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">防禦機制</div>
-          <div class="stat-value">極度敏銳的警戒</div>
+          <div class="stat-label">妊娠期</div>
+          <div class="stat-value">7 - 8 個月</div>
+          <div class="stat-sub">體型相對於妊娠期極長</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">群體規模</div>
+          <div class="stat-value">5 - 80 隻</div>
+          <div class="stat-sub">由一隻優勢雄性主導</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">野外壽命</div>
+          <div class="stat-value">約 10 - 12 年</div>
+          <div class="stat-sub">族群廣布且穩定</div>
         </div>
       </div>
       
@@ -4109,38 +4805,141 @@ img {
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'hyraxtab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'hyraxtab-behavior')">奇妙演化</button>
-        <button class="tab-btn" onclick="switchTab(event, 'hyraxtab-tips')">觀察小語</button>
+        <button class="tab-btn" onclick="switchTab(event, 'hyraxtab-where')">觀賞地點</button>
+        <button class="tab-btn" onclick="switchTab(event, 'hyraxtab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
         <div class="tab-panel active" id="hyraxtab-overview">
           <div class="prose">
-            <p>別看岩蹄兔長得像肥胖版的豚鼠，牠們與大象和海牛有著共同的演化起源。牠們是極佳的攀岩專家，足底擁有特殊的軟墊結構，能像吸盤一樣緊貼岩壁。<br><br>牠們以家族為單位棲息，因為缺乏有效的體溫調節機制，對於太陽有著特殊的愛好，常可見到整群岩蹄兔在清晨的岩石上進行集體<strong>「日光浴」</strong>以提高體溫。</p>
+            <p>
+              岩蹄兔外表像肥胖版的豚鼠，卻是大象、海牛與儒艮的遠房親戚——這個出乎意料的演化關係，讓牠們成為 Safari 中最具話題性的「知識彩蛋」。牠們棲息在 Kopjes（塞倫蓋提草原上突出的花崗岩巨岩群）的岩縫中，是這些「草原孤島」生態系的核心居民。
+            </p>
+            <p>
+              岩蹄兔體溫調節能力較弱，每天需花費大量時間進行「社群日光浴」以維持體溫，這個行為讓牠們成為 Safari 途中最容易近距離觀察的野生動物之一。
+            </p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🦶</span>
+              <div><strong>吸盤足底——天生的攀岩高手：</strong>岩蹄兔足底有特殊的橡膠狀軟墊，內有汗腺持續分泌濕潤黏液，功能類似吸盤，能在幾乎垂直的岩面上自由奔跑，讓掠食者難以追上。</div>
+            </li>
+            <li>
+              <span class="fi">☀️</span>
+              <div><strong>社群日光浴——每日必修的體溫課：</strong>岩蹄兔缺乏有效的內部產熱機制，清晨體溫可降至接近環境溫度。每天日出後，整群個體會擠在岩石南面集體曬太陽、互相依偎取暖，直到體溫回升才開始覓食活動。</div>
+            </li>
+            <li>
+              <span class="fi">🐘</span>
+              <div><strong>與大象共享的演化遺產：</strong>儘管體型天差地別，岩蹄兔與大象同屬「非洲獸總目（Afrotheria）」，共享若干解剖學特徵：睪丸位於腹腔內（與大象相同）、上門齒終身生長（與象牙同源）、蹄狀趾甲，以及相近的胎盤結構。</div>
+            </li>
+            <li>
+              <span class="fi">🏠</span>
+              <div><strong>Kopjes 是牠們的城堡：</strong>塞倫蓋提的花崗岩巨岩群是岩蹄兔最重要的棲所——岩縫提供天然庇護所，居高臨下的視野讓牠們能提早偵測掠食者，而光滑岩面讓大型掠食者難以追入。一塊 Kopjes 往往棲居著數十乃至上百隻岩蹄兔。</div>
+            </li>
+          </ul>
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>岩蹄兔的妊娠期長達 <strong>7–8 個月</strong>——以牠們豚鼠般的體型來說，這個數字令人瞠目結舌（相比之下，老鼠只需 3 週）。這個異常長的妊娠期正是演化淵源的另一條線索：與大象同源的古老生殖系統，至今仍保留著那個「大型動物」的節奏。</p>
           </div>
         </div>
         <div class="tab-panel" id="hyraxtab-behavior">
           <div class="prose">
-            <p>岩蹄兔的演化充滿了反差：</p>
+            <p>岩蹄兔的演化充滿了反差：一個體型微小、外表平凡的動物，卻擁有複雜的聲音語言、精密的警戒系統，以及研究者至今仍在破解的「歌唱求偶」文化。</p>
+            <p>
+              以色列海法大學的長期研究（逾 20 年）發現，岩蹄兔的叫聲複雜程度與某些鯨豚、靈長類相當，被部分學者視為語言演化研究的重要模式動物。
+            </p>
+</div>
           <ul class="feature-list">
             <li>
-              <span class="fi">👨‍👨‍👧‍👦</span>
-              <div><strong>大象的親戚：</strong>雖外表渺小，但牠們擁有與大象相似的門齒發育過程，且腳趾結構也顯示出蹄類動物的特徵。</div>
+              <span class="fi">🔊</span>
+              <div><strong>分類警報系統——能區分天空與地面的威脅：</strong>岩蹄兔擁有至少兩種截然不同的警報叫聲：針對猛禽（鷹、雕）發出的短促高頻叫聲，讓群體立刻蹲低貼岩；針對地面掠食者（蛇、獴）發出的連串低頻叫聲，讓群體快速衝入岩縫深處。不同的威脅觸發不同的逃生策略。</div>
             </li>
             <li>
-              <span class="fi">⚠️</span>
-              <div><strong>靈敏警戒：</strong>牠們擁有一套複雜的叫聲系統，能分辨來自天上的猛禽與地上的蛇類威脅。牠們的警戒性極高，只要其中一隻發出尖叫，整個群體會瞬間隱沒在岩縫中。</div>
+              <span class="fi">🎵</span>
+              <div><strong>雄性「演唱會」求偶——愈能持久愈受青睞：</strong>成年雄性會發出由嘰嘎聲、顫音與低鳴組成的複雜「歌曲」，持續時間從數秒到數分鐘不等。研究顯示，歌聲節奏更穩定、持續更久的雄性，後代存活率更高——雌性藉此評估雄性的基因品質與體能狀態。</div>
             </li>
             <li>
-              <span class="fi">💛</span>
-              <div><strong>唱歌求偶：</strong>對於人耳而言，牠們的音調聽起來就像混合了鬣狗的嘎嘎叫聲和粉筆劃過黑板的刺耳聲響。但對於雌性岩蹄兔而言，每次雄性合唱維持節奏愈久，雌性就愈有可能為牠們神魂顛倒，繁殖出的後代存活率也更高。</div>
+              <span class="fi">👁️</span>
+              <div><strong>背部腺體——群體的化學語言：</strong>岩蹄兔背部中央有一塊顏色較深的背腺（Dorsal Gland），能分泌費洛蒙，用於標記領地與傳遞個體狀態訊息。激動或受威脅時，背部腺體周圍的毛髮會豎起，同時釋放更濃烈的氣味訊號。</div>
             </li>
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>夜間集體共眠——用體溫對抗低溫：</strong>非洲夜晚氣溫驟降，岩蹄兔無法靠自身代謝維持體溫，因此整個群體會緊密堆疊在岩縫中集體共眠，以群體體溫互相補充，是「社群體溫調節（Social Thermoregulation）」的典型案例。</div>
+            </li>
+          </ul>
 
-            </ul>
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>岩蹄兔是 Kopjes 生態系的關鍵物種——牠們的糞便與尿液長期積累在固定排泄點，形成富含氮磷的「岩蹄兔石」（Hyraceum），為岩縫中的植物提供集中養分；同時也是黑雕、岩蟒、非洲野貓等掠食者的重要食物來源，撐起了整個 Kopjes 食物鏈。</p>
           </div>
         </div>
-        <div class="tab-panel" id="hyraxtab-tips">
+
+        <div class="tab-panel" id="hyraxtab-where">
           <div class="prose">
-            <p>在塞倫蓋提或馬賽馬拉的<strong>巨石陣 (Kopjes)</strong> 頂端，請務必拿望遠鏡尋找。若您看到一顆顆<strong>「會動的石頭」</strong>在曬太陽，那就是岩蹄兔。由於牠們視力很好且動作極快，靠近時請保持安靜，否則牠們會在眨眼間「集體消失」在岩石裂縫中。</p>
+            <p>岩蹄兔幾乎與 Kopjes（花崗岩巨岩群）如影隨形——有岩石的地方幾乎就有牠們。本次 Safari 路線中以下地點觀察機率最高：</p>
+          </div>
+
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（塞倫蓋提中部 Seronera 區）</strong>——塞倫蓋提中部的 Kopjes 群是全東非密度最高的花崗岩岩群，幾乎每一塊 Kopjes 都有穩定的岩蹄兔族群，清晨日光浴時段可近距離觀察。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP（Seronera）</span>
+                  <span class="loc-tag">Simba Kopjes</span>
+                  <span class="loc-tag">Moru Kopjes</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（恩戈羅恩戈羅火山口邊緣）</strong>——火山口邊緣的玄武岩岩壁與散落的岩石區同樣有穩定族群，有時可觀察到岩蹄兔與岩鼠、巨蜥共用同一岩縫棲所的有趣共生場景。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Ngorongoro Crater Rim</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>清晨 7–9 點在 Kopjes 南向岩面守候是最佳策略</strong>——岩蹄兔幾乎每天在同一塊岩石的同一位置曬太陽，行為高度規律。請嚮導停在 Kopjes 南面下風處靜候，通常 10 分鐘內就能見到牠們從岩縫中陸續爬出。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>清晨日光浴是拍攝岩蹄兔的黃金窗口——整群個體靜止堆疊在明亮的淺色岩石上，背景簡潔，光線柔和。使用 200mm 以上鏡頭從車內拍攝，重點捕捉多隻個體堆疊取暖的「疊疊樂」構圖，或是哨兵個體站在最高點警戒的剪影畫面。</p>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="hyraxtab-tips">
+          <ul class="feature-list">
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>在 Kopjes 頂端找「會動的石頭」：</strong>遠看 Kopjes 時，用望遠鏡掃描岩石頂端——若有幾個「石頭」輪廓比周圍更圓潤、更毛絨，且偶爾微微移動，那就是正在曬太陽的岩蹄兔。牠們靜止時與岩石的顏色非常相近，需要仔細分辨。</div>
+            </li>
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>聽警報聲判斷掠食者種類：</strong>岩蹄兔急促的高頻連叫（像短促的「嗶嗶」）代表空中威脅——立刻仰頭搜索天空，可能有草原雕或獵鷹正在盤旋；若是連串較低沉的叫聲加上群體衝入岩縫，通常代表地面有蛇或小型掠食者。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>保持距離與靜默是關鍵：</strong>岩蹄兔警覺性極高，群體中始終有一至數隻「哨兵」站在制高點保持警戒。任何突然的聲響或快速移動都會讓整群在 3 秒內消失進岩縫，且短時間內不會再出現。請嚮導熄火後靜待，讓牠們自然忽略車輛存在。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>把握 Kopjes 的「黃金時段」——清晨日出後 1 小時：</strong>岩蹄兔從岩縫出現、集體日光浴、開始覓食的完整流程通常在日出後 45–90 分鐘內完成。錯過這個窗口，中午牠們多躲在岩縫深處避熱，幾乎不可見。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>善用 Kopjes 作為前景構圖元素：</strong>在廣角視角中，可將岩蹄兔置於巨大花崗岩的前景，背景帶入塞倫蓋提開闊草原，強烈的大小對比能呈現出「渺小生命在巨石上生存」的史詩感。清晨側光讓岩石紋理最為立體。</div>
+            </li>
+          </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>岩蹄兔目前 IUCN 列為「無危」，廣布非洲與中東的岩石地帶，族群整體穩定。由於高度依賴特定地形（岩石露頭），棲地破壞對局部族群影響較大。在保護區內，牠們是 Kopjes 生態系的基石物種，保護 Kopjes 的完整性，就是保護從岩蹄兔到黑雕的整個食物鏈。</p>
           </div>
         </div>
       </div>
@@ -5035,27 +5834,27 @@ img {
         <div class="stat-item">
           <div class="stat-label">♂ 肩高</div>
           <div class="stat-value">54 - 62 cm</div>
-          <div class="stat-sub">草原貓科中腿最長</div>
+          <div class="stat-sub">草原貓科中腿最長比例</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">♂ 體重</div>
           <div class="stat-value">9 - 18 kg</div>
-          <div class="stat-sub">雌性略輕</div>
+          <div class="stat-sub">♀ 約 7 - 12 kg</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">跳躍高度</div>
           <div class="stat-value">可達 3 m</div>
-          <div class="stat-sub">垂直躍起捕鳥</div>
+          <div class="stat-sub">垂直躍起高度驚人</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">耳朵長度</div>
           <div class="stat-value">~ 8.5 cm</div>
-          <div class="stat-sub">貓科比例最大</div>
+          <div class="stat-sub">貓科中頭部比例最大</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">主要獵物</div>
-          <div class="stat-value">囓齒類</div>
-          <div class="stat-sub">成功捕獵率高達 50%</div>
+          <div class="stat-label">捕獵成功率</div>
+          <div class="stat-value">約 50%</div>
+          <div class="stat-sub">遠超獅子（約 25%）</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">野外壽命</div>
@@ -5081,57 +5880,156 @@ img {
         <button class="tab-btn active" onclick="switchTab(event, 'serval-tab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'serval-tab-behavior')">狩獵絕技</button>
         <button class="tab-btn" onclick="switchTab(event, 'serval-tab-where')">觀賞地點</button>
-        <button class="tab-btn" onclick="switchTab(event, 'serval-tab-tips')">觀察心法</button>
+        <button class="tab-btn" onclick="switchTab(event, 'serval-tab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
         <div class="tab-panel active" id="serval-tab-overview">
           <div class="prose">
-            <p>藪貓是草原上最迷人的小型貓科動物。牠們擁有<strong>貓科動物中比例最大的耳朵</strong>，以及與體型不相稱的長腿，這使牠們能在高聳的草叢中擁有絕佳的視野與移動能力。</p>
-            <p>牠們外觀如同小型獵豹，全身佈滿斑點，但在尾部呈現環狀紋路。藪貓主要生活在水源附近的濕地或草原邊緣，是非常傑出的環境適應者。</p>
+            <p>
+              藪貓是草原上最迷人的中型貓科動物——擁有<strong>貓科中比例最大的耳朵</strong>、與體型不相稱的修長長腿，以及全身密佈的黑色斑點。牠們外觀有時被誤認為小型獵豹，但尾巴較短、耳朵顯著更大，實為獨立演化的物種。
+            </p>
+            <p>
+              藪貓主要棲息在水源附近的高草濕地與草原邊緣，是高度特化的聽覺獵手，捕獵成功率接近 50%，在所有貓科動物中名列前茅。在 Safari 中遭遇藪貓，是大多數遊客意想不到的驚喜。
+            </p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">📡</span><div><strong>雷達耳朵：</strong>巨大的耳朵能夠偵測到草叢下微小的囓齒類聲音，即使獵物躲在洞穴或地底也能精準定位。</div></li>
-            <li><span class="fi">🏃</span><div><strong>長腿優勢：</strong>修長的四肢不僅便於在長草間跨越，還能幫助牠們在衝刺時快速變換方向。</div></li>
-            <li><span class="fi">🐱</span><div><strong>社交模式：</strong>通常單獨活動，並且無論雄雌都會透過噴灑氣味來標記地盤，雖然牠們的領土可能會重疊，但藪貓們向來「以和為貴」，彼此間很少吵架，只會象徵性兇一下；戀愛中的情侶雖然會一起逛街，但並不會合作打獵。</div></li>
+            <li>
+              <span class="fi">📡</span>
+              <div><strong>雷達耳朵——貓科中的聽覺冠軍：</strong>藪貓的耳朵長約 8.5 公分，佔頭部比例為所有貓科之冠，能獨立旋轉 180°，精準鎖定藏匿於草叢或地洞中的獵物。即使隔著 30 公分的厚草，也能定位出體重不到 10 公克的田鼠確切位置。</div>
+            </li>
+            <li>
+              <span class="fi">🏃</span>
+              <div><strong>長腿的演化邏輯——高草中的視野與速度：</strong>藪貓的腿長與體長之比為貓科動物中最高，讓牠們能在齊腰高的高草叢中抬頭觀察，同時以大跨步高速追逐。牠們的前腿也特別長，讓撲擊時的打擊範圍和力道遠超體型應有的水準。</div>
+            </li>
+            <li>
+              <span class="fi">🐱</span>
+              <div><strong>「以和為貴」的獨居生活：</strong>藪貓通常單獨生活，以氣味標記領地，領土可能與鄰居重疊，但牠們幾乎不發生激烈衝突，多以象徵性的警告了事。繁殖期的配對短暫同行，但從不合作狩獵——牠們是徹頭徹尾的獨行俠。</div>
+            </li>
+            <li>
+              <span class="fi">🌾</span>
+              <div><strong>農夫的隱形盟友：</strong>一隻成年藪貓每年可捕食約 <strong>4,000 隻囓齒類動物</strong>，對農業地帶的鼠害控制貢獻顯著。研究顯示，藪貓幾乎不攻擊家禽與家畜，與人類農業區的共存潛力遠高於其他貓科動物。</div>
+            </li>
           </ul>
+
           <div class="fun-fact">
-            <div class="ff-label">🌍 保育現況</div>
-            <p>藪貓因皮毛美麗而常遭到非法獵殺，皮毛在非洲當地的毛皮市場很受歡迎，甚至會被<strong>假冒成獵豹或花豹的皮毛</strong>以哄抬價格。牠們<strong>比獵豹和花豹更容易被獵人捕捉</strong>。除了人類的過度開發，<strong>路殺事件</strong>也是頻繁發生的威脅之一。藪貓的個性特點之一是，當牠們被車燈照到時很容易呆住，這大大增加了夜間在道路上被撞的風險。</p>
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>藪貓是家貓重要的遠親——據信現代家貓的祖先北非野貓（<em>Felis silvestris lybica</em>）與藪貓在東非共享同一片棲地數萬年，兩者偶爾甚至能產生可育的雜交後代「沙瓦納貓（Savannah Cat）」，是目前全球最受歡迎的混種寵物貓品種之一。</p>
           </div>
         </div>
 
         <div class="tab-panel" id="serval-tab-behavior">
           <div class="prose">
-            <p>藪貓是機會主義的掠食者。牠們採取「靜止-定位-突擊」的狩獵模式，在草叢中保持靜止，利用驚人的聽覺鎖定位置後，發動垂直躍起的一擊。</p>
+            <p>
+              藪貓採取「靜止—定位—垂直突擊」的高度特化狩獵模式，完全不同於獅子的伏擊或獵豹的高速追逐。牠們靠的是<strong>極致的聽覺精度</strong>與令人咋舌的跳躍力，以最小的體力消耗換取最高的捕獵效率。
+            </p>
+            <p>
+              這套模式讓藪貓的捕獵成功率達到約 50%，遠超多數大型貓科，堪稱草原上效率最高的貓科獵手。
+            </p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">🚀</span><div><strong>垂直跳躍：</strong>藪貓能垂直躍起超過 3 公尺，準確捕抓空中的鳥類，或用前掌將躲在草叢內的獵物狠狠擊暈。</div></li>
-            <li><span class="fi">🌙</span><div><strong>晨昏行動：</strong>多在清晨或傍晚活動，躲避烈日與大型掠食者的威脅。</div></li>
-            <li><span class="fi">👨‍🌾</span><div><strong>農夫好朋友：</strong>多一隻成年藪貓每年可以捕食約四千隻齧齒類動物，對農夫而言是有益的「捉老鼠好朋友」。值得注意的是，藪貓幾乎不捕食家畜。</div></li>
+            <li>
+              <span class="fi">🚀</span>
+              <div><strong>垂直躍擊——3 公尺高空的致命一掌：</strong>藪貓能垂直躍起超過 3 公尺，用雙前掌以驚人的力道從空中向下擊打獵物，瞬間造成震盪使其昏迷或死亡。這個動作的速度之快，讓獵物幾乎毫無反應時間，即便是空中飛行的鳥類也難逃一擊。</div>
+            </li>
+            <li>
+              <span class="fi">🎯</span>
+              <div><strong>聽音辨位——不需目視的精準定位：</strong>藪貓狩獵的關鍵步驟是「耳朵搜索」——牠們靜立不動，雙耳獨立旋轉掃描，可在完全看不見獵物的情況下，僅靠聲音精準判斷獵物在草叢下的確切位置與移動方向，再計算好落點後一躍而出。</div>
+            </li>
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>晨昏行動——避開競爭的時間策略：</strong>藪貓主要在清晨與傍晚活動，這個時段大型貓科（獅子、花豹）多在休息，獵豹則偏好正午狩獵。藪貓藉此在時間上與競爭者錯開，降低遭遇的風險，同時此時囓齒類動物的活動量也最高。</div>
+            </li>
+            <li>
+              <span class="fi">🐟</span>
+              <div><strong>菜單多元——從田鼠到青蛙：</strong>雖以囓齒類為主食（約佔食物的 80%），藪貓的菜單遠不止如此：青蛙、蜥蜴、昆蟲、魚類，以及機會性捕捉兔子與小型鳥類。在濕地邊緣，牠們甚至會涉水捕魚，是少數不排斥水域的貓科動物。</div>
+            </li>
           </ul>
-        
+
           <div class="fun-fact">
-            <div class="ff-label">✨ 趣味冷知識</div>
-            <p>藪貓是<strong>貓科動物中的狙擊手</strong>，狩獵成功率在所有貓科動物中名列前茅，平均捕獵成功率接近 50%，遠高於獅子的 20-30%！</p>
+            <div class="ff-label">🔬 生態角色</div>
+            <p>藪貓在草原生態系中扮演<strong>「囓齒類族群調節者」</strong>的關鍵角色。每年捕食的大量田鼠與鼴鼠，有效控制囓齒類族群的過度膨脹，防止草原植被遭受破壞性的地下挖掘。少了藪貓，草原可能面臨如北美草原犬鼠氾濫般的生態失衡危機。</p>
           </div>
         </div>
 
         <div class="tab-panel" id="serval-tab-where">
           <div class="prose">
-            <p>藪貓分佈於撒哈拉以南的非洲地區，特別喜歡水源充足的草原或濕地環境：</p>
+            <p>藪貓高度依賴濕地邊緣的高草環境，分布範圍雖廣但隱蔽性強，以下是本次行程中遭遇機率相對較高的地點：</p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">📍</span><div><strong>賽倫蓋提 (Serengeti)：</strong>在雨季過後的濕地邊緣最容易發現。</div></li>
-            <li><span class="fi">📍</span><div><strong>恩戈羅恩戈羅 (Ngorongoro)：</strong>火山口內的濕地與矮草區是藪貓的熱門棲地。</div></li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（恩戈羅恩戈羅火山口）</strong>——火山口底部的濕地草甸是東非藪貓密度最高的地點之一，矮草與高草的交界帶提供了理想的狩獵環境，清晨目擊率在東非保護區中名列前茅。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Ngorongoro Crater</span>
+                  <span class="loc-tag">濕地草甸邊緣</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（塞倫蓋提 Seronera 河谷）</strong>——雨季過後的濕地邊緣草叢高度適中，是藪貓狩獵的理想環境，嚮導間口耳相傳的熱點多集中在常設水源附近的蘆葦叢旁。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti NP（Seronera）</span>
+                  <span class="loc-tag">Grumeti River 周邊</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（馬賽馬拉）</strong>——馬拉河支流附近的濕地草帶有穩定的藪貓族群記錄，清晨沿河道行駛是搜索藪貓最有效的路線策略。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Mara River 支流濕地</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>清晨 6–8 點沿濕地邊緣低速行駛是最有效策略</strong>——藪貓在此時段活動量最高，習慣在高草與短草交界的「視覺清晰帶」緩步搜索獵物。嚮導可先搜索是否有從草叢頂端微微突出的大耳廓輪廓，那往往是藪貓在耳朵搜索時的特徵姿態。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>藪貓最具標誌性的畫面是「靜止耳搜索」姿態——四腳站定、雙耳前傾獨立轉動、眼神專注下方草叢，整個身體蓄勢待發。這個姿態通常持續 10–30 秒，是捕捉藪貓神韻的黃金構圖。建議使用長焦（300mm+）大光圈（f/4–5.6），讓背後的高草形成散景，主體更突出。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="serval-tab-tips">
           <ul class="feature-list">
-            <li><span class="fi">🔭</span><div><strong>觀察建議：</strong>藪貓行動隱蔽，建議在清晨第一班車出發時，請駕駛特別留意濕地周圍的高草叢邊緣。</div></li>
-            <li><span class="fi">📷</span><div><strong>拍攝技巧：</strong>由於牠們行動極快，使用高速快門捕捉牠們豎起耳朵聆聽或躍起的瞬間，是所有 Safari 愛好者的終極挑戰。</div></li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>找「從草叢頂端探出的大耳廓」：</strong>當藪貓站在高草叢中耳朵搜索時，身體幾乎完全被草遮蔽，但那對巨大的三角形耳朵往往會微微突出草叢頂端。掃描濕地邊緣草叢時，找任何看起來「草上長了兩個三角形」的異常輪廓，極可能就是藪貓。</div>
+            </li>
+            <li>
+              <span class="fi">👀</span>
+              <div><strong>辨識藪貓 vs. 小型獵豹：</strong>兩者均有黑色斑點，易混淆。關鍵差異：藪貓耳朵明顯巨大（獵豹耳朵小而圓）、腿長比例更誇張、尾巴較短且有環紋（獵豹尾長且漸層）、體型更輕盈，臉部沒有獵豹特有的「眼淚紋」黑線。</div>
+            </li>
+            <li>
+              <span class="fi">⏰</span>
+              <div><strong>清晨第一班車沿濕地路線行駛：</strong>請明確告訴嚮導你想找藪貓，並要求沿水源地或河岸濕地邊緣低速行駛。許多嚮導習慣直奔大型貓科的已知位置，主動溝通需求才能確保搜索路線正確。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>發現後立刻熄火靜候：</strong>藪貓對引擎聲與車輛移動較為敏感，遭遇後請立刻示意嚮導熄火，以最低姿態靜待。通常 3–5 分鐘後牠會逐漸忽略車輛，繼續原本的搜獵行為，屆時才是觀察與拍攝的最佳時機。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>捕捉「垂直躍擊」需要耐心等待與預先準備：</strong>藪貓躍擊前通常有 10–20 秒的「蓄力靜止期」——雙耳鎖定方向、身體微微下沉、後腿收緊。辨識到這個姿勢後立刻切換連拍（10fps+）、快門 1/2000s 以上，並鎖定自動追焦，等待那 0.3 秒的完整躍擊瞬間。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>藪貓目前 IUCN 列為「無危」，但面臨多重威脅：美麗的皮毛使其常遭非法獵殺，甚至被偽裝成獵豹或花豹皮毛高價出售；夜間被車燈照到時容易「定格呆滯」而遭路殺；棲地濕地的農業開發也持續壓縮其生存空間。藪貓不攻擊家畜的溫和習性，使牠們是最值得與農業社區和平共存的貓科動物之一。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -5157,28 +6055,28 @@ img {
       <div class="stat-grid">
         <div class="stat-item">
           <div class="stat-label">體長</div>
-          <div class="stat-value">22 - 25 cm</div>
-          <div class="stat-sub">尾巴幾乎等長</div>
+          <div class="stat-value">22 - 30 cm</div>
+          <div class="stat-sub">尾巴幾乎等長，約 19–25 cm</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">體重</div>
           <div class="stat-value">400 - 800 g</div>
-          <div class="stat-sub">輕盈靈活</div>
+          <div class="stat-sub">雄性略重於雌性</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">棲息環境</div>
-          <div class="stat-value">乾旱草原</div>
-          <div class="stat-sub">耐旱耐熱</div>
+          <div class="stat-label">耐熱上限</div>
+          <div class="stat-value">43°C</div>
+          <div class="stat-sub">體表可承受的最高溫</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">群體性質</div>
-          <div class="stat-value">高度社會化</div>
-          <div class="stat-sub">成群穴居</div>
+          <div class="stat-label">群體規模</div>
+          <div class="stat-value">3 - 30 隻</div>
+          <div class="stat-sub">雌性家族群為核心</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">主要食物</div>
-          <div class="stat-value">雜食性</div>
-          <div class="stat-sub">種子、果實、昆蟲</div>
+          <div class="stat-label">地洞深度</div>
+          <div class="stat-value">可達 1.5 m</div>
+          <div class="stat-sub">多出入口的複雜網絡</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">警戒機制</div>
@@ -5204,46 +6102,143 @@ img {
         <button class="tab-btn active" onclick="switchTab(event, 'squirrel-tab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'squirrel-tab-behavior')">生存絕技</button>
         <button class="tab-btn" onclick="switchTab(event, 'squirrel-tab-where')">觀賞地點</button>
-        <button class="tab-btn" onclick="switchTab(event, 'squirrel-tab-tips')">觀察心法</button>
+        <button class="tab-btn" onclick="switchTab(event, 'squirrel-tab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
         <div class="tab-panel active" id="squirrel-tab-overview">
           <div class="prose">
-            <p>與一般會爬樹的松鼠不同，非洲地松鼠選擇了更具挑戰的地面生存模式。牠們主要分佈在南部非洲的乾旱地區，是極端氣候下的適應者。雖然體型細小，但牠們擁有驚人的社會結構，彼此互助以對抗強大的掠食者。</p>
-            <p>牠們外觀上最顯眼的特徵是<strong>寬大且蓬鬆的尾巴</strong>，這不僅是防禦的工具，更是牠們調節體溫的重要配件。</p>
+            <p>
+              非洲地松鼠放棄了松鼠家族慣用的樹梢生活，選擇在東非最嚴酷的乾旱草原上挖洞定居。牠們體型嬌小，卻以驚人的耐熱力、精密的哨兵系統，以及那條如同天然遮陽傘的蓬鬆大尾巴，在烈日、掠食者與旱季的三重考驗下游刃有餘。
+            </p>
+            <p>
+              東非常見的是<strong>條紋地松鼠（Xerus rutilus）</strong>，側腹有一條明顯的白色縱紋，是辨識的關鍵特徵。牠們在 Safari 中往往被遊客忽略，卻是草原生態系中不可或缺的「小角色大功能」物種。
+            </p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">☀️</span><div><strong>耐熱演化：</strong>牠們具備特殊的生理結構，能夠在攝氏 40 度以上的高溫中保持活動，這在炙熱的沙漠地帶極為罕見。</div></li>
-            <li><span class="fi">🏠</span><div><strong>穴居建築師：</strong>牠們挖掘複雜的地洞網絡，既是避暑勝地，也是躲避獅子、毒蛇等掠食者的天然堡壘。</div></li>
+            <li>
+              <span class="fi">☀️</span>
+              <div><strong>生理耐熱極限——43°C 照常出門：</strong>多數哺乳動物超過 40°C 就會中暑，但地松鼠能讓體表溫度短暫升高到 43°C 而不受傷害，之後再鑽回地洞散熱。這種「暫時蓄熱」策略讓牠們能在正午其他動物都躲避烈日時照常覓食。</div>
+            </li>
+            <li>
+              <span class="fi">🏠</span>
+              <div><strong>複雜地下城堡——多出入口的安全網：</strong>地松鼠挖掘深達 1.5 公尺、擁有多個出入口的地洞網絡，地洞溫度比地表低 10–15°C，是午間避暑、夜間保暖與緊急逃生的多功能基地。廢棄的舊洞穴也常被蛇、蜥蜴等小型動物接手利用。</div>
+            </li>
+            <li>
+              <span class="fi">🍽️</span>
+              <div><strong>雜食機會主義者：</strong>種子、草根、球莖、昆蟲、蜥蜴蛋，甚至腐肉都在菜單上。在旱季食物極度匱乏時，地松鼠是少數仍能維持正常活動的地棲哺乳動物，雜食性帶來了極強的生存彈性。</div>
+            </li>
+            <li>
+              <span class="fi">🐍</span>
+              <div><strong>天生的蛇類騷擾者：</strong>地松鼠對眼鏡蛇等毒蛇有部分免疫力，面對入侵地洞的蛇，牠們不但不逃，反而會聚集成群、豎起尾巴、以誇張的跳躍動作反覆騷擾蛇類，直到蛇放棄離去——這種「蛇類騷擾行為（Snake Harassment）」是地松鼠保衛幼崽的集體防禦策略。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>地松鼠是<strong>不冬眠的松鼠</strong>——牠們棲息的東非旱季雖嚴酷，但溫度不足以觸發冬眠，因此全年 365 天都需要主動覓食。這反而倒逼牠們演化出一套極為精密的熱管理系統，讓牠們成為哺乳動物中耐熱能力最強的物種之一。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="squirrel-tab-behavior">
           <div class="prose">
-            <p>非洲地松鼠最著名的行為莫過於牠們如何利用尾巴來「遮陽」。</p>
+            <p>
+              地松鼠最廣為人知的行為，是那把從自身尾巴生長出來的「天然遮陽傘」——但牠們的生存絕技遠不止於此，從精密的哨兵分工到集體對抗眼鏡蛇，每個行為背後都是數百萬年演化磨合的精密設計。
+            </p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">⛱️</span><div><strong>自帶遮陽傘：</strong>當牠們在烈日下進食時，會將那條毛茸茸的大尾巴舉起並彎曲，蓋在背上形成一把「遮陽傘」，大幅降低受熱程度。</div></li>
-            <li><span class="fi">📢</span><div><strong>社交警報：</strong>牠們擁有精密的哨兵系統，當發現鷹隼或蛇類時，會發出尖銳的叫聲提醒全體成員撤回地洞。</div></li>
+            <li>
+              <span class="fi">⛱️</span>
+              <div><strong>尾巴遮陽傘——物理防曬的演化奇蹟：</strong>在烈日下覓食時，地松鼠會將蓬鬆的大尾巴舉起向前彎曲，蓋在背部形成一把「個人遮陽傘」，可降低背部受熱達 5°C。這個行為研究者稱為「太陽保護（Sun Shade）行為」，是哺乳動物中極為罕見的工具性體溫調節案例。</div>
+            </li>
+            <li>
+              <span class="fi">📢</span>
+              <div><strong>分工哨兵系統——空中與地面分開警報：</strong>群體覓食時，始終有個體輪班站立在高點擔任哨兵。牠們對不同威脅發出不同叫聲：尖銳短促的「嗶」聲代表空中猛禽，低沉連續的「咕咕」代表地面掠食者（蛇、貓鼬）。群體成員能精準識別警報類型並做出對應逃生動作。</div>
+            </li>
+            <li>
+              <span class="fi">🤸</span>
+              <div><strong>集體蛇類騷擾行為：</strong>當眼鏡蛇靠近地洞時，地松鼠群體不退反進——成員輪流靠近、豎尾、誇張彈跳，持續騷擾數分鐘至數十分鐘，直到蛇放棄。研究發現牠們甚至能識別無毒蛇（放鬆應對）與毒蛇（全力騷擾），展現出驚人的認知判斷力。</div>
+            </li>
+            <li>
+              <span class="fi">🤝</span>
+              <div><strong>互相理毛鞏固社群紐帶：</strong>地松鼠群體中，雌性間的社會關係最為緊密，互相理毛（Allogrooming）是日常維持群體凝聚力的重要儀式。觀察誰在幫誰理毛，往往能看出群體內的親緣關係與社會地位——這與狒狒的「社交貨幣」理毛行為有著異曲同工之妙。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>地松鼠的地洞挖掘行為是草原生態系中重要的「土壤工程師」功能——翻鬆的土壤改善水分滲透與通氣，廢棄地洞成為多種小型動物的棲所與繁殖地。牠們也是眾多猛禽（草原雕、秘書鳥）、蛇類與小型貓科的重要食物來源，是乾旱草原食物網的基石之一。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="squirrel-tab-where">
           <div class="prose">
-            <p>非洲地松鼠主要棲息於乾燥環境，常出現在南部非洲的國家公園：</p>
+            <p>東非條紋地松鼠廣布於東非乾旱草原與灌木地帶，本次 Safari 路線中以下地點遭遇機率較高：</p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">📍</span><div><strong>卡拉哈里沙漠 (Kalahari)：</strong>牠們在這裡最為活躍，經常能在開闊的灌木叢中看見牠們蹦蹦跳跳。</div></li>
-            <li><span class="fi">📍</span><div><strong>埃托沙國家公園 (Etosha)：</strong>在乾燥的鹽鹼地附近，常能觀察到成群的地松鼠在挖土。</div></li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（塔蘭吉雷國家公園）</strong>——塔蘭吉雷的乾旱灌木草原是東非地松鼠密度最高的保護區之一，乾季時在白蟻丘附近與開闊短草地上極易見到覓食群體。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Tarangire NP</span>
+                  <span class="loc-tag">白蟻丘周邊開闊地</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（安波塞利 & 馬賽馬拉乾旱區）</strong>——安波塞利的短草平原乾季時地松鼠活動頻繁，常在大型草食動物群附近的開闊地帶出沒，有時可見牠們在大象腳邊撿食被踩鬆的種子。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Amboseli NP</span>
+                  <span class="loc-tag">Masai Mara NR（乾旱區）</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>白蟻丘附近是最佳守候點</strong>——地松鼠偏好在白蟻丘頂端站立瞭望，周邊疏鬆土壤也是牠們挖洞的首選地點。找到一個有多個洞口且周圍有鬆土痕跡的白蟻丘，停在下風處靜候，通常幾分鐘內就能見到牠們探頭出洞。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>「舉尾遮陽」是拍攝地松鼠最具標誌性的畫面，通常出現在<strong>上午 9–11 點</strong>太陽升高後的覓食高峰。地松鼠對車輛適應性不差，低速靠近後熄火靜候，往往能在 2–3 公尺的極近距離拍攝。逆光構圖下蓬鬆尾巴透光呈現金色輪廓，效果最為出色。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="squirrel-tab-tips">
           <ul class="feature-list">
-            <li><span class="fi">🔎</span><div><strong>觀察建議：</strong>牠們非常機警，接近時請保持安靜。若車輛緩慢靠近，牠們往往會站立起來（如同一根小木樁）確認有無危險。</div></li>
-            <li><span class="fi">📸</span><div><strong>拍攝技巧：</strong>地松鼠動作極快，建議使用長焦鏡頭。當牠們舉起尾巴遮陽的瞬間，是拍攝「沙漠求生」風格影像的最佳時刻。</div></li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>找「白蟻丘上的小木樁」：</strong>地松鼠受到驚擾時，會立刻直立站起、前肢緊貼胸前，如同一根小木樁靜止觀察威脅。在開闊草地上掃描白蟻丘頂端，尋找這種垂直細小的輪廓，是最有效的目視搜索方式。</div>
+            </li>
+            <li>
+              <span class="fi">⛱️</span>
+              <div><strong>等待「舉傘」時機——上午 9 點後太陽升高再找：</strong>清晨氣溫較低時，地松鼠尾巴垂落正常；待太陽升高、地表溫度超過 35°C 後，遮陽行為才會出現。刻意在上午 9–11 點的覓食高峰前往，目擊「尾巴遮陽傘」的機率大幅提升。</div>
+            </li>
+            <li>
+              <span class="fi">👀</span>
+              <div><strong>辨識東非條紋地松鼠：</strong>側腹有一條清晰的<strong>白色縱紋</strong>從肩部延伸至臀部，是辨識關鍵。背部黃褐色、腹部較白，尾巴蓬鬆呈灰棕色。與疣豬或其他地棲哺乳動物同框時，這條白紋在距離較遠時也能輕鬆識別。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>聽警報叫聲判斷威脅方向：</strong>地松鼠的警報聲響亮穿透，若聽到急促的連串尖叫且群體同時直立張望，立刻抬頭搜索天空（猛禽威脅）或掃視周邊低草（蛇類威脅）。嚮導有時甚至利用地松鼠的警報聲來快速定位附近的猛禽位置。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>極近距離拍攝——善用地松鼠的低警覺性：</strong>相較於多數草原動物，地松鼠對靜止車輛的適應性較佳，熄火後耐心等待，往往能靠近至 1–3 公尺的超近距離。此時改用較短焦段（100–200mm）搭配大光圈，讓背景草叢虛化，突顯主體細節與眼神。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>東非條紋地松鼠目前 IUCN 列為「無危」，族群廣布且適應力強，是少數在農業擴張與棲地變化中仍能維持穩定數量的小型哺乳動物。主要威脅來自農業區的毒鼠藥（設計用來對付嚙齒類但誤殺地松鼠），以及猛禽族群下降導致的食物鏈失衡。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -5261,41 +6256,41 @@ img {
       <div class="profile-img-wrap">
         <img src="https://zbsafaris.co.za/wp-content/uploads/Reedbuck-min.png" alt="葦羚" loading="lazy" />
         <div class="img-caption">
-          <span>葦羚 · Reedbuck</span>
+          <span>葦羚 · Bohor Reedbuck</span>
           <strong>Sub-Saharan Africa</strong>
         </div>
       </div>
 
       <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">肩高</div>
-          <div class="stat-value">60 - 90 cm</div>
-          <div class="stat-sub">體型中等</div>
+          <div class="stat-label">♂ 肩高</div>
+          <div class="stat-value">70 - 89 cm</div>
+          <div class="stat-sub">♀ 略小，約 67 - 76 cm</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">體重</div>
-          <div class="stat-value">40 - 95 kg</div>
-          <div class="stat-sub">依亞種而異</div>
+          <div class="stat-label">♂ 體重</div>
+          <div class="stat-value">43 - 65 kg</div>
+          <div class="stat-sub">♀ 約 35 - 45 kg</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">角長</div>
-          <div class="stat-value">25 - 45 cm</div>
-          <div class="stat-sub">僅雄性有角</div>
+          <div class="stat-label">♂ 角長</div>
+          <div class="stat-value">25 - 40 cm</div>
+          <div class="stat-sub">向前弓彎，僅雄性有角</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">棲息環境</div>
-          <div class="stat-value">濕地/高草叢</div>
-          <div class="stat-sub">依賴水源</div>
+          <div class="stat-value">濕地 / 高草叢</div>
+          <div class="stat-sub">必須靠近永久水源</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">食性</div>
-          <div class="stat-value">食草性</div>
-          <div class="stat-sub">喜食嫩草</div>
+          <div class="stat-label">活動時段</div>
+          <div class="stat-value">晨昏 & 夜間</div>
+          <div class="stat-sub">白天多隱匿草叢休息</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">野外壽命</div>
           <div class="stat-value">約 10 年</div>
-          <div class="stat-sub">受環境影響</div>
+          <div class="stat-sub">族群依水源分布</div>
         </div>
       </div>
 
@@ -5307,55 +6302,153 @@ img {
 
     <div class="profile-content">
       <div class="profile-names">
-        <div class="name-zh">葦羚</div>
-        <div class="name-en">Reedbuck</div>
-        <div class="name-sci">Redunca arundinum (常見南部亞種)</div>
+        <div class="name-zh">葦羚（波霍葦羚）</div>
+        <div class="name-en">Bohor Reedbuck</div>
+        <div class="name-sw">斯瓦希里語：<strong>Tohe</strong></div>
+        <div class="name-sci">Redunca redunca</div>
       </div>
 
       <div class="tabs">
         <button class="tab-btn active" onclick="switchTab(event, 'reed-tab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'reed-tab-behavior')">特殊習性</button>
         <button class="tab-btn" onclick="switchTab(event, 'reed-tab-where')">觀賞地點</button>
-        <button class="tab-btn" onclick="switchTab(event, 'reed-tab-tips')">觀察心法</button>
+        <button class="tab-btn" onclick="switchTab(event, 'reed-tab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
         <div class="tab-panel active" id="reed-tab-overview">
           <div class="prose">
-            <p>葦羚是一種極度依賴濕地與茂密草叢的羚羊。正如其名（Reedbuck），牠們總是選擇靠近河流、沼澤或高草叢的地帶棲息。牠們的身材優雅，背部呈黃褐色，腹部為白色，最顯眼的特徵是其耳朵後方的<strong>特有深色斑點</strong>。</p>
-            <p>與其他在大草原上奔馳的羚羊不同，葦羚性格較為害羞且謹慎，<strong>行動路線依賴環境掩護（草叢、灌木、蘆葦）</strong>。牠們的保護色完美融合於枯黃的蘆葦或草地中，若非受驚，極難被發現，是<strong>「低調型生存專家」</strong>。</p>
+            <p>
+              葦羚是東非濕地草原最具代表性的中型羚羊，正如其名（Reedbuck），牠們幾乎從不遠離蘆葦叢與河岸高草帶。黃褐色的背部與蒼白的腹部讓牠們完美融入枯黃草叢，加上天性謹慎低調，使葦羚成為 Safari 中最容易被遊客忽略、卻最值得停車細觀的「隱形羚羊」。
+            </p>
+            <p>
+              東非常見的是<strong>波霍葦羚（Bohor Reedbuck）</strong>，雄性角向前弓彎呈鉤狀，是辨識的重要特徵。牠們對水源的高度依賴，使其成為濕地生態系健康狀況的天然指標物種。
+            </p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">🌿</span><div><strong>環境指標：</strong>葦羚的存在通常代表該區域擁有良好的水源與健康的植被結構。</div></li>
-            <li><span class="fi">🧬</span><div><strong>身體特徵：</strong>修長的頸部與靈動的雙耳，幫助牠們在茂密的草叢中監控周遭的一舉一動。</div></li>
+            <li>
+              <span class="fi">🌿</span>
+              <div><strong>完美保護色——草叢中的隱形術：</strong>葦羚的黃褐色體毛與東非旱季的枯草幾乎無法區分。受到威脅時，牠們的第一反應往往不是逃跑，而是<strong>原地蹲低靜止</strong>，依靠保護色融入環境——這讓即便是有經驗的嚮導有時也難以在草叢中找到牠們。</div>
+            </li>
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>對水源的絕對依賴：</strong>葦羚無法在距水源 2–3 公里以外的地區生存，是對水源依賴程度最高的東非羚羊之一。牠們的存在幾乎是「附近有常設水源」的生物指標——在乾旱區若偶遇葦羚，代表不遠處必有水源。</div>
+            </li>
+            <li>
+              <span class="fi">🧬</span>
+              <div><strong>耳後腺體——領地語言的化學標記：</strong>葦羚耳後有一個深色的<strong>裸露腺體斑點</strong>，能分泌費洛蒙用於標記領地。這個黑色斑點也是辨識葦羚的重要特徵之一，在近距離觀察時清晰可見於耳根後方。</div>
+            </li>
+            <li>
+              <span class="fi">👫</span>
+              <div><strong>小型家庭制的領地結構：</strong>葦羚通常以雄雌配對或小型家族群（3–5 隻）為單位活動，雄性嚴格守護一塊含有充足水源與高草的核心領地。不同於牛羚等遷徙物種，葦羚終年守在同一塊濕地，是真正的「定居型」羚羊。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>葦羚白天的隱匿能力強到一個出乎意料的程度——研究者曾在已知有葦羚的草地，以步行方式系統性搜索，卻走到距離不足 3 公尺時才驚動牠起身逃跑。牠們的靜止策略如此有效，以至於<strong>「移動的葦羚」反而比「靜止的葦羚」更容易被發現</strong>。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="reed-tab-behavior">
           <div class="prose">
-            <p>葦羚的生活步調與許多掠食者錯開，牠們的行為模式具有極高的防禦性。</p>
+            <p>
+              葦羚的行為模式高度以「不被發現」為核心設計——從晨昏活動的時間選擇，到一套兼具警告與欺敵功能的特殊逃跑語言，每個細節都反映出在高掠食壓力濕地環境中的生存智慧。
+            </p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">⚠️</span><div><strong>哨兵警示：</strong>當感受到危險時，葦羚會發出尖銳的噴氣聲（Whistle），這不只是提醒同伴，更是在向掠食者宣告「我已發現你了」。</div></li>
-            <li><span class="fi">💨</span><div><strong>獨特奔跑：</strong>逃跑時，牠們會像「跳躍」般地擺動尾巴，露出一抹鮮明的白色尾底，這種行為既是視覺訊號，也是向後方追趕的獵食者示警。</div></li>
+            <li>
+              <span class="fi">📯</span>
+              <div><strong>噴氣哨聲——兼具警告與欺敵的雙重功能：</strong>受威脅時，葦羚會發出響亮的鼻腔「噴氣哨聲（Whistle）」，這個聲音一方面警告同伴，另一方面也在向掠食者宣告「我已發現你了」，以此打斷掠食者的伏擊節奏、降低被突襲的風險。</div>
+            </li>
+            <li>
+              <span class="fi">💨</span>
+              <div><strong>白尾逃跑訊號——邊跑邊廣播：</strong>全速逃跑時，葦羚會高高豎起尾巴，露出鮮白的尾底，同時以大幅度的側向搖擺步態奔跑。這個視覺訊號讓草叢中的其他個體能在看不清本體的情況下立刻識別逃跑方向，是一種高效的群體警報機制。</div>
+            </li>
+            <li>
+              <span class="fi">🌙</span>
+              <div><strong>晨昏與夜間活動——與掠食者時間錯開：</strong>葦羚白天多躲在高草或蘆葦叢中靜息，主要在清晨日出前後、傍晚黃昏，以及夜間進行覓食與活動。這個時間表讓牠們在一定程度上躲避視覺型掠食者（獵豹、花豹）的黃金狩獵時段。</div>
+            </li>
+            <li>
+              <span class="fi">🦁</span>
+              <div><strong>「冰凍靜止」的最後防線：</strong>當掠食者已非常靠近但尚未發動攻擊時，葦羚有時會選擇完全靜止不動，利用保護色做最後一搏。這個策略在高草環境中有時出奇有效——即便是獅子在距離數公尺時也可能因為獵物靜止而失去視覺追蹤。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>葦羚是濕地草原的<strong>「高草修剪者」</strong>——牠們偏好採食生長旺盛的嫩草，有助於控制濕地邊緣的草叢高度，維持開闊的視覺通道，間接讓其他物種也能更有效地監控掠食者。同時作為中型草食動物，牠們是花豹、獵豹與大型猛禽的重要食物來源。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="reed-tab-where">
           <div class="prose">
-            <p>葦羚廣泛分佈於非洲撒哈拉以南的濕地與草原：</p>
+            <p>葦羚高度依賴濕地與河岸高草環境，本次 Safari 路線中以下含有常設水源的保護區均有穩定族群：</p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">📍</span><div><strong>奧卡萬戈三角洲 (Okavango Delta)：</strong>這裡是葦羚的天堂，大片的水道與葦草區為其提供了完美的避難所。</div></li>
-            <li><span class="fi">📍</span><div><strong>克魯格國家公園 (Kruger)：</strong>在靠近河流的灌木叢邊緣，經常能見到牠們成對或小群活動。</div></li>
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（馬賽馬拉 — 馬拉河沿岸）</strong>——馬拉河及其支流的河岸蘆葦叢是葦羚在馬賽馬拉最集中的棲息地，清晨沿河道行駛時常能在蘆葦叢邊緣發現雄性獨自站立守望。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Mara River 沿岸</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（塞倫蓋提 Seronera 河谷 & 塔蘭吉雷）</strong>——Seronera 河谷的永久水源吸引葦羚全年定居；塔蘭吉雷河岸邊的高草帶在乾季是目擊率最高的地點之一。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Serengeti（Seronera）</span>
+                  <span class="loc-tag">Tarangire NP 河岸</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>沿河岸蘆葦叢低速行駛是最有效的搜索策略</strong>——葦羚通常站在高草與開闊地的交界處，清晨光線下雄性的弓型角輪廓最易辨認。嚮導可特別留意蘆葦叢邊緣「不自然的垂直輪廓」，那往往是靜立葦羚的角或耳朵。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>清晨霧氣未散時，葦羚常站在蘆葦叢前的開闊地飲水或採食，此時逆光拍攝可得到被晨霧柔化的夢幻背景。雄性的弓型角在側面角度最具辨識度，建議以水平高度拍攝，讓主體與蘆葦叢形成前後景深對比。若幸運遭遇雄性發出噴氣哨聲，耳朵前傾、鼻孔張開的表情是極具張力的特寫畫面。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="reed-tab-tips">
           <ul class="feature-list">
-            <li><span class="fi">🔭</span><div><strong>觀察建議：</strong>葦羚屬於夜行性或晨昏活動的草食動物，在清晨或黃昏時段前往水源地附近。葦羚非常警覺，若發現車輛距離過近，牠們會瞬間消失在草叢中。</div></li>
-            <li><span class="fi">📷</span><div><strong>拍攝技巧：</strong>葦羚白天經常躲藏在長草叢中休息，專注於草叢的動靜，特別是那些突然「靜止不動」的地方。牠們有時會為了躲避攝影師而選擇「冰凍」原地，這時是捕捉其眼神與形態的最佳時刻。</div></li>
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>先聽哨聲再找本體：</strong>葦羚的鼻腔噴氣哨聲響亮穿透，在靜謐的清晨草原可傳達數百公尺。聽到這個獨特的「噗——」長音後，沿聲音方向掃描蘆葦叢邊緣，通常能找到發聲的葦羚正對著某個方向警戒——那個方向很可能有其他掠食者存在。</div>
+            </li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識雌雄——弓型角是關鍵：</strong>雄性具有向前弓彎的獨特角型，側面看呈明顯的「鉤狀」，在蘆葦叢中也能辨認；雌性無角，體型略小。兩者耳後均有黑色裸斑，是區別於其他羚羊的共同特徵。帶有幼崽的個體必定是雌性。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>清晨日出前後是黃金觀察窗口：</strong>葦羚在日出前後的 1–2 小時最為活躍，此時會離開草叢到開闊地帶飲水與採食。隨著太陽升高，牠們逐漸退入高草中靜休，白天幾乎完全隱匿。請嚮導在天剛亮時即前往水源附近等待。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>發現後保持距離與靜默：</strong>葦羚受驚後的第一反應是「冰凍」或緩慢蹲低，若此時車輛繼續靠近，牠們才會選擇竄入草叢消失。因此發現葦羚後立刻示意嚮導停車熄火，在牠進入「冰凍靜止」狀態時，往往能在原地觀察數分鐘，甚至觀察到完整的覓食行為。</div>
+            </li>
+            <li>
+              <span class="fi">📷</span>
+              <div><strong>搜索「草叢中不自然的垂直線條」：</strong>靜止的葦羚最難被發現，訣竅是掃描草叢頂端尋找「不隨風搖擺的垂直線條」——那可能是角、腿，或是直立的耳朵。用望遠鏡系統性地從左至右掃描蘆葦叢邊緣，是找到靜止葦羚最可靠的方法。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>波霍葦羚目前 IUCN 列為「無危」，東非族群整體穩定。然而由於對水源的高度依賴，任何導致濕地乾涸或退化的因素——農業引水、氣候變遷導致的降雨減少、過度放牧——都可能迅速造成局部族群崩潰。牠們是濕地健康狀況最靈敏的生物指標之一。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -5378,38 +6471,39 @@ img {
         </div>
       </div>
 
-      <div class="stat-grid">
+        <div class="stat-grid">
         <div class="stat-item">
-          <div class="stat-label">身長</div>
+          <div class="stat-label">♀ 身長</div>
           <div class="stat-value">63 - 75 cm</div>
-          <div class="stat-sub">體型健壯</div>
+          <div class="stat-sub">雌性顯著大於雄性</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">翼展</div>
           <div class="stat-value">175 - 210 cm</div>
-          <div class="stat-sub">極具爆發力</div>
+          <div class="stat-sub">可乘熱氣流長時間滑翔</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">食性</div>
-          <div class="stat-value">高度肉食</div>
-          <div class="stat-sub">主食為魚類</div>
+          <div class="stat-label">♀ 體重</div>
+          <div class="stat-value">2.0 - 3.6 kg</div>
+          <div class="stat-sub">♂ 約 1.9 - 2.5 kg</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">叫聲</div>
-          <div class="stat-value">標誌性鳴叫</div>
-          <div class="stat-sub">非洲之聲</div>
+          <div class="stat-label">捕魚載重</div>
+          <div class="stat-value">可達 1.8 kg</div>
+          <div class="stat-sub">超出限制時以水面拖行代替飛起</div>
         </div>
         <div class="stat-item">
-          <div class="stat-label">棲息環境</div>
-          <div class="stat-value">水源地</div>
-          <div class="stat-sub">湖泊/河流邊緣</div>
+          <div class="stat-label">領地範圍</div>
+          <div class="stat-value">1 - 3 km 水岸</div>
+          <div class="stat-sub">終身固守同一領地</div>
         </div>
         <div class="stat-item">
           <div class="stat-label">野外壽命</div>
-          <div class="stat-value">15 - 20 年</div>
-          <div class="stat-sub">領地意識強</div>
+          <div class="stat-value">15 - 24 年</div>
+          <div class="stat-sub">終身一夫一妻制</div>
         </div>
       </div>
+
 
       <div class="iucn-badge" style="background: rgba(58,79,53,0.2); border-color: rgba(90,120,83,0.5); color: var(--safari-light);">
         <i class="fa-solid fa-circle-check"></i>
@@ -5421,6 +6515,7 @@ img {
       <div class="profile-names">
         <div class="name-zh">非洲魚鷹</div>
         <div class="name-en">African Fish Eagle</div>
+        <div class="name-sw">斯瓦希里語：<strong>Tai wa Pwani</strong></div>
         <div class="name-sci">Haliaeetus vocifer</div>
       </div>
 
@@ -5428,46 +6523,144 @@ img {
         <button class="tab-btn active" onclick="switchTab(event, 'eagle-tab-overview')">生態總覽</button>
         <button class="tab-btn" onclick="switchTab(event, 'eagle-tab-behavior')">狩獵絕技</button>
         <button class="tab-btn" onclick="switchTab(event, 'eagle-tab-where')">觀賞地點</button>
-        <button class="tab-btn" onclick="switchTab(event, 'eagle-tab-tips')">觀察心法</button>
+        <button class="tab-btn" onclick="switchTab(event, 'eagle-tab-tips')">Safari 小技巧</button>
       </div>
 
       <div class="tab-panels">
         <div class="tab-panel active" id="eagle-tab-overview">
           <div class="prose">
-            <p>非洲魚鷹是非洲水域最顯眼的猛禽，牠們與白頭海鵰有親緣關係。其外觀極好辨識：雪白的頭部、頸部與胸部，搭配栗紅色的身體以及深褐色的翅膀。對於任何到訪非洲的旅客來說，牠們響亮而高亢的叫聲，往往是喚醒非洲清晨的第一道記憶。</p>
-            <p>牠們是終身的配偶，通常在水域邊的大樹上築巢，並在領地內進行嚴格的守護與巡視。</p>
+            <p>
+              非洲魚鷹是整個撒哈拉以南非洲最具辨識度的猛禽——雪白的頭頸與胸部、栗紅色的身體、深褐色的翅膀，以及那道讓人聽過一次便終生難忘的<strong>高亢鳴叫聲</strong>，使牠成為「非洲聲景」最具代表性的物種。牠與北美白頭海鵰同屬海鵰屬，是海鵰屬中分布最廣的非洲物種。
+            </p>
+            <p>
+              非洲魚鷹實行<strong>終身一夫一妻制</strong>，同一對配偶會在同一棵大樹上連續使用同一個巢穴數十年，每年修繕擴大，最終巢穴可達數百公斤。
+            </p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">📢</span><div><strong>非洲之聲：</strong>其經典的鳴叫聲被視為「非洲的聲音」，常被運用在電影中，只要聽到那穿透力十足的叫聲，便知附近必有水域。</div></li>
-            <li><span class="fi">🦅</span><div><strong>領地捍衛者：</strong>成對的魚鷹對領地非常執著，經常能看到牠們在空中進行激烈的領地展示飛行。</div></li>
+            <li>
+              <span class="fi">📢</span>
+              <div><strong>非洲最具標誌性的叫聲：</strong>那道高亢穿透、帶有野性顫音的「剋—伊—伊—伊」鳴叫，是多個非洲國家的聲音象徵，更是無數電影與紀錄片用來塑造「非洲感」的首選音效。有趣的是，這個叫聲其實是雌雄雙方<strong>頭部後仰同步合唱</strong>的二重奏，單獨聽到只算一半。</div>
+            </li>
+            <li>
+              <span class="fi">🏰</span>
+              <div><strong>終身守護的水岸王國：</strong>每對魚鷹嚴格守護 1–3 公里的水岸領地，終年不離。入侵者無論大小，必遭驅逐——包括其他魚鷹、鱷魚，甚至試圖搶魚的鬣狗。這份對領地的執著讓牠們成為水岸生態系中最穩定的頂層守護者。</div>
+            </li>
+            <li>
+              <span class="fi">🪺</span>
+              <div><strong>數十年的同一個巢：</strong>魚鷹的巢穴由枯枝構成，每年繁殖季前夕夫妻共同修繕添料，數十年下來直徑可超過 1.5 公尺、重量達數百公斤。在大型金合歡樹頂端，這個龐然大物往往比魚鷹本身更容易被發現。</div>
+            </li>
+            <li>
+              <span class="fi">⚖️</span>
+              <div><strong>雌大雄小的反向性別二態：</strong>如同多數猛禽，雌性非洲魚鷹體型顯著大於雄性（最重可達 3.6 kg vs 雄性約 2.5 kg），這讓雌性能捕獲更大的魚類，雄性則以靈活性彌補體型劣勢，夫妻在食物大小上形成天然分工。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">✨ 趣味冷知識</div>
+            <p>非洲魚鷹的學名 <em>Haliaeetus vocifer</em> 中，<em>vocifer</em> 源自拉丁文「大聲呼喊者」——連分類學家都忍不住把牠的叫聲寫進了正式學名裡。牠是辛巴威、尚比亞、南蘇丹及奈及利亞的<strong>國鳥</strong>，是非洲被最多國家選為國家象徵的鳥類。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="eagle-tab-behavior">
           <div class="prose">
-            <p>非洲魚鷹是技藝精湛的漁夫，能夠精確地從水面捕捉魚類。</p>
+            <p>
+              非洲魚鷹是技藝精湛的空中漁夫，一套從高空偵測到入水抓魚的完整流程，每個細節都是數百萬年演化的精密成果。牠們每天只需捕獲 1–2 條魚（消耗約 10% 的清醒時間）就能滿足能量需求，其餘時間幾乎都在領地高點靜靜守望。
+            </p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">🎣</span><div><strong>精準一擊：</strong>利用極佳的視力，牠們能在高空發現水下的活動，然後以俯衝方式，利用帶有尖刺突起的腳掌，精準抓起重達數公斤的魚類。</div></li>
-            <li><span class="fi">🔄</span><div><strong>空中技巧：</strong>儘管魚類沉重，牠們依然能展現驚人的平衡力，將魚體調整為流線型，減小飛行阻力，飛回巢穴或棲木。</div></li>
+            <li>
+              <span class="fi">🎣</span>
+              <div><strong>俯衝入水的精準一擊：</strong>從高空鎖定獵物後，魚鷹以45度角俯衝，在接觸水面前的最後一刻雙腳前伸、翅膀上揚緩衝，以帶有角質突起（稱為「骨突 Spicules」）的腳掌瞬間抓牢滑溜的魚體。整個入水過程不到 0.1 秒。</div>
+            </li>
+            <li>
+              <span class="fi">💧</span>
+              <div><strong>「游泳式」拖魚上岸——超重時的備案：</strong>若捕獲的魚超過可飛離重量（約 1.8 kg），魚鷹不會放手，而是改以雙翅划水，像蝶式游泳一樣<strong>將魚拖向岸邊</strong>，再拖上陸地享用。這個畫面極為罕見，遇到堪稱奇蹟。</div>
+            </li>
+            <li>
+              <span class="fi">🔄</span>
+              <div><strong>空中翻轉調整魚的方向：</strong>抓魚離水後，魚鷹會在飛行中將魚體調整為頭部朝前的流線方向，以減少飛行阻力，更省力地回到停棲點。這個空中調整動作發生在幾秒內，但清晰可見。</div>
+            </li>
+            <li>
+              <span class="fi">🦅</span>
+              <div><strong>機會性的強盜行為（Kleptoparasitism）：</strong>魚鷹有時會選擇攔截並搶奪其他鳥類（如鶚、白鸛）剛捕到的魚，省去自己入水的麻煩。在食物豐盛時這個行為較少見，乾旱期魚源減少時則更頻繁出現。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🔬 生態角色</div>
+            <p>非洲魚鷹是水域生態系健康的<strong>關鍵指標物種</strong>——牠們對水質污染與魚類族群崩潰極為敏感，一旦某水域的魚鷹族群開始下降，往往預示著水質惡化或過度捕撈正在發生。東非保育組織因此長期監測各主要湖泊的魚鷹密度，作為水域生態系的「生物晴雨表」。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="eagle-tab-where">
           <div class="prose">
-            <p>只要有大型水源的地方，幾乎都能見到非洲魚鷹的蹤影：</p>
+            <p>只要有大型永久水源，幾乎必有非洲魚鷹的蹤影。本次 Safari 路線中以下地點目擊機率最高：</p>
           </div>
+
           <ul class="feature-list">
-            <li><span class="fi">📍</span><div><strong>維多利亞湖 (Lake Victoria)：</strong>廣闊的湖面提供了豐富的漁獲與棲息環境。</div></li>
-            <li><span class="fi">📍</span><div><strong>奧卡萬戈三角洲 (Okavango Delta)：</strong>水域繁雜，是觀察牠們狩獵與築巢行為的最佳場所。</div></li>
+            <li>
+              <span class="fi">🇰🇪</span>
+              <div>
+                <strong>肯亞（馬賽馬拉 — 馬拉河及牛軛湖）</strong>——馬拉河沿岸的大型金合歡樹頂端是魚鷹最愛的停棲與築巢點，牛軛湖的靜水環境讓牠們能輕鬆偵測水下魚類，是馬賽馬拉最穩定的魚鷹觀賞點。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Masai Mara NR</span>
+                  <span class="loc-tag">Mara River 沿岸</span>
+                  <span class="loc-tag">牛軛湖（Oxbow Lakes）</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">🇹🇿</span>
+              <div>
+                <strong>坦尚尼亞（恩戈羅恩戈羅火山口湖 & 塔蘭吉雷河）</strong>——火山口內的 Makat 鹽湖雖鹽分較高，但邊緣的淡水滲出區仍有魚鷹固定活動；塔蘭吉雷河乾季形成的水潭是觀察魚鷹捕魚的熱點。
+                <div class="location-tags" style="margin-top:8px">
+                  <span class="loc-tag">Ngorongoro Crater（湖岸）</span>
+                  <span class="loc-tag">Tarangire NP（河段）</span>
+                </div>
+              </div>
+            </li>
+            <li>
+              <span class="fi">⭐</span>
+              <div><strong>清晨 7–10 點在水岸大樹頂端靜候是最有效策略</strong>——魚鷹通常在日出後 1–2 小時才開始積極狩獵，此時先在附近的高大金合歡或無花果樹頂端找到停棲個體，再耐心等待牠起飛俯衝的狩獵行為。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">📸 攝影最佳時機</div>
+            <p>「鳴叫姿態」是拍攝魚鷹最具標誌性的畫面——雌雄雙方頭部同步向後大幅仰起、喙張開、翅膀微張，持續約 3–5 秒。觀察到一方開始抬頭時立刻切換連拍，這個動作常在清晨與傍晚最為頻繁。俯衝捕魚的瞬間則需要快門至少 1/2000s 以上，並預先以 AI 伺服追焦鎖定盤旋中的個體。</p>
+          </div>
         </div>
 
         <div class="tab-panel" id="eagle-tab-tips">
           <ul class="feature-list">
-            <li><span class="fi">🔭</span><div><strong>觀察建議：</strong>建議在清晨前往水源地。牠們喜歡站在高大的枯樹枝頭俯瞰水面，這是最容易發現牠們的位置。</div></li>
-            <li><span class="fi">📷</span><div><strong>拍攝技巧：</strong>準備好您的連續快門。當您看到魚鷹開始鳴叫並頭部後仰，通常意味著牠即將起飛或呼喚伴侶，這是最關鍵的拍攝時機。</div></li>
+            <li>
+              <span class="fi">👂</span>
+              <div><strong>先聽叫聲再找本體：</strong>非洲魚鷹的鳴叫聲在靜謐清晨可傳達 1–2 公里。聽到那道「剋—伊—伊—伊」的高亢叫聲後，朝聲音來源方向搜索水岸附近的高大枯樹頂端——停棲的魚鷹幾乎都選在視野開闊的最高枝點，一旦找到立刻用望遠鏡確認。</div>
+            </li>
+            <li>
+              <span class="fi">🔭</span>
+              <div><strong>辨識雌雄——體型與停棲位置：</strong>雌性體型明顯更大；同一巢附近若有兩隻同時停棲，體型較小者為雄性。繁殖季（東非約為 9–12 月）時雄性會頻繁向雌性獻食（Courtship Feeding），可觀察到雄性帶魚飛回巢穴的互動。</div>
+            </li>
+            <li>
+              <span class="fi">🎣</span>
+              <div><strong>預測俯衝時機——觀察「盤旋行為」：</strong>魚鷹準備捕魚前會在水面上空以低矮的圓形盤旋，並頻繁向下凝視。一旦看到牠從盤旋模式改為「定點懸停」或直接收翅下降，俯衝幾乎在 3–5 秒內就會發生，此時立刻進入連拍準備狀態。</div>
+            </li>
+            <li>
+              <span class="fi">🌅</span>
+              <div><strong>清晨逆光拍「鳴叫二重奏」：</strong>日出後魚鷹常在棲枝上進行晨間鳴叫互動，此時太陽仍在低位，逆光拍攝可得到頭頸雪白羽毛的自然透光效果，配合後方水面或天空背景，是最具視覺張力的魚鷹畫面。</div>
+            </li>
+            <li>
+              <span class="fi">🤫</span>
+              <div><strong>發現巢穴後保持距離：</strong>魚鷹巢穴通常位於水岸大樹最高點，體積龐大極易辨認。繁殖季時請嚮導在至少 100 公尺外熄火觀察，避免親鳥受驚離巢——魚鷹對巢位的執著雖強，但持續的人為干擾仍可能導致當季繁殖失敗。</div>
+            </li>
           </ul>
+
+          <div class="fun-fact">
+            <div class="ff-label">🌍 保育現況</div>
+            <p>非洲魚鷹目前 IUCN 列為「無危」，東非族群整體穩定。主要威脅來自：水源地農藥污染（累積於魚體，影響蛋殼厚度導致繁殖失敗）、湖泊過度捕撈導致食物減少，以及人類定居擴張砍伐水岸大樹破壞巢位。保護東非湖泊與河流的水質，就是保護這道讓非洲清晨有聲音的聲景遺產。</p>
+          </div>
         </div>
       </div>
     </div>
